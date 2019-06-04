@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+
+var firmware = 'http://212.77.128.178/stb-upd/215/2.18-r19/254/imageupdate';
+
+function onLoad() {
+	setTimeout("timerHandler()", 1000);
+	stbUpdate.startCheck(firmware);
+
+	setTimeout("upgrade()", 8000);
+}
+
+function timerHandler() {
+	document.getElementById("div0").innerHTML=stbUpdate.getStatus();
+	document.getElementById("div1").innerHTML="\"" + stbUpdate.getStatusStr() + "\"";
+	document.getElementById("div2").innerHTML=stbUpdate.getPercents() + "%";
+	document.getElementById("div3").innerHTML=stbUpdate.getImageVersionStr();
+	document.getElementById("div4").innerHTML=stbUpdate.getImageDateStr();
+
+	setTimeout("timerHandler()", 1000);
+}
+
+function upgrade() {
+	var activeBank = (stbUpdate.getActiveBank()) ? 0 : 1;
+	stbUpdate.startUpdate(activeBank, firmware);
+}
+
+</script>
+</head>
+
+<body onload="onLoad()" style="background: silver; padding: 40px; font-size: 16px;">
+
+<h1>Обновление ПО</h1>
+<p><b>Пожалуйста, НЕ выключайте устройство!<br />Приставка перезагрузится автоматически после завершения обновления.</b></p>
+<br />
+
+<table cellspacing="10" cellpadding="10" border="3">
+<tr>
+	<td><div>Код: </div></td>
+	<td><div id="div0"></div></td>
+</tr>
+<tr>
+	<td><div>Статус: </div></td>
+	<td><div id="div1"></div></td>
+</tr>
+<tr>
+	<td><div>Прогресс: </div></td>
+	<td><div id="div2"></div></td>
+</tr>
+<tr>
+	<td><div>Версия прошивки: </div></td>
+	<td><div id="div3"></div></td>
+</tr>
+<tr>
+	<td><div>Дата прошивки: </div></td>
+	<td><div id="div4"></div></td>
+</tr>
+</table>
+
+</body>
+</html>

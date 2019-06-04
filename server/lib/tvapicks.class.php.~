@@ -1,0 +1,161 @@
+<?php
+
+class Tvapicks extends AjaxResponse implements \Stalker\Lib\StbApi\Tvapicks
+{
+	public static $instance = null;
+	protected $request;
+	protected $year = null;
+	protected $category = null;
+	protected $rating = null;
+
+	const MAX_PAGE_ITEMS = 10;
+
+	public static function getInstance(){
+		if (self::$instance == null)
+		{
+			self::$instance = new self;
+		}
+		return self::$instance;
+	}
+	
+	public function __construct(){
+		$this->request = $this->parseRequestVar($_REQUEST);
+		parent::__construct();
+	}
+
+	private function parseRequestVar($req) {
+		return $req;
+	}
+
+	private function getYear() {
+
+		$year = null;
+
+		if(isset($this->request['year']) && $this->request['year'] !== '') {
+			$year = array('year' => $this->request['year']);
+		}
+
+		return $year;
+	}
+
+	private function getCategory() {
+
+		$category = null;
+
+		if(isset($this->request['category'])) {
+			$category = array('category' => '%' . $this->request['category'] . '%');
+		}
+
+		return $category;
+	}
+
+	private function getRating() {
+
+		$rating = null;
+
+		if(isset($this->request['rating']) && $this->request['rating'] !== '') {
+			$rating = array('rating<' => $this->request['rating']);
+		}
+		return $rating;
+	}
+
+	private function getCountry() {
+
+		$country = null;
+
+		if(isset($this->request['country'])) {
+			$country = array('country' => '%' . $this->request['country'] . '%');
+		}
+		return $country;
+	}
+
+	public function getMovies() {
+
+		if(isset($this->request['shift'])) {
+			$shift = (int)$this->request['shift'];
+			$shift = $shift * self::MAX_PAGE_ITEMS;
+		} else {
+			$shift = 0;
+		}
+
+		$itv = new Itv();
+		$userChannels = $itv->getAllUserChannelsIds();
+
+		$query = Mysql::getInstance()
+			// ->select('id, ch_id, time, name, category, descr, duration, img, country, year, rating')
+			->select('id, ch_id, time, name, category, descr, duration, "" as img, "Зимбабве" as country, 2020 as year, 10500 as rating')
+			->from('epg')
+			->where(
+				array(
+					'time>' => date(Mysql::DATETIME_FORMAT, strtotime('-115 hour')),
+					'time_to<' => date(Mysql::DATETIME_FORMAT)
+				)
+			)
+			// ->like(array(
+			// 	'basecat' => '%фильм%',
+			// 	'basecat' => '%Для взрослых%'
+			// 	), 'OR'
+			// )
+			->in('basecat', ['Фильм', 'Для взрослых'])
+			->where($this->getYear())
+			->where($this->getRating())
+			->like($this->getCountry())
+			->like($this->getCategory())
+			->in('ch_id', $userChannels);
+
+		$query_rows = clone $query;
+		
+		$counter = $query_rows->nolimit()->nogroupby()->noorderby()->count()->get()->counter();
+
+		$result = $query
+			->limit(self::MAX_PAGE_ITEMS, $shift)
+			->get()
+			->all();
+		
+		// return $this->getResponse('prepareData');
+		return array(
+			'total_items' => (int)$counter,
+			'total_pages' => ceil($counter / self::MAX_PAGE_ITEMS),
+			'max_page_items' => self::MAX_PAGE_ITEMS,
+			'data' => $result,
+		);
+	}
+
+	public function getGenres() {
+		$genres = [
+			'Все' => '',
+			'Порево' => 'Эротика',
+			'Боевик' => 'Боевик',
+			'Вестерн' => 'Вестерн',
+			'Военный' => 'Военный',
+			'Детектив' => 'Детектив',
+			'Детский' => 'Детский',
+			'Драма' => 'Драма',
+			'Исторический' => 'Исторический',
+			'Комедия' => 'Комедия',
+			'Криминал' => 'Криминал',
+			'Мелодрама' => 'Мелодрама',
+			'Мюзикл' => 'Мюзикл',
+			'Приключения' => 'Приключения',
+			'Семейный' => 'Семейный',
+			'Сказка' => 'Сказка',
+			'Трагикомедия' => 'Трагикомедия',
+			'Триллер' => 'Триллер',
+			'Ужасы' => 'Ужасы',
+			'Фантастика' => 'Фантастика',
+			'Фэнтези' => 'Фэнтези',
+		];
+
+		return array(
+			'total_items' => sizeof($genres),
+			'data' => $genres,
+		);
+	}
+
+	public function getTest() {
+		return Stb::getInstance();
+		// return Itv::getAllUserChannelsIds();
+		// $i = new Itv();
+		// return $i->getAllUserChannelsIds();
+	}
+}

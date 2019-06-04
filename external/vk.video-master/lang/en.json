@@ -1,0 +1,89 @@
+{
+	"meta": {
+		"charset": "utf-8",
+		"project": "vk.video 0.0.1",
+		"language": "en",
+		"plural": "(n != 1)"
+	},
+	"data": {
+		"": {
+			"After 10 seconds, the browser will be loaded, and to confirm your wish to log in, click on the button \"Pass test check\"": "",
+			"Aspect": "",
+			"Back": "",
+			"Cancel": "",
+			"Clear history": "",
+			"Clear search history ?": "",
+			"Convenient application for viewing videos from the popular social network VKontakte. This service allows you to watch video from a personal page or use the search by friends, groups or title.": "",
+			"Exit": "",
+			"Exit from the app?": "",
+			"External video may not be played": "",
+			"Friends videos": "",
+			"Group albums": "",
+			"Groups videos": "",
+			"Language": "",
+			"Loading...": "",
+			"Login": "",
+			"Logout": "",
+			"Logout?": "",
+			"My albums": "",
+			"My videos": "",
+			"No content or some error happened, try later.": "",
+			"No videos or loading error, try later.": "",
+			"Ok": "",
+			"Original": "",
+			"Own albums": "",
+			"Password": "",
+			"Phone or email": "",
+			"Please, input login": "",
+			"Please, input password": "",
+			"Safe search": "",
+			"Search": "",
+			"Search history ": "",
+			"Service is temporarily unavailable": "",
+			"Settings": "",
+			"Total": "",
+			"User albums": "",
+			"Videos of me": "",
+			"added": "",
+			"ago": "",
+			"day": [
+				"",
+				""
+			],
+			"hour": [
+				"",
+				""
+			],
+			"minute": [
+				"",
+				""
+			],
+			"month": [
+				"",
+				""
+			],
+			"offline": "",
+			"online": "",
+			"second": [
+				"",
+				""
+			],
+			"user": [
+				"",
+				""
+			],
+			"video": [
+				"",
+				""
+			],
+			"view": [
+				"",
+				""
+			],
+			"year": [
+				"",
+				""
+			]
+		}
+	}
+}

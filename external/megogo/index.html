@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <base href="http://aura-app.megogo.net/v3/" />
+    <link rel="stylesheet" href="bundle.css" />
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
+    <script type="text/javascript">
+      window.stb = gSTB
+    </script>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "http://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      function showDebug(data, clear) {
+        var debug_item = document.getElementById("debug");
+        if (!debug_item) {
+          debug_item = document.createElement("div");
+          debug_item.style =
+            "display: block; position: absolute; z-index: 100; width: 1048px; height: 90px; background-color: #5d5cbb; padding: 50px; font-size: 20px; color: white; opacity: 0.8";
+          document.body.appendChild(debug_item);
+        }
+        if (clear) {
+          debug_item.innerHTML = "";
+        }
+        debug_item.innerHTML = data;
+      }
+    </script>
+  </head>
+
+  <body class="init">
+    <!--<div id="debug" style="display: block; position: absolute; z-index: 100; width: 1048px; height: 90px; background-color: #5d5cbb; padding: 50px; font-size: 20px; color: white; opacity: 0.8"></div>-->
+
+    <!-- inject:html -->
+    <div id="pagePlayer">
+      <div id="pagePlayerContainer"></div>
+    </div>
+
+    <div id="pageMovie">
+      <div id="pageMovieContainer">
+        <div id="pageMovieTop" class="clearfix">
+          <div id="pageMovieCover"></div>
+          <div id="pageMovieInfo">
+            <div id="pageMovieTitle"></div>
+            <div id="pageMovieDigitalInfo"></div>
+            <div id="pageMovieWatch" class="clearfix">
+              <div id="pageMovieWatchVideo"></div>
+              <div id="pageMovieWatchTrailer"></div>
+              <div id="pageMovieWatchSeries"></div>
+              <div id="pageMovieAdvertFree"></div>
+            </div>
+            <div id="pageMovieDescription"></div>
+            <div id="pageMovieActions" class="clearfix">
+              <div id="pageMovieWatchLater"></div>
+              <div id="pageMovieDetail"></div>
+              <div id="pageMovieDislike"></div>
+              <div id="pageMovieLike"></div>
+            </div>
+          </div>
+        </div>
+        <div id="pageMovieBottom">
+          <!-- <div id="pageMovieActors"></div>
+             <div id="pageMovieReviews" class="movie-comments">
+                     <div id="pageMovieReviewsWrap" class="movie-comments__wrap"></div>
+             </div>
+             <div id="pageMovieRelated"></div>-->
+        </div>
+      </div>
+    </div>
+
+    <div id="pageReviews">
+      <div id="pageReviewsContainer">
+        <div class="comments">
+          <div class="comments__wrap">
+            <div id="pageReviewsList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pagePaymentCardNew">
+      <div id="pagePaymentCardNewContainer">
+        <div class="visa">
+          <div class="card-visa"></div>
+          <div class="card-master"></div>
+        </div>
+        <div class="master"></div>
+        <div id="payment-card" class="payment-card"></div>
+      </div>
+    </div>
+
+    <div id="pagePaymentCardToken">
+      <div id="pagePaymentCardTokenContainer">
+        <div class="notification">
+          <div class="notification__wrap">
+            <div class="notification__content">
+              <div class="icon icon_card"></div>
+              <div id="paymentTokenDescription" class="notification__txt"></div>
+              <div class="btn-wrap">
+                <div
+                  id="paymentButtonCardToken"
+                  class="notification__btn btn btn_blue"
+                ></div>
+                <div
+                  id="paymentButtonCardChange"
+                  class="notification__btn btn btn_blue"
+                ></div>
+              </div>
+              <div id="promo-text" class="promo-tariff-text"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pagePaymentChoice">
+      <div id="pagePaymentChoiceContainer">
+        <div class="payment-choice">
+          <div class="payment-choice__wrap">
+            <div id="payment-choice__title" class="payment-choice__title"></div>
+            <div id="paymentChoiceWrapList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pagePaymentMobile">
+      <div id="pagePaymentMobileContainer">
+        <div class="notification">
+          <div class="notification__wrap">
+            <div class="notification__content">
+              <div class="icon icon_sms"></div>
+              <div id="descriptionTextMobile" class="notification__txt"></div>
+              <div class="fields fields_row">
+                <div id="mobileNumberInput" class="fields__input"></div>
+                <div class="btn-wrap">
+                  <div
+                    id="nextButtonMobile"
+                    class="notification__btn btn btn_blue"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mobileSmallText" class="small-text"></div>
+      </div>
+    </div>
+
+    <div id="pagePaymentSetting">
+      <div id="pagePaymentSettingContainer" class="payment-settings">
+        <div id="pagePaymentIcon"></div>
+        <div id="pagePaymentTitle"></div>
+        <div id="pagePaymentText" class="payment-settings__txt"></div>
+        <div id="paymentButtonOn"></div>
+        <div id="paymentButtonBuy"></div>
+        <div id="paymentButtonOff"></div>
+      </div>
+    </div>
+
+    <div id="pageProfileAgreement">
+      <div id="pageProfileAgreementContainer">
+        <div id="scrollContainer">
+          <div id="agreementContainer" class="term-of-use"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pageProfilePC">
+      <div id="pageProfilePCContainer" class="notification">
+        <div class="notification__wrap">
+          <div class="notification__content">
+            <div class="icon icon_age">
+              <div id="ageLimit" class="age__num">18<span>+</span></div>
+            </div>
+            <div id="pc_profile_description" class="notification__txt"></div>
+            <div class="fields fields_row">
+              <div class="fields__half">
+                <div id="child_age_text" class="fields__lable"></div>
+                <div id="child_age" class="fields__input"></div>
+              </div>
+              <div class="fields__half">
+                <div id="pinCodeInputText" class="fields__lable"></div>
+                <div
+                  id="pinCodeInput"
+                  class="fields__input"
+                  style="font-size: 50px;"
+                ></div>
+              </div>
+
+              <div id="purchase_check_box" class="checkbox">
+                <div class="checkbox__icon "></div>
+              </div>
+
+              <div class="btn-wrap btn-wrap_320">
+                <div id="save_pc" class="notification__btn btn btn_blue"></div>
+                <div
+                  id="remove_pc"
+                  class="notification__btn btn btn_blue"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pageProfileReportInfo" class="profile-report">
+      <div id="pageProfileReportInfoContainer" class="profile-report__wrap">
+        <div
+          id="pageProfileReportInfoSubtitle"
+          class="profile-report__subtitle"
+        ></div>
+        <div class="profile-report__left">
+          <div
+            id="pageProfileReportInfoPhone"
+            class="profile-report__phone"
+          ></div>
+          <div
+            id="pageProfileReportInfoMail"
+            class="profile-report__mail"
+          ></div>
+        </div>
+        <div class="profile-report__right">
+          <div id="pageProfileInfoTitle" class="profile-report__title"></div>
+          <div
+            id="pageProfileReportInfoGrid"
+            class="profile-report__grid"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="widgetWhatchChannelsSchedule">
+      <div id="scheduleListContainer">
+        <div id="categoriesListContainer">
+          <div id="scheduleListCategories"></div>
+        </div>
+        <div id="channelsListContainer">
+          <div id="scheduleListChannels"></div>
+        </div>
+        <div id="programsListContainer">
+          <div id="scheduleListPrograms"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="widgetLeftMenu">
+      <div id="wlmContainer">
+        <div id="wlmIcons"></div>
+        <div id="borderShade"></div>
+        <div id="wlmCatList">
+          <div id="wlmArrow"></div>
+          <div id="wlmCategories"></div>
+        </div>
+      </div>
+      <div id="wlmShade"></div>
+    </div>
+
+    <div id="widgetErrorBlock">
+      <div id="widgetErrorBlockContainer">
+        <div class="notification">
+          <div id="error-block-wrap" class="notification__wrap">
+            <div class="notification__content">
+              <div id="error-block-results-img" class="icon icon_success"></div>
+              <div
+                id="error-block-results-text"
+                class="notification__txt"
+              ></div>
+              <div class="btn-wrap">
+                <div
+                  id="error-block-results-buttons-list"
+                  class="results-buttons-list"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="widgetPopUpParentalControlReset">
+      <div id="widgetPopUpParentalControlResetContainer">
+        <div class="notification">
+          <div class="notification__wrap">
+            <div class="notification__content">
+              <div id="reset-img" class="icon icon_age">
+                <div class="age__num">18<span>+</span></div>
+              </div>
+              <div id="reset-text" class="notification__txt"></div>
+              <div class="btn-wrap">
+                <div
+                  id="reset-button"
+                  class="notification__btn btn btn_blue"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="widgetParentalControlSet">
+      <div id="widgetParentalControlSetContainer">
+        <div class="notification">
+          <div class="notification__wrap">
+            <div class="notification__content">
+              <div class="notification__head">
+                <div class="icon">
+                  <div>18<span>+</span></div>
+                </div>
+              </div>
+              <div id="pc-text" class="notification__txt"></div>
+              <div class="btn-wrap btn-wrap_inline">
+                <div
+                  id="yes-button"
+                  class="notification__btn btn btn_blue btn_inline"
+                ></div>
+                <div
+                  id="no-button"
+                  class="notification__btn btn btn_blue btn_inline"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="widgetPopUpPincode">
+      <div id="widgetPopUpPincodeContainer">
+        <div class="notification">
+          <div class="notification__wrap">
+            <div class="notification__content">
+              <div class="notification__head">
+                <div id="pincode-img"></div>
+              </div>
+              <div id="pincode-text" class="notification__txt"></div>
+              <div class="fields fields_row">
+                <div
+                  id="pinCodeInputPinPopUp"
+                  class="fields__input"
+                  style="font-size: 50px;"
+                ></div>
+                <div id="pincode-error-text" class="notification__error"></div>
+                <div class="btn-wrap">
+                  <div
+                    id="pincode-button"
+                    class="notification__btn btn btn_blue"
+                  ></div>
+                  <div
+                    id="pincode-remind-button"
+                    class="notification__btn btn btn_blue"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="widgetPopUpResults">
+      <div id="widgetPopUpResultsContainer">
+        <div class="notification">
+          <div class="notification__wrap">
+            <div class="notification__content">
+              <div id="results-img" class="icon icon_success"></div>
+              <div id="results-text" class="notification__txt"></div>
+              <div class="btn-wrap">
+                <div
+                  id="results-button"
+                  class="notification__btn btn btn_blue"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="widgetVideoRestrictions">
+      <div id="widgetVideoRestrictionsContainer">
+        <div class="notification">
+          <div class="notification__wrap">
+            <div class="notification__content">
+              <div class="notification__head">
+                <div class="icon icon_restriction_invalid"></div>
+              </div>
+              <div
+                id="restriction-invalid-title"
+                class="notification__title"
+              ></div>
+              <div
+                id="restriction-invalid-text"
+                class="notification__txt"
+              ></div>
+              <div class="btn-wrap btn-wrap_inline">
+                <div
+                  id="restriction-invalid-button"
+                  class="notification__btn btn btn_blue btn_inline"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- endinject -->
+
+    <script src="http://212.77.128.205/stalker_portal/external/megogo/bundle.js"></script>
+    <script type="text/javascript" src="http://212.77.128.205/stalker_portal/external/megogo/JsHttpRequest.js"></script>
+    <script type="text/javascript" src="http://212.77.128.205/stalker_portal/external/megogo/watchdog.js"></script>
+
+    <script>
+      window.log = function(params) {
+        var date = new Date();
+        console.log(
+          date.getHours() +
+            ":" +
+            date.getMinutes() +
+            ":" +
+            date.getSeconds() +
+            ":" +
+            date.getMilliseconds() +
+            " -> ",
+          params
+        );
+      };
+    </script>
+  </body>
+</html>

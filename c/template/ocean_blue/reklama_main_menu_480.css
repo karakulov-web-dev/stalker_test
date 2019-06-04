@@ -1,0 +1,29 @@
+.reklama_main_menu_block{
+    position: absolute;
+    left: 70px;
+    top : 135px;
+    width: 293px;
+    height: 85px;
+    color: #fff;
+    text-shadow: #000 0 -1px 0;
+    font-size: 34px;
+    background-image: url("i_720/25alfa_20.png");
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.reklama_main_menu_block .curweather_img{
+    position: absolute;
+    top : 2px;
+    left: 35px;
+}
+
+.reklama_main_menu_block .curweather_descr{
+    margin: 27px 0px 0 120px;
+    padding: 0 0 8px 8px;
+}
+
+.reklama_main_menu_block .curweather_title{
+    font-family: "Myriad Pro Cond", sans-serif;
+    color: #99a8b5;
+}

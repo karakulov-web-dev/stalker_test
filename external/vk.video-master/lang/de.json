@@ -1,0 +1,64 @@
+{
+	"meta": {
+		"charset": "utf-8",
+		"project": "vk.video 0.0.1",
+		"language": "de",
+		"plural": "(n != 1)"
+	},
+	"data": {
+		"": {
+			"External video can not be played": "",
+			"Friends videos": "",
+			"Groups videos": "",
+			"My albums": "",
+			"My videos": "",
+			"No access": "",
+			"Own albums": "",
+			"Search": "",
+			"Total": "",
+			"User albums": "",
+			"Videos of me": "",
+			"added": "",
+			"ago": "",
+			"day": [
+				"",
+				""
+			],
+			"hour": [
+				"",
+				""
+			],
+			"minute": [
+				"",
+				""
+			],
+			"month": [
+				"",
+				""
+			],
+			"offline": "",
+			"online": "",
+			"second": [
+				"",
+				""
+			],
+			"user": [
+				"",
+				""
+			],
+			"video": [
+				"",
+				""
+			],
+			"view": [
+				"",
+				""
+			],
+			"vk.com - a social network for quick and easy communication between people all over the world. You can exchange messages and share photos, follow the news of your friends and make new acquaintances, watch videos and listen to music, join soobzestva and play games.": "",
+			"year": [
+				"",
+				""
+			]
+		}
+	}
+}

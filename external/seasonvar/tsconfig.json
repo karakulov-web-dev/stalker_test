@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "target": "es3",
+        "outFile": "app.js",
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [
+        "./ts/app.ts"
+    ]
+}

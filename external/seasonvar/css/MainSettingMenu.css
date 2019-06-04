@@ -1,0 +1,70 @@
+.app_MainSettingMenuList_wrap {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background: url('../img/bgBottomButton.png');
+    }
+    
+    .app_MainSettingMenuList_window {
+        width: 315px;
+        margin: 97px auto;
+        background: #fafafa;
+        position: relative;
+    }
+    
+    .app_MainSettingMenuList_header {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 47px;
+        background: #c62d1f;
+        border: 1px solid #d02718;
+        color: #ffffff;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: bold;
+        padding-top: 25px;
+        padding-left: 40px;
+    }
+    
+    .app_MainSettingMenuList_content {
+        position: relative;
+        top: 74px;
+        background: #cccccc;
+        padding: 2%;
+        width: 96.1%;
+    }
+    
+    .app_MainSettingMenuListItem {
+        font-size: 16px;
+        font-family: Roboto, Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px;
+    }
+    .app_MainSettingMenuListItem.active {
+        background: #999999;
+    }
+
+   
+
+    .ParentControlWindow_h1 {
+        font-size: 16px;
+        font-family: Roboto, Arial, sans-serif;
+        font-weight: bold;
+        margin: 0px 0px;
+        padding: 0px 0px;
+        position: relative;
+        left: 4px;
+        top: 20px;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 40px;
+    }
+    

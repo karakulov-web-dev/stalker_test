@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Zoomby</title>
+<script language="javascript" type="text/javascript" src="Javascript/Main.js"></script>
+<!-- <script language="javascript" type="text/javascript" src="Javascript/objs.js"></script> -->
+    <script language="javascript" type="text/javascript" src="Javascript/Server.js"></script>
+    <script language="javascript" type="text/javascript" src="Javascript/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="Javascript/key-processing.js"></script>
+    <script language="javascript" type="text/javascript" src="Javascript/Player.js"></script>
+    <script language="JavaScript" src="Javascript/event.js"></script>
+    <script type="text/javascript" src="Javascript/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="Javascript/RGraph.bar.js" ></script>
+</head>
+<body onload="Main.onLoad();" onkeydown="keydown(event)">
+	<div id="top" style="display: none;"><div id="top1"></div><span class="widget_title" id="version"><img id="logozoomby" src="./img/zoomby_logo.gif"></span><span id="widget_time"></span></div>
+<div id="channelList" style="display: none;">
+					<div class="channel" id="ch0"><div id="number0" class="number"></div><div class="chan_info" id="chan0"><div class="first_line"><div class="channel_name" id="title0"></div></div></div></div>
+					<div class="channel" id="ch1"><div id="number1" class="number"></div><div class="chan_info" id="chan1"><div class="first_line"><div class="channel_name" id="title1"></div></div></div></div>
+					<div class="channel" id="ch2"><div id="number2" class="number"></div><div class="chan_info" id="chan2"><div class="first_line"><div class="channel_name" id="title2"></div></div></div></div>
+					<div class="channel" id="ch3"><div id="number3" class="number"></div><div class="chan_info" id="chan3"><div class="first_line"><div class="channel_name" id="title3"></div></div></div></div>
+					<div class="channel" id="ch4"><div id="number4" class="number"></div><div class="chan_info" id="chan4"><div class="first_line"><div class="channel_name" id="title4"></div></div></div></div>
+					<div class="channel" id="ch5"><div id="number5" class="number"></div><div class="chan_info" id="chan5"><div class="first_line"><div class="channel_name" id="title5"></div></div></div></div>
+					<div class="channel" id="ch6"><div id="number6" class="number"></div><div class="chan_info" id="chan6"><div class="first_line"><div class="channel_name" id="title6"></div></div></div></div>
+					<div class="channel" id="ch7"><div id="number7" class="number"></div><div class="chan_info" id="chan7"><div class="first_line"><div class="channel_name" id="title7"></div></div></div></div>
+					<div class="channel" id="ch8"><div id="number8" class="number"></div><div class="chan_info" id="chan8"><div class="first_line"><div class="channel_name" id="title8"></div></div></div></div>
+					<div class="channel" id="ch9"><div id="number9" class="number"></div><div class="chan_info" id="chan9"><div class="first_line"><div class="channel_name" id="title9"></div></div></div></div>
+				</div> 
+	 <div id="info" style="display: none;" ><div class="logo"><img id="img" src="./img/xbmc-series.jpg" width=390px><div id="info_film" style="display: none;"><div id="rating"></div><img id='zvezda' src="./img/fon.png"><div id="Adult"></div><div id="Year"></div><div id="country"></div><div id="duration"></div><div id="director"></div><div id="actors"></div></div></div></div>
+     <!-- <div id="film_info" style="display: none;"><div class="logo_film"><img id="img_film" src="" width=205px height=150px float=left margin=4px><div id="file_name"></div><div id="spravka"></div></div></div>  -->
+     <div id="film_info" style="display: none;"><div class="logo_film"><img id="img_film" src="./img/zoomby_logo.gif" width=205px height=150px float=left margin=4px><div id="file_name">123123</div><div id="spravka">345345345</div></div></div>
+	<div id="navi" style="display: none;">
+			    <div id="help_navi_menu" style="display:block;">
+					<div id="navi_button"><img src="./img/lr_button.png"></img></div><span id="navi_helpertext">Управление курсором</span>
+                    <div id="navi_button"><img src="./img/ok.gif"></img></div><span id="navi_helpertext">Выбор</span>
+                    <div id="navi_button"><img src="./img/ico_exit.png"></img></div><span id="navi_helpertext">Выход</span>
+                    <div id="navi_button"><img src="./img/ico_info.png"></img></div><span id="navi_helpertext">Инфо</span>
+                    <div id="navi_button"><img src="./img/ico_f3.png"></img></div><span id="navi_helpertext">Поиск</span>
+				</div>
+                </div>
+    <div id="navi_info" style="display: none;">
+                                    <div id="navi_button"><img src="./img/ico_exit.png"></img></div><span id="navi_helpertext">Выход</span>
+                                </div>
+<!-- Player -->
+        <div id="main" style="display: none;">
+            <div id="filename">Some name gq</div>
+            <div id="playModeInPlayer" class="single"></div>
+            <div id="time_act">00:00:00</div>
+            <div id="time_total">/ 00:00:00</div>
+            <div id="quality">HQ</div>
+            <div id="interval_above"><a href="#" class="interval_above"></a></div>
+            <div id="interval_input">30 sec</div>
+            <div id="interval_less"><a href="#" class="interval_less"></a></div>
+            <div id="rewind"><a href="#" class="rewind"></a></div>
+            <div id="scrollbar"><div id="conditiion"></div></div>
+            <div id="forward"><a href="#" class="forward"></a></div>
+        </div>
+<!-- End Player -->
+<!-- Volume@affect -->
+        <div id="mute" style="display:none;"></div>
+        <div id="playingStatus" style="display:none;"></div>
+        <div id="volumeForm" style="display:none;">
+            <div id="volume_bar"><div id="volume_right"></div></div>
+            <div id="volume_num">100%</div>
+        </div>
+<!-- End Volume@affect -->
+<!-- aspectRatio@affect -->
+        <div id="screenAspect"></div>
+<!-- End aspectRatio@affect -->
+<!-- Loading@affect -->
+        <div id="loading" style="display:block;">
+            <div class="render"><img src="img/loading.gif" /><span>Загрузка...<span id="loading2"></span></span></div>
+            <div id="soobshenie"></div>
+        </div>
+<!-- End Loading@affect -->
+<!-- search -->
+            <div id="yt_search_bg" style="display:none;">
+                <div id="yt_modalform_search">
+                    <div class="yt_modalform_left"></div>
+                    <div class="yt_modalform_right modalinput_search">
+                        <input name="textfield" type="text" class="yt_modalinput" id="search_val" value="" />
+                    </div>
+                </div>
+            </div>
+<!-- End search -->
+<div id="not_found" style="display: none;"><div id="soobshenie1">Не найдено ни одного фильма, мультфильма, сериала или телепередачи соответствующего вашему запросу. Нажмите EXIT.</div></div>
+</body>
+</html>

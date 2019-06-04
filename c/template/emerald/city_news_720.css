@@ -1,0 +1,513 @@
+/*1.0*/html,body
+{
+     margin: 0;
+     padding: 0;
+     width: 1280px; height: 720px;
+/*     outline: 2px solid #000; */
+     /*background-image: url("bg3.png");     */
+}
+
+#kvant_pages {
+    top: 91px;
+    left: 70px;
+    position: absolute;
+    width: 1113px;
+    height: 560px;
+}
+
+#kvant_gl_menu
+{
+     top: 8px;
+     left: 100px;
+     position: absolute;
+     width: 1100px;
+     height: 600px;
+     display: block;
+}
+
+#kvant_video0
+{
+     display: block;
+     top: 0px;
+     left: 0px;
+     position: absolute;
+     width: 922px;
+     height: 136px;
+     overflow: hidden;
+     border-radius: 5px;
+    /* background-color: rgb(34, 101, 145);*/
+}
+
+#kvant_video1
+{
+     display: block;
+     top: 136px;
+     left: 0px;
+     position: absolute;
+     width: 922px;
+     height: 136px;
+     overflow: hidden;
+     border-radius: 5px;
+     /*background-color: rgb(34, 101, 145);*/
+}
+
+#kvant_video2
+{    
+     display: block;
+     top: 272px;
+     left: 0px;
+     position: absolute;
+     width: 922px;
+     height: 136px;
+     overflow: hidden;
+     border-radius: 5px;
+    /* background-color: rgb(34, 101, 145);     */
+}
+
+#kvant_video3
+{    
+     display: block;
+     top: 408px;
+     left: 0px;
+     position: absolute;
+     width: 922px;
+     height: 136px;
+     overflow: hidden;
+     border-radius: 5px;
+     /*background-color: rgb(34, 101, 145);*/
+}
+
+#kvant_video_img0, #kvant_video_img1, #kvant_video_img2, #kvant_video_img3
+{
+	position: absolute;
+	left: 8px;
+	top: 3px;
+}
+
+#kvant_video_img0 img, #kvant_video_img1 img, #kvant_video_img2 img, #kvant_video_img3 img
+{
+	width: 230px;
+     height: 130px;
+	
+}
+
+#kvant_duration0, #kvant_duration1, #kvant_duration2, #kvant_duration3
+{
+     position: absolute;
+     top: 107px;
+     right: 690px;    
+     color: white;
+     text-align: center;
+     overflow: hidden;
+     height: 20px;
+    background: black;
+     /*width: 40px;*/
+     padding-right: 4px;
+     padding-left: 4px; 
+	padding-bottom: 2px;
+     font-size: 20px;
+}
+
+#kvant_data0, #kvant_data1, #kvant_data2, #kvant_data3
+{
+     position: relative;
+     top: 10px;
+     left: 0px;
+     color: white;     
+     overflow: hidden;
+     height: 30px;
+    /*  background: black;
+     width: 73px; 
+     padding-right: 4px; */
+     font-size: 19px;
+     text-align: left;
+}
+
+#kvant_name0, #kvant_name1, #kvant_name2, #kvant_name3
+
+{
+     position: absolute;
+     top: 8px;
+     font-size: 25px;
+     font-weight: bold;
+     left: 250px;
+     width: 656px;
+     color: white;
+     text-align: left;
+     overflow: hidden;
+   /*  height: 47px; */
+     font-family: Helvetica, sans-serif;
+}
+
+#kvant_menu_ {
+    top: 666px;
+    left: 55px;
+    position: absolute;
+    width: 1134px;
+    height: 24px;
+    font-size: 14px;
+    color: white;
+    overflow: hidden;
+}
+
+#kvant_red
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 11px;
+     font-weight: bold;
+     color: white;     
+     top:5px;
+     left: 25px;
+     vertical-align:middle;
+     float:left;
+     font-family: Helvetica, sans-serif;
+}
+#kvant_img_red
+{
+     position: absolute;
+     height: 24px;
+     top: 0px;
+     left: 0px;
+     vertical-align:middle;
+     background-image: url("kino_kuzbass/red.png");
+     width: 24px;
+}
+
+#kvant_green
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 11px;
+     color: white;     
+     top:5px;
+     left: 181px;
+     vertical-align:middle;
+font-weight: bold;
+font-family: Helvetica, sans-serif;
+}
+
+#kvant_img_green
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 157px;
+     vertical-align:middle;
+background-image: url("kino_kuzbass/green.png");
+width: 24px;
+}
+
+#kvant_yelow
+{
+     position: absolute;
+     height: 30px;  
+     font-size: 11px;
+     color: white;     
+     top:5px;
+     left: 305px;
+     vertical-align:middle;
+     font-weight: bold;
+     font-family: Helvetica, sans-serif;
+}
+
+#kvant_img_yelow
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 280px;
+     vertical-align:middle;
+background-image: url("kino_kuzbass/yelow.png");
+width: 24px;
+}
+
+#kvant_blue
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 11px;
+     color: white;    
+     top:5px;
+     left: 488px;
+     vertical-align:middle;
+     font-weight: bold;
+     font-family: Helvetica, sans-serif;
+}
+
+#kvant_img_blue
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 463px;
+     vertical-align:middle;
+     background-image: url("./kino_kuzbass/blue.png");
+     width: 24px;
+font-weight: bold;
+}
+
+#kvant_number_page {
+    position: absolute;
+    top: 25px;
+    left: 1060px;
+    width: 180px;
+    height: 30px;
+    color: white;
+    font-size: 27px;
+}
+
+#kvant_loading
+{
+	position: absolute;
+        top: 72%;
+        left: 42%;
+        height: 50px;
+        color: white;
+        font-size: 40px;
+        z-index: 20;
+        padding: 2px;
+        border-radius: 3px;
+}
+#kvant_exit_message
+{
+     display: none;
+     width: 1280px;
+     height: 720px;
+     background-color:rgba(0, 0, 0, 0.7);
+     position:absolute;
+     top:0;
+     left:0;
+     z-index:2010;
+}
+#kvant_exit_message_
+{
+    position: absolute;
+    z-index: 2002;
+     top: 49%;
+     left: 37%;
+     margin: -24px 0 0 -80px;
+     height: 57px;
+     width: 386px;
+     background: #000;
+     text-align: center;
+     padding: 10px;
+     border-width: 2px;
+     border-style: double;
+     border-color: #999;
+     border-radius: 4px;
+     -webkit-border-radius: 4px;
+     background-color: rgb(15, 50, 21);
+/*	background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i/25alfa_20.png");*/
+}
+#kvant_exit_message_title
+{
+     position: absolute;
+     left: 30px;
+     top: 24px;
+     color: #fff;
+     font-size: 23px;
+      width: 325px;
+     text-align: center;
+}
+
+#kvant_exit_message span
+{
+          top: -3px;
+          position: relative;
+}
+
+#kvant_menu
+{
+	top: 666px;
+    left: 200px;
+    position: absolute;
+    width: 1134px;
+    height: 28px;
+    font-size: 20px;
+    color: white;
+    overflow: hidden;
+
+}
+
+#kvant_menu_key0, #kvant_menu_key1, #kvant_menu_key2, #kvant_menu_key3, #kvant_menu_key4
+{
+     width: 280px;
+     height: 24px;
+     float: left;
+}
+
+#kvant_menu_key0_title, #kvant_menu_key1_title, #kvant_menu_key2_title, #kvant_menu_key3_title, #kvant_menu_key4_title
+{
+     left: 7px;
+     position: relative;
+/*     font_size: 24px; 
+        padding-top: 3px; */
+	top: -2px;
+}
+
+#kvant_menu_key0_img, #kvant_menu_key1_img, #kvant_menu_key2_img, #kvant_menu_key3_img, #kvant_menu_key4_img
+{
+     float: left;
+}
+
+#kvant_select_channel
+{
+     position: absolute;
+     top: 8px;
+     left: 130px;
+     position: absolute;
+     width: 1100px;
+     height: 600px;
+     display: none;
+}
+
+#kvant_select_channel_left_side
+{
+     top: 0px;
+     left: 0px;
+     position: absolute;
+/*     width: 358px; */
+     width: 425px;
+	height: 530px;
+     display: block;
+     font-size: 35px;
+     color:white;
+}
+
+#kvant_channel_0, #kvant_channel_1, #kvant_channel_2, #kvant_channel_3, #kvant_channel_4, #kvant_channel_5
+{
+     top: 0px;
+/*     width: 387px; */
+	width: 554px; 
+     height: 86px;
+     position: relative;
+     padding: 3px;
+/*    border-radius: 5px;
+     background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i/25alfa_20.png"); */
+	border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+
+#kvant_channel_0_img, #kvant_channel_1_img, #kvant_channel_2_img, #kvant_channel_3_img, #kvant_channel_4_img, #kvant_channel_5_img
+{
+	position: absolute;
+	left: 4px;
+	position: relative;
+	top: 10px;
+}
+
+#kvant_channel_0_title, #kvant_channel_1_title, #kvant_channel_2_title, #kvant_channel_3_title, #kvant_channel_4_title, #kvant_channel_5_title
+{
+     left:75px;
+     top: 22px;
+     position: absolute;
+}
+
+#kvant_channel_3
+{
+   /*  background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i/25alfa_20.png");*/
+}
+
+#kvant_select_channel_right_side
+{
+/*     right: 0px; */
+	right: 233px;
+     top: 0px;
+     width: 307px;
+     height: 552px;
+     position: absolute;
+/*     background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i/25alfa_20.png"); */
+	background-image: url("i/25alfa_20.png");
+/*     border-radius: 0px 5px 5px 5px; */
+	border-top-left-radius: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#kvant_select_channel_right_side_title
+{
+     left: 4px;
+     width: 237px;
+     height: 300px;
+     color: white;
+     font-size: 25px;
+     position: absolute;
+     top: 6px;
+     text-align: center;
+     overflow: hidden;
+	display: none;
+}
+
+#kvant_select_channel_update
+{
+	position: relative;
+     font-size: 22px;
+     top: 3px;
+     text-align: center;
+     color: white;
+     left: 3px;
+     height: 50px;
+     overflow: hidden;
+     width: 300px;
+	display: table;
+}
+
+#kvant_select_channel_update span
+{
+        vertical-align:middle !important;
+    display: table-cell !important;
+}
+
+#kvant_select_channel_right_side_preview
+{
+     position: relative;
+     top: 3px;
+     left: 7px;
+     height: 490px;
+     width: 320px;
+     overflow: hidden;   
+
+}
+
+#prev_video0, #prev_video1, #prev_video2
+{
+          top: 0px;
+     width: 320px;
+     height: 160px;
+     position: relative;
+     padding: 3px;
+}
+
+#prev_video0_img0 img, #prev_video0_img1 img, #prev_video0_img2 img
+{
+	width: 287px;
+     height: 162px;
+}
+
+#prev_duration0, #prev_duration1, #prev_duration2
+{
+     color: white;
+     background-color: black;
+     font-size: 15px;
+     padding-left: 4px;
+     padding-right: 4px;
+     height: 20px;
+     position: absolute;
+     top: 79px;
+     right:110px;
+	display: none;
+}
+
+#kvant_ad
+{
+     display: none;
+     width:1280px;
+     height:720px;
+     top:0;
+     left:0;
+     z-index: 10;
+        position: absolute;
+}
+

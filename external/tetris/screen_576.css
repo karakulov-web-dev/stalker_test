@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'micra';
+    src: url('fonts/micranormal.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrap {
+   margin: 40px auto 0 auto;
+   width: 600px;
+}
+
+#button_continue {
+   margin: 10px 0 0 0px;
+   width: 200px;
+}
+
+.left {
+	margin-top: 10px;
+	width: 570px;
+	float: left;
+	font-size: 11px;
+	line-height: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: justify;
+	border: 5px solid #ddd;
+	padding: 10px;
+	position:absolute;
+	z-index:1000;
+	background: #0c3b5c;
+	color: #CCCCCC;        
+
+}
+
+.left h2 {
+color: #CCCCCC;
+font-size: 16px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-weight: 80;
+padding : 5px 0 5px 0;
+}
+
+.left h3 {
+color: #CCCCCC;
+font-size: 16px;
+font-weight: 100;
+padding : 0px 0 0px 0;
+}
+
+
+#tetris * {
+	background-color: transparent;
+	border: none;
+	line-height: 1.4em;
+	list-style: none inside;
+	margin: 0;
+	padding: 0;
+	text-align: inherit;
+	text-decoration: none;
+	
+}
+
+/* Main */
+
+#tetris {
+	text-align: center;
+	padding-top: 0;
+	
+}
+
+	#tetris a:link, #tetris a:hover, #tetris a:active, #tetris a:visited {
+		color: #202;
+		text-decoration: underline;
+	}
+
+	#tetris strong {
+		font-weight: bold;
+	}
+
+	#tetris .clear {
+		clear: both;
+	}
+        
+
+
+#tetris-wrap {
+	margin: 0 auto 0 auto;
+	position: relative;
+	text-align: right;
+	width: 456px;
+}
+
+	#tetris-wrap-inner {
+		border: 2px solid #06304f;
+		margin-bottom: .2em;
+	}
+
+#tetris-main, #tetris-overlay, #tetris-side {
+	height: 547px; 
+}
+
+#tetris-main, #tetris-overlay {
+	width: 300px;
+}
+
+#tetris-main {
+	/*background: #012138;*/
+	background: url(img/bgg.png) no-repeat; 
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+#tetris-overlay {
+	position: absolute;
+
+}
+
+#tetris-message {
+    font-family: micra;
+    font-size: 27px;
+    text-align: center;
+    margin: 110px 0 0;
+    background-color: #1d6bc0;
+    -khtml-opacity: 0.8;
+    position:absolute;
+    width:300px;
+}
+
+#tetris-message p {
+	color: #FFF;
+	padding: .5em;
+}
+
+#tetris-message p span {
+	display: block;
+	font-size: 18px;
+	font-style: italic;
+	text-transform: none;
+}
+
+
+#tetris-message p score {
+        display: block;
+        font-size: 30px;
+        color: #feb622;
+}
+
+
+#tetris-message-gameover {
+    font-family: micra;
+    font-size: 24px;
+    text-align: center;
+    margin: 50px 0 0;
+    background-color: #1d6bc0;
+    -khtml-opacity: 0.8;
+   position:absolute;
+   width:300px;
+}
+
+#tetris-message-gameover p {
+        color: #FFF;
+        padding: .5em;
+}
+
+#tetris-message-gameover p span {
+        display: block;
+        font-size: 16px;
+        font-style: italic;
+        text-transform: none;
+}
+
+
+#tetris-message-gameover p score {
+        display: block;
+        font-size: 28px;
+        color: #feb622;
+}
+
+
+
+#tetris-side {
+	background: #012138;
+	color: #FFF;
+	float: right;
+	text-align: left;
+	width: 152px;
+}
+
+	#tetris-side-inner {
+		padding: 0px;
+	}
+
+	#tetris-side dl {
+		clear: both;
+	}
+
+	#tetris-side dt {
+		float: left;
+	}
+
+	#tetris-side dd {
+		float: right;
+	}
+
+
+dd#tetris-score {
+    position: absolute;
+    text-align: center;
+    top: 111px;
+    width: 142px;
+}
+
+
+dd#tetris-level {
+    position: absolute;
+    text-align: center;
+    top: 35px;
+    width: 142px;
+}
+
+
+
+dd#tetris-hightscore {
+    position: absolute;
+    text-align: center;
+    top: 213px;
+    width: 144px;
+}
+
+
+
+#tetris-next {
+	background: url(img/bg_next.png) no-repeat;
+	/*background: #123451;*/
+        margin: 10px 0 0 17px;	
+	position: relative;
+	height: 120px;
+	width: 120px;
+}
+
+
+
+#tetris-scores {
+        background: url(img/score.png) no-repeat;
+        /*background: #123451;*/
+        margin: 10px 0 0 3px;
+        position: relative;
+        height: 248px;
+        width: 149px;
+        font-family: micra;
+        font-size: 18px;
+}
+
+
+
+	#tetris-next-inner {
+		padding: 1em;
+	}
+
+
+#tetris-keys {
+    color: #ffffff;
+    font-family: micra;
+    font-size: 12px;
+    margin: 30px 0 0 10px;
+    width: 135px;
+}
+
+
+#logo {
+                margin: 35px 0 0 15px;
+                position: absolute;
+                width: 125px;
+                height:113px;
+		background: url(img/logo.png) no-repeat;
+                display:none;  
+}
+
+#yt_search_bg { height:547px; width:450px; background-color:rgba(0, 0, 0, 0.7); position:absolute; top:0px; z-index: 1003; }
+#yt_modalform_search { height:56px; left:60px; top:130px; position:absolute; z-index: 1004; }
+#search_note { width:350px; left:50px; top:70px; position:absolute;  text-align:center; font:14px trebuchet ms, Arial, Helvetica, sans-serif; font-weight:bold; color:#ffffff;}
+#msgboxx { width:300px; left:60px; top:400px; position:absolute; text-align:center; font:16px trebuchet ms, Arial, Helvetica, sans-serif; font-weight:bold; color:#f81801;}
+#yt_search_bg .yt_modalform_left {background:url(img/search.png) left no-repeat; height:56px; width:34px; position:absolute; }
+#yt_search_bg .yt_modalform_right{background:url(img/search.png) right no-repeat; height:56px; margin-left:34px; padding-right:20px; }
+#yt_search_bg .modalinput_search { width:300px; position:relative; }
+#yt_search_bg .yt_modalinput{font:20px trebuchet ms, Arial, Helvetica, sans-serif; font-weight:bold; color:#313131; border:none; background:none; margin-right:50px; margin-top:14px; width:260px;}	

@@ -1,0 +1,21 @@
+.app_HeaderComponent {
+  height: 80px;
+  background: #2b2521;
+  border-bottom: 1px solid grey;
+}
+
+.app_HeaderComponent_img {
+  width: 250px;
+  margin-top: 20px;
+  margin-left: 78px;
+}
+.app_HeaderComponent_breadcrumbs {
+  position: absolute;
+  top: 14px;
+  left: 350px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #dddddd;
+}

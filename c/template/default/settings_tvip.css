@@ -1,0 +1,468 @@
+.layer_bg2{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 1280px;
+    height: 720px;
+    background-image: url("i_720/bg2.png");
+}
+
+#settings_page
+{
+	width: 1000px; 
+	height: 570px;
+	left: 130px;
+	top: 100px;
+	background-color: #1B3D73; 
+	position: absolute;
+	font-family:"Trebuchet MS";
+}
+
+#settings_page_main, #settings_page_security, #settings_page_portal, #settings_page_protokol
+{
+	width: 980px;
+    height: 487px;
+    left: 10px;
+    top: 70px;
+    background-color: #1B3D73;
+    position: absolute;
+}
+
+#settings_page_main_button0, #settings_page_main_button1, #settings_page_main_button2, #settings_page_main_button3
+{
+	width: 880px; 
+	height:60px;
+	left: 25px;		 
+	position: absolute;
+	border-radius: 5px;
+}
+
+#settings_page_main_button0
+{
+	top: 25px;
+	background-color: white;
+}
+
+#settings_page_main_button1
+{
+	top: 85px;	
+}
+
+#settings_page_main_button2
+{
+	top: 145px;	
+}
+#settings_page_main_button3
+{
+	top: 205px;	
+}
+
+#settings_page_main_button0_ico, #settings_page_main_button1_ico, #settings_page_main_button2_ico, #settings_page_main_button3_ico
+{
+	width: 50px; 
+	height:50px;
+	left: 7px;
+	top: 6px;
+	position: absolute;
+	background:url(img/ico_lock_act.png);
+	background-repeat: no-repeat;
+}
+
+#settings_page_main_button1_ico
+{
+	background:url(img/ico_lang.png);
+	background-repeat: no-repeat;
+}
+
+#settings_page_main_button2_ico
+{
+	background:url(img/ico_wifi.png);
+	background-repeat: no-repeat;
+}
+
+#settings_page_main_button3_ico
+{
+	background:url(img/ico_advset.png);
+	background-repeat: no-repeat;
+}
+
+#settings_page_main_button0_caption, #settings_page_main_button1_caption, #settings_page_main_button2_caption, #settings_page_main_button3_caption
+{
+	width: 680px; 
+	height:35px;
+	left: 70px;
+	top: 5px;
+	position: absolute;
+	color: #1B3D73;
+	font-size: 40px;
+	/*font-weight:bold;*/
+	font-family:"Trebuchet MS";
+}
+
+#settings_page_main_button1_caption, #settings_page_main_button2_caption, #settings_page_main_button3_caption
+{
+	color: white;
+}
+
+#settings_page_caption
+{
+	width: 370px; 
+	height:60px;
+	left: 30px;
+	top: 10px;
+	position: absolute;
+	font-size: 35px;
+	color: white;
+	font-family:"Myriad Pro";
+}
+
+#settings_page_security_pass, #settings_page_security_new_pass, #settings_page_security_conf_pass
+{
+	width: 930px; 
+	height:60px;
+	left: 10px;		 
+	position: absolute;	
+	/*border-radius: 5px;*/
+	/*background-color: green;*/
+}
+
+#settings_page_security_pass
+{
+	top: 25px;
+}
+
+#settings_page_security_new_pass
+{
+	top: 80px;
+}
+
+#settings_page_security_conf_pass
+{
+	top: 135px;
+}
+
+.settings_page_menu_caption
+{
+	position:absolute;
+	top: 7px;
+	height:46px; 
+    width:492px;
+    color: white;    
+    font-size: 35px;
+    right: 432px;
+    text-align: right;
+}
+
+#settings_page_security_new_pass_input[type=password], #settings_page_security_conf_pass_input[type=password], #settings_page_security_pass_input[type=password] {
+    position:absolute;
+    right: 10px;
+    /*top: -24px;*/
+    height:46px; 
+    width:400px; 
+    margin:4px 0 4px 10px; 
+    background: none; 
+    font-family:"Trebuchet MS"; 
+    font-size:30px; 
+    color:#135; 
+    border-width: 0 8px; 
+    -webkit-border-image: url(img/input.png) 0 8 0 8 stretch stretch;
+}
+
+#settings_page_security_pass_input[type=password_focus], #settings_page_security_new_pass_input[type=password_focus], #settings_page_security_conf_pass_input[type=password_focus]{
+     position:absolute;
+    right: 10px;
+    /*top: -24px;*/
+    height:46px; 
+    width:400px; 
+    margin:4px 0 4px 10px; 
+    background: none; 
+    font-family:"Trebuchet MS"; 
+    font-size:30px; 
+    color:#135; 
+    border-width: 0 8px; 
+    -webkit-border-image: url(img/input_act.png) 0 8 0 8 stretch stretch;
+}
+
+#settings_page_security_check_ivi, #settings_page_security_check_catalog, #settings_page_security_check_youtube
+{
+	width: 60px; 
+	height:60px;
+	right: 42px;		 
+	position: absolute;	
+	/*border-radius: 5px;*/
+	/*background-color: green;*/
+	
+}
+
+#settings_page_security_check_ivi
+{
+	top: 190px;	
+}
+
+#settings_page_security_check_catalog
+{
+	top: 243px;	
+}
+
+#settings_page_security_check_youtube
+{
+	top: 296px;	
+}
+
+#settings_page_security_checking_ivi[type=not_check], #settings_page_security_checking_catalog[type=not_check], #settings_page_security_checking_youtube[type=not_check]
+{
+	position:absolute;
+    right: 378px;
+    /*top: -24px;*/
+    height: 46px;
+    width: 46px;
+    margin: 4px 0 4px 10px;
+    background: none;
+    color: #135;
+    border-width: 0 8px;
+    -webkit-border-image: url(img/check.png) 0 0 0 0;
+}
+
+#settings_page_security_checking_ivi[type=not_check_focus], #settings_page_security_checking_catalog[type=not_check_focus], #settings_page_security_checking_youtube[type=not_check_focus]
+{
+	position:absolute;
+    right: 378px;
+    /*top: -24px;*/
+    height: 46px;
+    width: 46px;
+    margin: 4px 0 4px 10px;
+    background: none;
+    color: #135;
+    border-width: 0 8px;
+    -webkit-border-image: url(img/check_act.png) 0 0 0 0;
+}
+
+#settings_page_security_checking_ivi[type=check], #settings_page_security_checking_catalog[type=check], #settings_page_security_checking_youtube[type=check]
+{
+	position:absolute;
+    right: 378px;
+    /*top: -24px;*/
+    height: 46px;
+    width: 46px;
+    margin: 4px 0 4px 10px;
+    background: none;
+    color: #135;
+    border-width: 0 8px;
+    -webkit-border-image: url(img/checked.png) 0 0 0 0;
+}
+
+#settings_page_security_checking_ivi[type=check_focus], #settings_page_security_checking_catalog[type=check_focus], #settings_page_security_checking_youtube[type=check_focus]
+{
+	position:absolute;
+    right: 378px;
+    /*top: -24px;*/
+    height: 46px;
+    width: 46px;
+    margin: 4px 0 4px 10px;
+    background: none;
+    color: #135;
+    border-width: 0 8px;
+    -webkit-border-image: url(img/checked_act.png) 0 0 0 0;
+}
+
+#settings_page_security_btn_ok, #settings_page_portal_btn_ok, #settings_page_protokol_btn_ok
+{
+	position:absolute;
+	top: 430px;
+	left: 700px;
+	height: 46px;
+    width: 75px;
+    -webkit-border-image: url(img/btn.png) 0 0 0 0;
+    color: white;
+    font-size: 28px;
+    font-weight:bold
+}
+
+#settings_page_security_btn_cancel, #settings_page_portal_btn_cancel, #settings_page_protokol_btn_cancel
+{
+	position:absolute;
+	top: 430px;
+	left: 790px;
+	height: 46px;
+    width: 145px;
+    -webkit-border-image: url(img/btn_l.png) 0 0 0 0;
+    color: white;
+    font-size: 28px;
+    font-weight:bold;
+    background:none;
+    white-space:nowrap;
+    /*border-width: 0 20px;*/
+}
+
+.settings_page_btn_caption
+{
+	/*position:absolute;*/
+	top: 10px;
+	text-align: center;
+	margin-top: 5px; 
+}
+
+#settings_page_portal_load, #settings_page_portal_load_ok, #settings_page_portal_tema
+{
+	width: 930px; 
+	height:60px;
+	left: 10px;		 
+	position: absolute;	
+	/*border-radius: 5px;*/
+	/*background-color: green;*/
+}
+
+#settings_page_portal_load
+{
+	top: 50px;
+}
+
+#settings_page_portal_load_ok
+{
+	top: 105px;
+}
+
+#settings_page_portal_tema
+{
+	top: 186px;
+}
+
+#settings_page_portal_load_input[type=portal_focus], #settings_page_portal_tema_input[type=portal_focus]
+{
+     position:absolute;
+    right: 10px;
+    /*top: -24px;*/
+    height:46px; 
+    width:400px; 
+    margin:4px 0 4px 10px; 
+    background: none; 
+    font-family:"Trebuchet MS"; 
+    font-size:30px; 
+    color:#135; 
+    border-width: 0 8px; 
+    -webkit-border-image: url(img/input_arrow_act.png) 0 0 0 0 stretch stretch;
+}
+
+#settings_page_portal_load_input[type=portal], #settings_page_portal_tema_input[type=portal]
+{
+     position:absolute;
+    right: 10px;
+    /*top: -24px;*/
+    height:46px; 
+    width:400px; 
+    margin:4px 0 4px 10px; 
+    background: none; 
+    font-family:"Trebuchet MS"; 
+    font-size:30px; 
+    color:#135; 
+    border-width: 0 8px; 
+    -webkit-border-image: url(img/input_arrow.png) 0 0 0 0 stretch stretch;
+}
+
+
+
+#settings_page_portal_load_ok_check[type=check_portal]
+{
+	position:absolute;
+    right: 378px;
+    /*top: -24px;*/
+    height: 46px;
+    width: 46px;
+    margin: 4px 0 4px 10px;
+    background: none;
+    color: #135;
+    border-width: 0 8px;
+    -webkit-border-image: url(img/check.png) 0 0 0 0;
+}
+
+#settings_page_portal_load_ok_check[type=checked_portal]
+{
+	position:absolute;
+    right: 378px;
+    /*top: -24px;*/
+    height: 46px;
+    width: 46px;
+    margin: 4px 0 4px 10px;
+    background: none;
+    color: #135;
+    border-width: 0 8px;
+    -webkit-border-image: url(img/checked.png) 0 0 0 0;
+}
+
+#settings_page_portal_load_ok_check[type=check_portal_focus]
+{
+	position:absolute;
+    right: 378px;
+    /*top: -24px;*/
+    height: 46px;
+    width: 46px;
+    margin: 4px 0 4px 10px;
+    background: none;
+    color: #135;
+    border-width: 0 8px;
+    -webkit-border-image: url(img/check_act.png) 0 0 0 0;
+}
+
+#settings_page_portal_load_ok_check[type=checked_portal_focus]
+{
+	position:absolute;
+    right: 378px;
+    /*top: -24px;*/
+    height: 46px;
+    width: 46px;
+    margin: 4px 0 4px 10px;
+    background: none;
+    color: #135;
+    border-width: 0 8px;
+    -webkit-border-image: url(img/checked_act.png) 0 0 0 0;
+}
+
+#settings_page_protokol_variant
+{
+	width: 930px; 
+	height:60px;
+	left: 10px;
+	top: 50px;		 
+	position: absolute;	
+}
+
+#settings_page_protokol_variant_input[type=protokol_focus]
+{
+     position:absolute;
+    right: 10px;
+    /*top: -24px;*/
+    height:46px; 
+    width:400px; 
+    margin:4px 0 4px 10px; 
+    background: none; 
+    font-family:"Trebuchet MS"; 
+    font-size:30px; 
+    color:#135; 
+    border-width: 0 8px; 
+    -webkit-border-image: url(img/input_arrow_act.png) 0 0 0 0 stretch stretch;
+}
+
+#settings_page_protokol_variant_input[type=protokol]
+{
+     position:absolute;
+    right: 10px;
+    /*top: -24px;*/
+    height:46px; 
+    width:400px; 
+    margin:4px 0 4px 10px; 
+    background: none; 
+    font-family:"Trebuchet MS"; 
+    font-size:30px; 
+    color:#135; 
+    border-width: 0 8px; 
+    -webkit-border-image: url(img/input_arrow.png) 0 0 0 0 stretch stretch;
+}
+
+#settings_page_line
+{
+	position: absolute;	
+	width: 998px; 
+	size: 2px;
+	background-color: "#ff0000";
+	top: 55px;
+}

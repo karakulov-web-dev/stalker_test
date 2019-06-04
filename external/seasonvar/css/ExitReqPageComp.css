@@ -1,0 +1,41 @@
+.app_ExitReqPageComp {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: #fafafa;
+}
+.app_ExitReqComp {
+    position: fixed;
+    left: 150px;
+    right: 150px;
+    background: #cccccc;
+    top: 110px;
+}
+.app_ExitReqComp_h1 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: Roboto, Arial, sans-serif;
+}
+.app_ExitReqComp_item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Roboto, Arial, sans-serif;
+}
+.app_ExitReqComp_item  p {
+    text-align: center;
+    font-size: 18px;
+    font-family: Roboto, Arial, sans-serif;
+    margin: 10px;
+}
+
+.app_ExitReqComp_item.active {
+    background: #999999;
+}
+
+

@@ -1,0 +1,14 @@
+{
+	"meta": {
+		"charset": "utf-8",
+		"project": "Twitch.tv 1.0.2",
+		"language": "ru",
+		"plural": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+	},
+	"data": {
+		"": {
+			"Twitch is the world’s leading video platform and community for gamers, with more than 100 million visitors per month. We connect gamers from around the world by allowing them to broadcast, watch, and chat with each other.": "Twitch является ведущей в мире платформой видео и сообществом для геймеров, с более чем 100 миллионов посетителей в месяц. Мы подключаем геймеров со всего мира, позволяя им транслировать, смотреть и общаться друг с другом.",
+			"Twitch.tv": ""
+		}
+	}
+}

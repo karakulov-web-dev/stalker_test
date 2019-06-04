@@ -1,0 +1,39 @@
+.reklama_main_menu_block{
+    position: absolute;
+    left: 40px;
+    top: 80px;
+    width: 182px;
+    height: 280px;
+    color: #fff;
+text-align: center;
+    background-image: url("i_720/25alfa_20.png");
+        -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.reklama_main_menu_block .reclame_img{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 7px;
+        vertical-align: middle;
+         -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#kartinka{
+position: absolute; 
+left: 5px;
+top: 8px; 
+-webkit-border-radius: 12px; 
+width: 172px; 
+height: 265px; 
+overflow: hidden;
+}
+
+#kartinka img {
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+}

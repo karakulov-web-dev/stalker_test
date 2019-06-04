@@ -1,0 +1,14 @@
+{
+	"meta": {
+		"charset": "utf-8",
+		"project": "vk.music 1.5.7",
+		"language": "ru",
+		"plural": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+	},
+	"data": {
+		"": {
+			"A VKmusic app provides you an access to the music library of social network VKontakte. Log in and get access to your albums.": "Музыкальное приложение VK предоставляет вам доступ к музыкальной библиотеке социальной сети ВКонтакте. Вход на конференцию и получить доступ к вашим альбомам.",
+			"vk.music": ""
+		}
+	}
+}

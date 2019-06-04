@@ -1,0 +1,48 @@
+.app_BottomButtonComponent {
+  background: url("../img/bgBottomButton.png");
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 49px;
+}
+
+.app_BottomButton_wrap_button {
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.app_BottomButton_button {
+    background-color: #c62d1f;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    border: 1px solid #d02718;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 18px;
+    padding: 7px 22px;
+    text-decoration: none;
+}
+.app_BottomButton_button_red {
+    background-color: #c62d1f;
+    border: 1px solid #d02718;
+}
+.app_BottomButton_button_green {
+    background-color: green;
+    border: 1px solid green;
+}
+.app_BottomButton_button_yellow {
+    background-color: gold;
+    border: 1px solid gold;
+}
+.app_BottomButton_button_blue {
+    background-color: blue;
+    border: 1px solid blue;
+}

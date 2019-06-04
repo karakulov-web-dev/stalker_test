@@ -1,0 +1,63 @@
+.layer_bg2{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 720px;
+    height: 576px;
+    background-image: url("i/bg2.png");
+}
+
+
+#tabs_data_gm div {display:none;border:0;}
+#tabs_data_gm {font-size:16px;}
+
+#tabs_gm {margin:90px 0px 0px 30px;font-size:24px;position:absolute;}
+#tabs_gm a {float:left;color:#fff;padding:10px;text-decoration:none;text-align: center;width: 145px; background-image: url("i/25alfa_20.png");}
+#tabs_gm a.active {background:#f2c40b;color:#000;}
+
+
+#current_weather{position:absolute;left:50px;top:170px;background:url(weather_icon_i/weather_lines.png)bottom no-repeat;width:608px;height:230px;}
+#current_weather div{width:152px;height:220px;float:left;color:#fff;text-align:center;}
+#current_weather div .weather_day {font-size:20px; font-weight:bold; width:120px;height: 65px;text-align:center;}
+#current_weather div .weather_deg {font-size:30px; font-weight:bold; width:150px; color:#f2c40b; text-shadow:1px 1px 0 #000;text-align:center;}
+#current_weather div .weather_cond {position:absolute; font-size:16px;font-weight: bold;letter-spacing: 0.01em; width:150px; top:175px;}
+
+#current_weather .moon {background:url(weather_icon_i/moon.png) 50% 65% no-repeat;}
+#current_weather .moon-cloud {background:url(weather_icon_i/moon-cloud.png) 50% 65% no-repeat;}
+#current_weather .moon-cloud-rain {background:url(weather_icon_i/moon-cloud-rain.png) 50% 65% no-repeat;}
+#current_weather .moon-cloud-rain-storm {background:url(weather_icon_i/moon-cloud-rain-storm.png) 50% 65% no-repeat;}
+#current_weather .moon-cloud-snow {background:url(weather_icon_i/moon-cloud-snow.png) 50% 65% no-repeat;}
+#current_weather .nomoon-cloud {background:url(weather_icon_i/nomoon-cloud.png) 50% 65% no-repeat;}
+#current_weather .nomoon-cloud-rain {background:url(weather_icon_i/nomoon-cloud-rain.png) 50% 65% no-repeat;}
+#current_weather .nomoon-cloud-rain-storm {background:url(weather_icon_i/nomoon-cloud-rain-storm.png) 50% 65% no-repeat;}
+#current_weather .nomoon-cloud-snow {background:url(weather_icon_i/nomoon-cloud-snow.png) 50% 65% no-repeat;}
+#current_weather .nosun-cloud {background:url(weather_icon_i/nosun-cloud.png) 50% 65% no-repeat;}
+#current_weather .nosun-cloud-rain {background:url(weather_icon_i/nosun-cloud-rain.png) 50% 65% no-repeat;}
+#current_weather .nosun-cloud-rain-storm {background:url(weather_icon_i/nosun-cloud-rain-storm.png) 50% 65% no-repeat;}
+#current_weather .nosun-cloud-snow {background:url(weather_icon_i/nosun-cloud-snow.png) 50% 65% no-repeat;}
+#current_weather .sun {background:url(weather_icon_i/sun.png) 50% 65% no-repeat;}
+#current_weather .sun-cloud {background:url(weather_icon_i/sun-cloud.png) 50% 65% no-repeat;}
+#current_weather .sun-cloud-rain {background:url(weather_icon_i/sun-cloud-rain.png) 50% 65% no-repeat;}
+#current_weather .sun-cloud-rain-storm {background:url(weather_icon_i/sun-cloud-rain-storm.png) 50% 65% no-repeat;}
+#current_weather .sun-cloud-snow {background:url(weather_icon_i/sun-cloud-snow.png) 50% 65% no-repeat;}
+
+#gismeteo {position:absolute; background:url(weather_icon_i/gismeteo_icon.png) no-repeat; height:40px; width:168px; left:30px; bottom:40px;}
+
+#weather_reclame_block{
+   position: absolute;
+    left: 210px;
+        top: 440px;
+    width: 440px;
+    height:115px;
+text-align: center;
+        -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+overflow: hidden;
+}
+
+#weather_reclame_block img {
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+}
+

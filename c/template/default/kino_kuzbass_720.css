@@ -1,0 +1,376 @@
+.layer_bg2{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 1280px;
+    height: 720px;
+    background-image: url("i_720/bg2.png");
+}
+
+#pages
+{
+     top: 80px;
+     left:53px;
+     position: absolute;
+     width: 880px; height: 580px;  
+	font-size: 22px;
+}
+
+#today, #schedule
+{
+     top: 3px;
+     left:0px;
+     position: absolute;
+     width: 482px; height: 390px;   
+}
+
+#header
+{    
+     left:80px;
+     position: absolute;
+     color: white;
+     top: 3px;
+	
+}
+
+#kino0
+{    
+     display:none;
+     top: 35px;
+     left:63px;
+     position: absolute;
+     width: 250px; 
+     height: 490px;
+     overflow:hidden;
+      border-radius: 5px;
+<!--     background: rgba(0, 170, 238, 0.3); -->
+}
+
+#kino1
+{    
+     display:none;
+     top: 35px;
+     left: 317px;
+     position: absolute;
+     width: 250px;
+     height: 490px;
+     overflow:hidden;
+     border-radius: 5px;
+}
+
+#kino2
+{    
+     display:none;
+     top: 35px;
+     left: 572px;
+     position: absolute;
+     width: 250px;
+     height: 490px;
+     overflow:hidden;
+     border-radius: 5px;
+}
+
+#kino_data0, #kino_data1, #kino_data2
+{
+     text-transform: uppercase;
+     font-size: 18px;
+     text-align: center;
+     color: white;
+     overflow:hidden;
+     top: 3px;
+    position: absolute;
+    width: 250px;
+}
+
+#kino_img0, #kino_img1, #kino_img2
+{
+     top: 30px;
+     left:10px;
+     position: absolute;
+     width: 230px; height: 307px;   
+}
+
+#genre0, #genre1, #genre2
+{
+position: relative;
+     top: 341px;
+     text-transform: uppercase;
+     font-size: 16px;
+     text-align: center;
+     color: white;
+     height: 42px;
+     overflow:hidden;
+	width: 240px;
+	left: 5px;
+}
+
+#name0, #name1, #name2
+
+{
+position: relative;
+     top: 344px;
+     font-size: 25px;
+     font-weight: bold;
+     left: 10px;
+     width: 230px;
+     color: white;
+     text-align: center;
+     overflow:hidden;
+     height: 97px;
+}
+
+#menu
+{
+     top: 667px;
+     left:55px;
+     position: absolute;
+     width: 1100px; height: 24px;   
+     font-size: 14px;
+     color: white;     
+}
+
+#red
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 20px;
+	font-weight: bold;
+     color: white;     
+     top:2px;
+     left: 25px;
+     vertical-align:middle;
+     float:left;
+}
+#img_red
+{
+     position: absolute;
+     height: 24px;
+     top: 0px;
+     left: 0px;
+     vertical-align:middle;
+     background-image: url("kino_kuzbass/red.png");
+     width: 24px;
+}
+
+#green
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 20px;
+     color: gray;     
+     top: 2px;
+     left: 271px;
+     vertical-align:middle;
+font-weight: bold;
+}
+
+#img_green
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 245px;
+     vertical-align:middle;
+background-image: url("kino_kuzbass/green.png");
+width: 24px;
+}
+
+#yelow
+{
+     position: absolute;
+     height: 30px;  
+     font-size: 20px;
+     color: gray;     
+     top:2px;
+     left: 573px;
+     vertical-align:middle;
+     font-weight: bold;
+}
+
+#img_yelow
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 548px;
+     vertical-align:middle;
+background-image: url("kino_kuzbass/yelow.png");
+width: 24px;
+}
+
+#blue
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 20px;
+     color: gray;     
+     top:2px;
+     left: 804px;
+     vertical-align:middle;
+     font-weight: bold;
+}
+
+#img_blue
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 779px;
+     vertical-align:middle;
+     background-image: url("./kino_kuzbass/blue.png");
+     width: 24px;
+font-weight: bold;
+}
+
+#left
+{
+     display:none;
+     position: absolute;     
+     top: 159px;
+     left: 33px;
+     background-image: url("kino_kuzbass/left.png");
+     width: 21px;
+height: 165px;
+}
+
+#right
+{
+     position: absolute;     
+     top: 159px;
+     left: 830px;
+     width: 21px;
+     height: 165px;
+     background-image: url("kino_kuzbass/right.png");    
+}
+
+#ad, #ad1
+{
+     display:none;
+     position: absolute;
+     height: 370px;
+     width: 277px;     
+     top: 118px;
+     left: 946px;
+     border-radius: 10px;
+     overflow: hidden;     
+     -webkit-border-radius: 10px;
+     background-image: url("kino_kuzbass/25alfa_20.png");
+}
+
+#ad_ad, #ad_ad1
+{
+position: absolute;
+left: 5px;
+top: 5px;
+-webkit-border-radius: 12px;
+width: 268px;
+height: 360px;
+overflow: hidden;
+}
+
+#ad_ad img
+{
+  -webkit-border-radius: 7px;
+  border-radius: 7px; 
+}
+
+#ad_ad1 img
+{
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+
+
+#info_blok
+{
+          top: 30px;
+          left: 2px;
+          position: absolute;
+          width: 850px; 
+     height: 525px;
+     overflow: hidden;
+     color: white;
+     display: none;
+     font-size: 25px;
+}
+
+#scrol
+{
+     position: absolute;
+     top: 50px;
+     left: 860px;
+     background-image: url("i_720/mb_scroll_bg.png");
+     height: 500px;
+	width: 20px;
+}
+
+#scrol_now
+{
+     position: absolute;
+     left: 6px;
+     top: 7px;
+}
+
+#detail
+{
+     position: absolute;
+        left: 47px;
+        top: 80px;
+     z-index:1000;
+     width: 1230px;
+     color: white;
+     overflow: hidden;
+	box-sizing: border-box;
+    padding: 20px;
+}
+
+.detail_class
+{
+     position: relative;
+     left:10px;
+     font-size: 25px;
+}
+
+#detail_description
+{
+     height: 310px;
+     width: 1180px;
+     overflow: hidden;
+     text-align: justify;
+}
+
+#detail_starring
+{
+        width: 1180px;
+        overflow: hidden;
+        text-align: justify;
+}
+
+.shedule_date
+{
+     text-transform: uppercase;
+     color: yellow;
+}
+
+#loading
+{
+     position: absolute;
+     top: 48%;
+     left: 42%;
+     width: 100px;
+     height: 30px;
+     color: white;
+     font-size: 35px;
+}
+
+#key_info_today
+{
+     position: absolute;
+     top: 538px;
+     left: 150px;
+     width: 600px;
+     height: 30px;
+     color: white;
+     font-size: 22px;
+     text-align: center;
+}

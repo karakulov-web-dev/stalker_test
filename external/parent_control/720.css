@@ -1,0 +1,79 @@
+.outer:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.inner {
+    display: inline-block;
+    vertical-align: middle;
+    font-family:"Myriad Pro";
+    font-size:22px;
+    font-weight:bold;
+    color:#fff;
+    background-color:#B6B6B4;
+    border-radius: 10px;
+    width:80%;
+    height:50%;
+    background-image: url(../settings/style/576/bg.png)
+}
+.outer {
+    text-align: center;
+}
+.button {
+    position:relative;
+    height:42px;
+    min-width:200px; 
+    margin-left:10px;  
+    padding-bottom:1px; 
+    background:none; 
+    white-space:nowrap; 
+    font-family:"Myriad Pro"; 
+    font-size:22px; 
+    font-weight:bold; 
+    color:#fff; 
+    border-width: 0 25px; 
+    -webkit-border-image: url(../settings/style/576/btn.png) 0 25 0 25 stretch stretch;
+    text-shadow:0 2px 0 #122748;
+}
+.button:focus {
+    background:none;
+    color:#fff; 
+    border-width: 0 25px; 
+    -webkit-border-image: url(../settings/style/576/btn_act.png) 0 25 0 25 stretch stretch;
+}
+#input_pass[type=password] {
+    position:relative;
+    top: -8px;
+    height:30px; 
+    width:320px; 
+    margin:3px 0 3px 10px; 
+    background: none; 
+    font-family:"Trebuchet MS"; 
+    font-size:20px; 
+    color:#135; 
+    border-width: 0 6px; 
+    -webkit-border-image: url(../settings/style/576/input.png) 0 6 0 6 stretch stretch;
+    cursor:url(576/cursor.gif);
+}
+#input_pass[type=password]:focus {
+    /*height:46px;*/
+    position:relative;
+    font-size:20px; 
+    font-weight:bold; 
+    -webkit-border-image: url(../settings/style/576/input_act.png) 0 6 0 6 stretch stretch;
+    cursor:url(576/cursor.gif);
+}
+#str_head {
+    margin: 20px 20px 0px 20px;
+}
+#str_hint {
+    margin: 20px 20px 0px 20px;
+}
+#ico_wrong {
+    content:url(../settings/style/576/wrong__.png);
+    visibility: hidden;
+}
+/*#divpass {
+    height: 150px;
+}*/

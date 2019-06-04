@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type"  content="text/css">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <script language="javascript" type="text/javascript" src="main.js"></script>
+        <script type="text/javascript">
+                var s_size=0;
+                (function () {
+                        // conditional css loading                        
+                        if (screen.width>=1280)
+                        {
+                                document.write('<link rel="stylesheet" href="1280.css">');
+                                //s_size=1280;
+                        }
+                        else
+                        {
+                                document.write('<link rel="stylesheet" href="720.css">');
+                                //s_size=720;
+                        }
+                })();
+        </script> 
+
+<title>Update Portal for MAG</title>
+<!--        <link rel='stylesheet' type='text/css' href = 'css/720.css'/> -->
+</head>
+ <body onload="onLoad()">
+            <div id="update_page" style="display:none;">
+                <div id="logo"></div>
+                <div id="info">Обновление ПО</div>
+                <div id="info2"><font color="red">Внимание!</font> НЕ выключайте устройство!</div>
+                <div id="info3">Приставка перезагрузится автоматически<br>после завершения обновления.</div>
+                <div id="current_version">Текущая версия:</div><div id="current_version_"></div>
+                <div id="description">Описание:</div><div id="description_"></div>
+                <div id="date">Дата:</div><div id="date_"></div>
+                <div id="current_version1" style="display:none;">Доступная версия:</div><div id="current_version1_"></div>
+                <div id="description1" style="display:none;">Описание:</div><div id="description1_"></div>
+                <div id="date1" style="display:none;">Дата:</div><div id="date1_"></div>
+                <div id="update_status" style="display:none;">Статус обновления:</div><div id="update_status_" style="display:none;"></div>
+                <progress max="100" value="0" id="progress" style="display:none;"></progress>
+                <div id="percent_progress" style="display:none;">0%</div>
+                <div id="back_progress" style="display:none;"></div>
+            </div>
+            <div id="message" style="display:none;"><div id="caption">Внимание!!!</div><div id="text"></div></div>
+ </body>
+</html>

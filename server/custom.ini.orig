@@ -1,0 +1,243 @@
+[database]
+mysql_host = 127.0.0.1
+;mysql_host = 192.168.0.16:33306
+;mysql_host = localhost
+;mysql_host = 192.168.0.204
+mysql_user = stalker
+mysql_pass = bte3TS3wpPArq8qG
+db_name = stalker_db
+
+[system]
+stalker_api_url = http://localhost/stalker_portal/api/
+display_menu_after_loading = true
+daemon_api_url = http://localhost:3000/
+
+[server_api]
+; API required for tv archive, pvr and billing
+enable_api = true
+api_auth_login = stalker
+api_auth_password = vtuf0gfhjkm3
+
+[locales]
+allowed_locales[Русский] = ru_RU.utf8
+
+[tv_archive]
+; number of pieces of archive records
+; 1 piece = 1 hour
+tv_archive_parts_number = 72
+;tv_archive_parts_number = 6
+total_records_length = 600
+
+[l18n]
+default_timezone = Asia/Omsk
+default_city_id = 699
+; openweathermap, weatherco
+weather_provider = openweathermap
+default_openweathermap_city_id = 1498920
+openweathermap_appid = 'f943a38b4467c2fbdd5db14d646324f8'
+
+enable_tariff_plans = true
+
+; Number of errors before the automatic switch-off storage
+max_storage_failures = 60
+
+[pvr]
+record_max_length = 120
+
+[vclub]
+kinopoisk_rating = false
+
+;update_url = http://212.77.128.205/update/216_r2/
+update_url = http://10.20.0.105/update/2.18r3/
+
+[subscription]
+;all_modules[] = fw_update
+all_modules[] = reklama_gismeteo
+all_modules[] = weather.gismeteo
+all_modules[] = city_news
+all_modules[] = kino_kuzbass
+all_modules[] = cams
+all_modules[] = transport_app
+all_modules[] = my_city
+
+all_modules[] = tv
+all_modules[] = tv_archive
+all_modules[] = time_shift
+all_modules[] = epg.reminder
+all_modules[] = epg.recorder
+all_modules[] = epg
+all_modules[] = epg.simple
+
+all_modules[] = videocatalog
+;all_modules[] = zoombytv
+all_modules[] = megogo
+all_modules[] = youtube
+;all_modules[] = clipmezhdunet
+;all_modules[] = tvzavr
+;all_modules[] = zoomby
+all_modules[] = ivi
+all_modules[] = twitch
+all_modules[] = magiccast
+;all_modules[] = vk-music
+;all_modules[] = vk-video
+all_modules[] = multashki
+all_modules[] = multiplex
+all_modules[] = videoportal
+;all_modules[] = kurs
+;all_modules[] = msg_reader
+all_modules[] = weather.current
+all_modules[] = reklama_main_menu
+;all_modules[] = weather.day
+all_modules[] = cityinfo
+all_modules[] = horoscope
+all_modules[] = demo
+all_modules[] = infoportal
+;all_modules[] = kvant_app
+;all_modules[] = downloads_dialog
+;all_modules[] = downloads
+all_modules[] = widget.audio
+all_modules[] = remotepvr
+;all_modules[] = pvr_local
+all_modules[] = pomogator_app
+all_modules[] = records
+all_modules[] = downloads_dialog
+all_modules[] = downloads
+all_modules[] = radio
+all_modules[] = game.lines
+all_modules[] = game.memory
+all_modules[] = game.sudoku
+all_modules[] = game.mine
+all_modules[] = game.sokoban
+all_modules[] = game.tetris
+all_modules[] = game.2048
+all_modules[] = shoutcast
+all_modules[] = online_radio
+all_modules[] = picasa
+all_modules[] = settings
+all_modules[] = settings_tvip
+;all_modules[] = kurs
+;all_modules[] = weather.gismeteo
+;all_modules[] = weather.current
+;;all_modules[] = weather.day
+;all_modules[] = cityinfo
+;all_modules[] = horoscope
+;all_modules[] = demo
+;all_modules[] = infoportal
+;all_modules[] = internet
+;all_modules[] = megogo
+;all_modules[] = youtube
+;all_modules[] = clipmezhdunet
+;all_modules[] = videocatalog
+;all_modules[] = zoomby
+;all_modules[] = ivi
+;all_modules[] = videoportal
+all_modules[] = games
+all_modules[] = course.cbr
+;all_modules[] = course.nbu
+;all_modules[] = anecdote
+all_modules[] = karaoke
+;all_modules[] = vclub
+all_modules[] = account
+;all_modules[] = account_menu
+;all_modules[] = service_management
+;all_modules[] = pomogator
+all_modules[] = media_browser
+
+disabled_modules[] = vclub
+;disabled_modules[] = karaoke
+disabled_modules[] = settings.parent
+disabled_modules[] = settings.localization
+disabled_modules[] = settings.update
+disabled_modules[] = settings.playback
+disabled_modules[] = settings.common
+disabled_modules[] = settings.network_status
+disabled_modules[] = vidimax
+disabled_modules[] = weather.weatherco.day
+disabled_modules[] = weather.day
+disabled_modules[] = game.mastermind
+;disabled_modules[] = account
+disabled_modules[] = internet
+disabled_modules[] = service_management
+disabled_modules[] = account_menu
+;disabled_modules[] = anecdote
+
+
+demo_video_url = 'http://212.77.128.203/video/faq.mkv'
+
+play_in_preview_only_by_ok = false
+
+[settings]
+use_embedded_settings = false
+
+[external_settings]
+module[] = lock
+module[] = lang
+module[] = update
+module[] = net_info
+net_info[] = wired
+;net_info[] = pppoe
+net_info[] = wireless
+;net_info[] = speed
+module[] = video
+module[] = audio
+;module[] = playback
+module[] = portal
+module[] = net
+net[] = ethernet
+ethernet[] = dhcp
+ethernet[] = dhcp_manual
+ethernet[] = manual
+ethernet[] = no_ip
+;net[] = pppoe
+;pppoe[] = dhcp
+;pppoe[] = dhcp_manual
+;pppoe[] = disable
+net[] = wifi
+wifi[] = dhcp
+wifi[] = dhcp_manual
+wifi[] = manual
+module[] = advanced
+module[] = remote_control
+;module[] = servers
+module[] = broadcast_settings
+module[] = dev_info
+module[] = reload
+;module[] = internal_portal
+module[] = reboot
+
+enable_connection_problem_indication = true
+
+enable_buffering_indication = true
+
+allowed_stb_types = MAG200,MAG245,MAG250,AuraHD,MAG254,MAG245D,MAG322
+
+enable_playback_limit = false
+
+logarithm_volume_control = true
+
+stream_proxy = ''
+
+;test_download_url = 'http://212.77.128.205/update/216/test_rikt/250/Bootstrap'
+
+show_tv_channel_logo = true
+
+enable_hdmi_events_handler = false
+
+enable_mac_format_validation = false
+
+enable_api_v2 = true
+oauth_force_mac_check = false
+oauth_force_serial_number_check = false
+
+; Access types = mac, bearer
+api_v2_access_type = bearer
+
+epg_update_delay_per_user = 0.6
+
+show_channel_logo_in_preview = false
+
+show_tv_channel_pvr_icon = false
+
+show_version_in_main_menu =false
+
+portal_logo_url = /stalker_portal/c/template/logo_kliktv1.png

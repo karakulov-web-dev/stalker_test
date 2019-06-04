@@ -1,0 +1,21 @@
+.app_HomeComponent {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: #fafafa;
+}
+.app_messageComponent {
+  position: absolute;
+  bottom: 70px;
+  right: 50px;
+  background: url("../img/bgBottomButton.png");
+  width: 300px;
+  text-align: center;
+  font-family: Roboto, Arial, sans-serif;
+  color: white;
+  padding: 25px;
+}

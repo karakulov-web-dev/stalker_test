@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+
+		<title>КЛИК-ТВ</title>
+
+		<!-- Bootstrap core CSS -->
+		<!-- <link href="bootstrap/css/bootstrap.min.d" rel="stylesheet"> -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="dashboard.css" rel="stylesheet">
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+<!-- 		// <script src="jquery-2.1.1.min.js"></script>
+		// <script src="js/main.js"></script>
+		// <script src="js/client.js"></script>
+		// <script src="js/layout.js"></script>
+		// <script src="js/my_date.js"></script>
+		// <script src="js/player.js"></script>
+		// <script src="js/server.js"></script>
+		// <script src="js/storage.js"></script> -->
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a id="current_ch_name" class="navbar-brand" href="#">КЛИК-ТВ</a>
+	<!-- 				<form class="navbar-form navbar-left">
+						<label>
+						<input type="checkbox" id="fav_switch"> Только избранное
+					</label>
+					</form> -->
+					<ul class="nav navbar-nav">
+						<!-- <li id="fav_switch" class=""><a href="#">Избранное</a></li> -->
+					</ul>
+					<p class="navbar-text">Сейчас: </p>
+					<p class="navbar-text" id="current_epg_name">-</p>
+					<p class="navbar-text" id="position_time">00:00:00</p>
+				</div>
+<!-- 				<ul class="nav navbar-nav navbar-center">
+					<li><a href=""></a></li>
+				</ul> -->
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li id="fav_switch" class=""><a href="#"><span class="glyphicon glyphicon-heart"></span></a></li>
+						<!-- <li><a href="#"></a></li> -->
+						<li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+<!-- 						<li><a href="#">Profile</a></li>
+						<li><a href="#">Help</a></li> -->
+					</ul>
+		<!-- 			<form class="navbar-form navbar-right">
+						<input type="text" class="form-control" placeholder="Search...">
+					</form> -->
+				</div>
+			</div>
+			<div class="progress-nav progress">
+				<div class="progress-bar-nav progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+					<span class="sr-only">40% Complete (success)</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<!-- <ul id="tv_genres" class="nav nav-sidebar"> -->
+					<!-- </ul> -->
+					<!-- <select class="form-control">
+						<option>Все каналы</option>
+						<option>Избранное</option>
+					</select> -->
+					<!-- <button type="button" class="btn btn-default btn-sm">Избранное</button> -->
+<!-- 					<label>
+						<input type="checkbox" id="fav_switch"> Только избранное
+					</label> -->
+					<ul id="playlist" class="nav nav-sidebar">
+					</ul>
+				</div>
+			<!-- 	<div class="col-sm-6 col-md-4 sidebar2">
+					<ul id="epglist" class="nav nav-sidebar"></ul>
+				</div> -->
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<!-- 		<h1 class="page-header">
+						<span id="current_ch_name"></span>
+						<span id="current_epg_name"></span>
+						<span id="position_time"></span>
+					</h1> -->
+					<!-- <div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							<span class="sr-only">40% Complete (success)</span>
+						</div>
+					</div> -->
+					<div class="row placeholders">
+
+					<!-- 	<video id="player_a" class="projekktor" poster="intro.jpg" title="this is projekktor" width="640" height="360">
+							<source src="projekktor/media/intro.mp4" type="video/mp4" videoScaling="aspectratio" />
+						</video> -->
+
+						<div class="row">
+							<div class="col-md-10 col-lg-6 player">
+								<br>
+								<embed type="application/x-vlc-plugin"
+									id="vlc"
+									autoplay="no" loop="no" width="640" height="400" controls="no"
+									target="http://10.20.0.214:7088/udp/239.200.200.91:1234"
+									text="Waiting for video"
+									windowless="true"
+									branding="false"
+								/>
+								<br>
+								<div class="row">
+									<div class="col-lg-6">
+										<input id="player_position" type="range" name="points" min="0" max="100" value="0">
+									</div>
+									<div class="col-lg-6">
+										<form class="form-inline" role="form">
+											<div class="btn-group">
+												<button id="play_btn" type="button" class="btn btn-default"><span class="glyphicon glyphicon-play"></span></button>
+												<button id="pause_btn" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pause"></span></button>
+												<button id="stop_btn" type="button" class="btn btn-default"><span class="glyphicon glyphicon-stop"></span></button>
+											</div>
+											<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-volume-off"></span></button>
+											<div class="form-group">
+												<div class="input-group">
+													<input id="player_volume" type="range" name="points" min="0" max="200" value="100">
+												</div>
+											</div>
+											<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-fullscreen"></span></button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+						<!-- 		<div class="table-responsive">
+									<table class="table table-striped">
+										<tbody>
+											<tr><td>status</td><td id="response_status"></td></tr>
+											<tr><td>error</td><td id="response_error"></td></tr>
+											<tr><td></td><td></td></tr>
+										</tbody>
+									</table>
+								</div>
+
+								<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal_credentials">
+									Launch demo modalasdsa
+								</button> -->
+
+								<textarea class="form-control" rows="20" id="debug"></textarea>
+								<br>
+								<div class="btn-group" role="group" aria-label="...">
+									<button type="button" class="btn btn-default" id="TIMER_PERIODIC">TIMER_PERIODIC</button>
+									<button type="button" class="btn btn-default" id="TIMER_STOP">TIMER_STOP</button>
+									<!-- <button type="button" class="btn btn-default" id="TIMER_REFRESH">TIMER_REFRESH</button> -->
+									<button type="button" class="btn btn-default" id="TIMER_TIMELINE">TIMER_TIMELINE</button>
+									<button type="button" class="btn btn-default" id="TIMER_EPG">TIMER_EPG</button>
+									<button type="button" class="btn btn-default" id="TIMER_OSD">TIMER_OSD</button>
+								</div>
+
+								<!-- Modal -->
+								<div class="modal fade" id="modal_credentials" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												<div class="alert alert-success" role="alert">...</div>
+												<form class="bs-docs-example form-horizontal" method="post" action="?action=gateway_mainstance_add">
+													<div class="form-group">
+														<label for="user_login" class="col-sm-2 control-label">Email</label>
+														<div class="col-sm-10">
+															<input type="email" class="form-control" id="user_login" placeholder="Email">
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="user_pass" class="col-sm-2 control-label">Password</label>
+														<div class="col-sm-10">
+															<input type="password" class="form-control" id="user_pass" placeholder="Password">
+														</div>
+													</div>
+												</form>
+
+											</div>
+											<div class="modal-footer">
+												<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+												<button type="button" class="btn btn-primary" data-dismiss="modal" id="save_credentials">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<!-- <h2 class="sub-header">Section title</h2> -->
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li epg_shift="-3" class="epg_tab"><a data-target="#epg_-3" role="tab" data-toggle="tab">-3</a></li>
+						<li epg_shift="-2" class="epg_tab"><a data-target="#epg_-2" role="tab" data-toggle="tab">-2</a></li>
+						<li epg_shift="-1" class="epg_tab"><a data-target="#epg_-1" role="tab" data-toggle="tab">-1</a></li>
+						<li epg_shift="0" class="epg_tab"><a data-target="#epg_0" role="tab" data-toggle="tab">0</a></li>
+						<li epg_shift="1" class="epg_tab"><a data-target="#epg_1" role="tab" data-toggle="tab">1</a></li>
+						<li epg_shift="2" class="epg_tab"><a data-target="#epg_2" role="tab" data-toggle="tab">2</a></li>
+						<li epg_shift="3" class="epg_tab"><a data-target="#epg_3" role="tab" data-toggle="tab">3</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content" id="epg_tabs">
+						<div role="tabpanel" class="tab-pane" id="epg_0">0
+							<div class="table-responsive epg_table">
+								<table class="table table-striped">
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="epg_-3">-3
+							<div class="table-responsive epg_table">
+								<table class="table table-striped">
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="epg_-2">-2
+							<div class="table-responsive epg_table">
+								<table class="table table-striped">
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="epg_-1">-1
+							<div class="table-responsive epg_table">
+								<table class="table table-striped">
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="epg_1">
+							<div class="table-responsive epg_table">
+								<table class="table table-striped">
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="epg_2">
+							<div class="table-responsive epg_table">
+								<table class="table table-striped">
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="epg_3">
+							<div class="table-responsive epg_table">
+								<table class="table table-striped">
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- <script src="bootstrap/js/docs.min.js"></script> -->
+	</body>
+</html>

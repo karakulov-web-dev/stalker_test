@@ -1,0 +1,14 @@
+{
+	"meta": {
+		"charset": "utf-8",
+		"project": "vk.music 1.5.7",
+		"language": "en",
+		"plural": "(n != 1)"
+	},
+	"data": {
+		"": {
+			"A VKmusic app provides you an access to the music library of social network VKontakte. Log in and get access to your albums.": "",
+			"vk.music": ""
+		}
+	}
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/player.css" />
+        <script type="text/javascript" src="js/objs.js?n=9"></script>
+        <script type="text/javascript" src="js/egSTB.js"></script>
+        <script type="text/javascript" src="js/base-funcs.js?n=9"></script>
+        <script type="text/javascript" src="js/date.difference.js"></script>
+        <script type="text/javascript" src="js/key-processing.js?n=9"></script>
+        <script type="text/javascript" src="js/common.js?n=9"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jsdeferred.js"></script>
+        <script type="text/javascript" src="js/variables.js?n=9"></script>
+        <script type="text/javascript" src="js/clock.js"></script>
+        <script type="text/javascript">
+        var ad=1;
+        var timer_videocatalog= null;
+        </script>
+
+        <style type="text/css">
+#loading { width:100%; height:100%; background:#000; position:absolute; top:0; left:0; z-index:2010; }
+#loading .render { position:absolute; z-index:2002; top:50%; left:50%; margin:-24px 0 0 -80px; height:48px; width:160px; background:#000; text-align:center; padding:10px;  }
+#loading .render img { display:block; float:left; width:48px; height:48px; }
+#loading .render span { color:#fff; font-size:18px; display:block; float:left; width:110px; line-height:48px; }
+
+#loader { width:100%; height:100%; background:#000; position:absolute; top:0; left:0; z-index:3010; }
+#loader1 { position:absolute; z-index:3002; top:80%; left:50%; margin:-24px 0 0 -80px; height:48px; width:160px; text-align:center; padding:10px; color:#fff; font-size:18px; float:left; line-height:48px;  background:#000;}
+        </style>
+    </head>
+
+
+    <body onselectstart="return false">
+        <div id="shell">
+            <div id="bg"></div>
+
+<!-- Header -->
+            <div id="mb_header_yt">
+                <div class="header_yt">
+                    <div class="t20w f_category_outer" id="search_block"><div id="search_block_inner"><span id="f_search"></span>:&nbsp;&nbsp;<span class="un_cats yt_category"><span id="search_query_line"></span></span></div></div>
+                    <div class="t20w f_quality_outer"><span id="f_mode"></span>:&nbsp;&nbsp;<img src="img/1x1.gif" id="mode" alt="" /></div>
+                    <div style="clear:both;height:5px;"></div>
+                    <div class="t20w f_category_outer"><span id="f_category"></span>:&nbsp;&nbsp;<span class="un_cats yt_category" id="cur_cat"><span id="cats_all"></span></span></div>
+                    <div class="t20w f_quality_outer"><span id="f_quality"></span>:&nbsp;&nbsp;<span class="un_cats yt_category" id="quality"></span></div>
+
+                </div>
+            </div>
+<!-- End Header -->
+
+
+
+<!-- categorias -->
+            <div id="category" style="display:none;">
+                <ul class="modalmenu_yt">
+                    <li class="top"><span class="t22w shadow_b" id="cat_0"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_1"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_2"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_3"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_4"></span></li>
+                    <li class="act"><span class="t26b shadow_w" id="cat_5"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_6"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_7"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_8"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_9"></span></li>
+                    <li class="top"><span class="t22w shadow_b" id="cat_10"></span></li>
+                </ul>
+            </div>
+<!-- End categorias -->
+
+<!-- caption -->
+
+            <div id="caption" style="display:none;">
+                  <div class="modalcaption">
+                     <div class="modalcaption_descr_all" >
+                       <div id="modalcaption_text" class="modalcaption_text"></div>
+                       <div id="modalcaption_descr" class="modalcaption_descr"></div>
+                     </div>
+                     <div id="modalcaption_arrow" class="modalcaption_arrow"></div>
+                 </div>
+            </div>
+
+<!-- End caption -->
+
+<!-- search -->
+            <div id="yt_search_bg" style="display:none;">
+                <div id="yt_modalform_search">
+                    <div class="yt_modalform_left"></div>
+                    <div class="yt_modalform_right modalinput_search">
+                        <input name="textfield" type="text" class="yt_modalinput" id="search_val" value="" />
+                    </div>
+                </div>
+            </div>
+<!-- End search -->
+<!-- Main@affect -->
+            <div id="frame"></div>
+<!-- End Main@affect -->
+<!-- Footer -->
+            <div id="footer_yt">
+                <div class="footer_yt_buttons">
+                    <span class="footer_btn_yt btn_red_yt"></span><span class="footer_text"><span id="f_category2"></span></span>
+                    <span class="footer_btn_yt btn_green_yt"></span><span class="footer_text"><span id="f_videolike2"></span></span>
+                    <span class="footer_btn_yt btn_yellow_yt"></span><span class="footer_text"><span id="f_search2"></span></span>
+                    <span class="footer_btn_yt btn_blue_yt">                    
+                    
+
+                    </span>
+                    <span class="footer_text"><span id="f_settings2"></span></span>
+                    <span class="btn_app_yt"></span><span class="footer_text"><span id="f_app_btn"></span></span>
+
+                    <div id="arrows">
+                        <div class="arrow left" ><div id="arrow_left"  class="arrow"></div></div>
+                        <div class="arrow right"><div id="arrow_right" class="arrow"></div></div>
+                    </div>
+
+                   <div id="clock">
+                     <div id="textTime"></div>
+                   </div>
+
+                </div>
+                
+            </div>
+
+             <div id="footer_menu_settings">
+                            <div class="top"></div>
+                            <div class="body">
+                                <ul>
+                                    <li id="menuPlayModes"><div class="l1"><span id="f_m_modes"></span></div>
+                                        <div id="subMenuPlayModes" class="submenu">
+                                            <div class="top"></div>
+                                            <div class="body">
+                                                <ul>
+                                                    <li id="menuPMsingle"><div></div><strong><b></b></strong></li>
+                                                    <li id="menuPMrepeat"><div></div><strong><b></b></strong></li>
+                                                    <li id="menuPMlist"><div></div><strong><b></b></strong></li>
+                                                    <li id="menuPMrandom"><div></div><strong><b></b></strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                      <li id="menuQuality"><div class="l1"><span id="f_m_quality"></span></div>
+                                        <div id="subMenuQuality" class="submenu">
+                                            <div class="top"></div>
+                                            <div class="body">
+                                                <ul>
+                                                    <li id="menuPMasc"><strong id="f_m_q_low"></strong></li>
+                                                    <li id="menuPMdesc"><strong id="f_m_q_high"></strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                    
+                                       </li>
+
+                                      <li id="menuSortModes"><div class="l1"><span id="f_m_sort"></span></div>
+                                        <div id="subMenuSortModes" class="submenu">
+                                            <div class="top"></div>
+                                            <div class="body">
+                                                <ul>
+                                                    <li id="menuPMname"><strong id="f_m_s_name"></strong></li>
+                                                    <li id="menuPMyear"><strong id="f_m_s_year"></strong></li>
+                                                    <li id="menuPMadd"><strong id="f_m_s_add"></strong></li>                                                    
+                                                    <li id="menuPMviews"><strong id="f_m_s_views"></strong></li>
+                                                    <li id="menuPMRatingKP"><strong id="f_m_s_RatingKP"></strong></li>
+                                                    <li id="menuPMRatingIMDB"><strong id="f_m_s_RatingIMDB"></strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                    
+                                       </li>
+
+                                       <li id="menuSubtitles"><div class="l1"><span id="f_m_sub"></span></div>
+                                        <div id="subMenuSubtitles" class="submenu">
+                                            <div class="top"></div>
+                                            <div class="body">
+                                                <ul>
+                                                    <li id="menuPMsub_on"><strong id="f_m_s_sub_on"></strong></li>
+                                                    <li id="menuPMsub_off"><strong id="f_m_s_sub_off"></strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                    
+                                       </li>
+
+                                       <li id="menuVolume"><div class="l1"><span id="f_m_volume"></span></div>
+                                        <div id="subMenuVolume" class="submenu">
+                                            <div class="top"></div>
+                                            <div class="body">
+                                                <ul>
+                                                    <li id="menuPMvol_95"><strong id="f_m_s_vol_95">95</strong></li>
+                                                    <li id="menuPMvol_80"><strong id="f_m_s_vol_80">80</strong></li>
+                                                    <li id="menuPMvol_60"><strong id="f_m_s_vol_60">60</strong></li>
+                                                    <li id="menuPMvol_40"><strong id="f_m_s_vol_40">40</strong></li>
+                                                    <li id="menuPMvol_20"><strong id="f_m_s_vol_20">20</strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                    
+                                       </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+<!-- End Footer -->
+        </div>
+<!-- Player -->
+        <div id="main" style="display: none;">
+            <div id="textTime_p"></div>
+            <div id="filename">Some name gq</div>
+            <div id="playModeInPlayer" class="single"></div>
+            <div id="subtitles"></div>
+            <div id="time_act">00:00:00</div>
+            <div id="time_total">/ 00:00:00</div>
+            <div id="interval_above"><a href="#" class="interval_above"></a></div>
+            <div id="interval_input">30 sec</div>
+            <div id="interval_less"><a href="#" class="interval_less"></a></div>
+            <div id="rewind"><a href="#" class="rewind"></a></div>
+            <div id="scrollbar"><div id="conditiion"></div></div>
+            <div id="forward"><a href="#" class="forward"></a></div>
+        </div>
+<!-- End Player -->
+<!-- Volume@affect -->
+        <div id="mute" style="display:none;"></div>
+        <div id="playingStatus" style="display:none;"></div>
+        <div id="volumeForm" style="display:none;">
+            <div id="volume_bar"><div id="volume_right"></div></div>
+            <div id="volume_num">100%</div>
+        </div>
+<!-- End Volume@affect -->
+<!-- aspectRatio@affect -->
+        <div id="screenAspect"></div>
+<!-- End aspectRatio@affect -->
+<!-- Loading@affect -->
+        <div id="loading" style="display:none;">
+            <div class="render"><img src="img/loading_6.gif" /><span><span id="loading2"></span></span></div>
+        </div>
+<!-- End Loading@affect -->
+<!-- Loading@affect -->
+        <div id="loader" style="display:block;">
+            <div id="loader1"><img align="middle" src="img/loading_6.gif"> &nbsp;&nbsp;Загрузка</div>
+        </div>
+           <div id="exit" style="display:none;">
+            <div class="render"><div id="img_exit"></div></div>
+           </div>
+           <div id="video_url_error" style="display:none;">
+            <div class="render"><div id="error_text"></div></div>
+           </div>
+    </body>
+</html>

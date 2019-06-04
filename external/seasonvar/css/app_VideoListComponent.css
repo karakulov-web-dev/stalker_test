@@ -1,0 +1,61 @@
+.app_VideoListComponent {
+    height: 100%;
+    position: fixed;
+    left: 80px;
+    right: 50px;
+    padding-top: 5px;
+    top: 92px;
+}
+.app_VideoListComponent_wrap_elem {
+    height: 35%;
+    overflow: hidden;
+    display: inline-block;
+    width: 32%;
+    margin-right: 1%;
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+.app_VideoListComponent_wrap_elem.active .app_VideoListComponent_card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    background: #777777;
+    border: 5px solid #777777;
+}
+.app_VideoListComponent_card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+.app_VideoListComponent_card_img {
+    height: 55%;
+    width: 100%;
+}
+.app_VideoListComponent_wrap_elem.active .app_VideoListComponent_card_h1 {
+    text-decoration: underline;
+}
+.app_VideoListComponent_card_h1 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-left: 5px;
+    text-align: left;
+}
+.app_VideoListComponent_card_duration {
+    position: absolute;
+    right: 20px;
+    top: 75px;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    background: url(../img/bgBottomButton.png);
+    padding: 5px 5px;
+    text-align: center;
+}

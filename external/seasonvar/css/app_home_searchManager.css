@@ -1,0 +1,60 @@
+
+.app_home_searchManager {
+    height: 91px;
+    display: inline-block;
+    width: 315px;
+    position: absolute;
+    left: 340px;
+    top: 0px;
+}
+
+.app_home_searchManager_window {
+    width: 500px;
+    height: 150px;
+    margin: 97px auto;
+    background: #fafafa;
+    position: relative;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.app_home_searchManager_window_header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 47px;
+    background: gold;
+    border: 1px solid gold;
+    color: #ffffff;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 40px;
+}
+
+.app_home_searchManager_window_body {
+    position: absolute;
+    bottom: 0px;
+    top: 74px;
+    left: 0px;
+    right: 0px;
+    background: #cccccc;
+}
+
+.app_home_searchManager_search {
+    height: 91px;
+}
+
+.app_home_searchManager_search_input {
+    height: 30px;
+    margin-top: 20px;
+    width: 80%;
+    border: 1px solid grey;
+    padding-left: 10px;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 40px;
+}

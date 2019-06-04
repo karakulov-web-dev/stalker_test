@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <script type="text/javascript" src="base-funcs.js"></script>
+    <script type="text/javascript" src="egSTB.js"></script>
+    <script type="text/javascript" src="variables.js"></script>
+    <script type="text/javascript" src="keypress.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="minesweeper.js"></script>
+
+
+    <style type="text/css">
+
+#gamefield { z-index: 2; }
+#cursorBox, #cursor { z-index: 3; }
+#counter_time,counter_mine {z-index:4}
+#begin {z-index: 5}
+#errorFinish { z-index: 7; }
+#errorFinish2 { z-index: 8; }
+
+    </style>
+
+<link rel="stylesheet" type="text/css" href="minesweeper.css" />
+
+
+
+</head>
+<body>
+
+<p id="timer">&nbsp;</p><p id="touchcounter">&nbsp;</p>
+
+
+<div id="gamefield">
+
+</div>
+
+      
+      <div id="cursorBox">
+       <div id="cursor"></div>
+        </div>
+      
+       <div id="counter_time"><div class="cover">00 00</div></div>
+       <div id="counter_mine"><div id="mine_num" class="cover">00</div></div>
+       
+       <div id="info"><div class="cover">Управление</div></div>
+       <div id="info2"><div class="cover">поставить метку</div></div>
+
+       <div id="mine_marker"></div>
+       <div id="info3"><div class="cover">OK - открыть сектор<br>BACK - начать заново</div></div>
+
+       <div id="mine_logo"></div>
+
+       <div id="errorFinish"></div>
+       <div id="errorFinish2"></div>
+         
+      <div id="begin"><ul><li id="c_easy"></li><li id="c_normal"></li><li id="c_hard"></li></ul></div>        
+
+</body></html>

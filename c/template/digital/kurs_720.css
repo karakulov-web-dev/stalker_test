@@ -1,0 +1,30 @@
+.layer_bg2{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 1280px;
+    height: 720px;
+    background-image: url("i_720/bg2.png");
+}
+
+#tabs_data div {display:none;border:0;}
+#tabs_data {font-size:18px;}
+
+#tabs {margin:110px 0px 0px 50px;font-size:24px;position:absolute;}
+#tabs a {float:left;color:#fff;padding:15px;text-decoration:none;text-align: center;width: 90px; background-image: url("i_720/25alfa_20.png");}
+#tabs a.active {background:#f2c40b;color:#000;}
+
+#tabs_kurs {position:absolute;left:56px;top:120px;height:110px;}
+#tabs_kurs ul{font-size:22px; font-weight: bold;}
+
+#current_kurs.USD{position:absolute;left:60px;top:190px;background:url(../../../tools/cbr_img_graph/hd_1.png)bottom no-repeat;width:850px;height:460px;}
+#current_kurs.EUR{position:absolute;left:60px;top:190px;background:url(../../../tools/cbr_img_graph/hd_2.png)bottom no-repeat;width:850px;height:460px;}
+#current_kurs.KZT{position:absolute;left:60px;top:190px;background:url(../../../tools/cbr_img_graph/hd_3.png)bottom no-repeat;width:850px;height:460px;}
+#current_kurs.UAH{position:absolute;left:60px;top:190px;background:url(../../../tools/cbr_img_graph/hd_4.png)bottom no-repeat;width:850px;height:460px;}
+
+#kurs_condition {  
+  position:absolute; width:345px; height:135px; top:35px; right:380px;
+}
+
+.text36 { font-size:36px;color:#F2C40B;}
+.text28 { font-size:28px;color:#fff;}

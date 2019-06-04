@@ -1,0 +1,39 @@
+.layer_bg2{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 720px;
+    height: 576px;
+    background-image: url("i/bg2.png");
+}
+#tabs_kurs {position:absolute;left:56px;top:120px;height:110px;}
+#tabs_kurs ul{font-size:15px; font-weight: bold; text-shadow:1px 1px 0 #000;}
+
+#current_kurs.USD{position:absolute;left:35px;top:190px;background:url(../tools/cbr_img_graph/sd_1.png)bottom no-repeat;width:650px;height:350px;}
+#current_kurs.EUR{position:absolute;left:35px;top:190px;background:url(../tools/cbr_img_graph/sd_2.png)bottom no-repeat;width:650px;height:350px;}
+#current_kurs.JPY{position:absolute;left:35px;top:190px;background:url(../tools/cbr_img_graph/sd_3.png)bottom no-repeat;width:650px;height:350px;}
+#current_kurs.GBP{position:absolute;left:35px;top:190px;background:url(../tools/cbr_img_graph/sd_4.png)bottom no-repeat;width:650px;height:350px;}
+
+#kurs_condition {
+  color:#fff;
+  text-shadow: 1px 2px 2px #000;
+  position:absolute; width:270px; height:135px; top:35px; right:50px;
+  background-position: bottom left;
+  background-repeat:no-repeat;}
+
+#kurs_condition.USD {background-position:0 0; background-image:url(i/dollar_sign.png);}
+#kurs_condition.EUR {background-position:0 0; background-image:url(i/euro_sign.png);}
+#kurs_condition.JPY {background-position:0 0; background-image:url(i/yen_sign.png);}
+#kurs_condition.GBP {background-position:0 0; background-image:url(i/gbp_sign.png);}
+
+.text24 { font-size:24px;}
+.text20 { font-size:20px;}
+.text18 { font-size:18px;}
+
+.uarr{
+    float:right;
+}
+
+.darr{
+    float:right;
+}

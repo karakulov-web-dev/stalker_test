@@ -1,0 +1,574 @@
+/*1.0*/html,
+body
+{
+     margin: 0;
+     padding: 0;
+/*     width: 720px; height: 576px;
+/*     outline: 2px solid #000;
+     background-image: url("bg3.png");     */
+}
+
+#pom_pages
+{
+     top: 70px;
+     left:46px;
+     position: absolute;
+     width: 667px; height: 445px;  
+
+}
+
+#pom_categories
+{
+     top: 32px;
+     left:8px;
+     position: absolute;
+     width: 608px;
+     height: 444px;
+     display: block;
+}
+
+#pom_cat0
+{
+     display: none;
+     top: 0px;
+     left: 0px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow: hidden;
+     border-radius: 5px;
+  /*   background-color: rgb(34, 101, 145); */
+}
+
+#pom_cat1
+{
+     display: none;
+     top: 0px;
+     left: 210px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow: hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat2
+{    
+     display: none;
+     top: 0px;
+     left: 420px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow: hidden;
+     border-radius: 5px;
+     
+     
+}
+
+#pom_cat3
+{    
+     display:none;
+     top: 127px;
+     left:0px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat4
+{    
+     display:none;
+     top: 127px;
+     left: 210px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat5
+{    
+     display:none;
+     top: 127px;
+     left: 420px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat6
+{    
+     display:none;
+     top: 254px;
+     left: 0px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+    
+}
+
+#pom_cat7
+{    
+     display:none;
+     top: 254px;
+     left: 210px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat8
+{    
+     display:none;
+     top: 254px;
+     left: 420px;
+     position: absolute;
+     width: 210px;
+     height: 127px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat9
+{    
+     display:none;
+     top: 220px;
+     left: 152px;
+     position: absolute;
+     width: 152px;
+     height: 113px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat10
+{    
+     display:none;
+     top: 220px;
+     left: 304px;
+     position: absolute;
+     width: 152px;
+     height: 113px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat11
+{    
+     display:none;
+     top: 220px;
+     left: 456px;
+     position: absolute;
+     width: 152px;
+     height: 113px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat12
+{    
+     display:none;
+     top: 330px;
+     left: 0px;
+     position: absolute;
+     width: 152px;
+     height: 113px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+#pom_cat13
+{    
+     display:none;
+     top: 330px;
+     left: 152px;
+     position: absolute;
+     width: 152px;
+     height: 113px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+#pom_cat14
+{    
+     display:none;
+     top: 330px;
+     left: 304px;
+     position: absolute;
+     width: 152px;
+     height: 113px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat15
+{    
+     display:none;
+     top: 330px;
+     left: 456px;
+     position: absolute;
+     width: 152px;
+     height: 113px;
+     overflow:hidden;
+     border-radius: 5px;
+     
+}
+
+#pom_cat_img0, #pom_cat_img1, #pom_cat_img2, #pom_cat_img3, #pom_cat_img4, #pom_cat_img5, #pom_cat_img6, #pom_cat_img7, #pom_cat_img8, #pom_cat_img9, #pom_cat_img10, #pom_cat_img11, #pom_cat_img12, #pom_cat_img13, #pom_cat_img14, #pom_cat_img15
+{
+     top: 3px;
+     left: 35px;
+     position: absolute;
+     border-radius: 5px;
+     width: 143px;
+     height: 83px;
+     overflow: hidden;
+}
+
+#pom_cat_img0 img, #pom_cat_img1 img, #pom_cat_img2 img, #pom_cat_img3 img, #pom_cat_img4 img, #pom_cat_img5 img, #pom_cat_img6 img, #pom_cat_img7 img, #pom_cat_img8 img, #pom_cat_img9 img, #pom_cat_img10 img, #pom_cat_img11 img, #pom_cat_img12 img, #pom_cat_img13 img, #pom_cat_img14 img, #pom_cat_img15 img
+{
+	  -webkit-border-radius: 5px;
+	  border-radius: 5px; 
+	width: 143px;
+	height: 80px;
+	text-align: center;
+}
+
+#pom_name0, #pom_name1, #pom_name2, #pom_name3, #pom_name4, #pom_name5, #pom_name6, #pom_name7, #pom_name8, #pom_name9, #pom_name10, #pom_name11, #pom_name12, #pom_name13, #pom_name14, #pom_name15
+
+{
+position: relative;
+top: 83px;
+font-size: 14px;
+font-weight: bold;
+left: 0px;
+width: 210px;
+color: white;
+text-align: center;
+overflow: hidden;
+height: 40px;
+font-family: Helvetica, sans-serif;
+}
+
+#pom_menu
+{
+     top: 520px;
+     left:55px;
+     position: absolute;
+     width: 600px; height: 24px;   
+/*     font-size: 14px; */
+     color: white;
+     overflow: hidden;  
+}
+
+#pom_menu_key0, #pom_menu_key1, #pom_menu_key2, #pom_menu_key3
+{
+     width: 150px; 
+     height: 24px;
+     float: left;
+}
+
+#pom_menu_key0_title, #pom_menu_key1_title, #pom_menu_key2_title, #pom_menu_key3_title
+{
+     left: 7px;
+     position: relative;
+/*     font_size: 24px; */
+	padding-top: 3px;
+}
+
+#pom_menu_key0_img, #pom_menu_key1_img, #pom_menu_key2_img, #pom_menu_key3_img
+{
+     float: left;
+}
+
+#pom_loading
+{
+     position: absolute;
+     top: 10px;
+     left: 222px;
+     width: 100px;
+     height: 30px;
+     color: white;
+     font-size: 30px;
+}
+
+#pom_up
+{
+     display: none;
+     position: absolute;
+     top: -10px;
+     left: 242px;
+   /*  background-image: url("./pomogator_app/up.png"); */
+}
+
+#pom_down
+{
+     display: none;
+     position: absolute;
+     top: 415px;
+     left: 242px;
+   /*  background-image: url("./pomogator_app/down.png"); */
+}
+
+#pom_number_page
+{
+    position: absolute;
+     top: 25px;
+     left: 552px;
+     width: 100px;
+     height: 30px;
+     color: white;
+     font-size: 20px;
+   /*  background-image: url("./pomogator_app/down.png"); */
+}
+
+#pom_loading
+{
+        position: absolute;
+        top: 48%;
+        left: 42%;
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-size: 30px;
+}
+
+#pom_product
+{
+     top: 0px;
+     left:0px;
+     position: absolute;
+     width: 608px;
+     height: 444px;
+     display: none;
+}
+
+#pom_product_img
+{
+    display: block;
+     top: 20px;
+     left: 5px;
+     position: absolute;
+     width: 210px;
+     height: 118px;
+     overflow: hidden;
+     border-radius: 5px;
+     background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i_720/25alfa_20.png");
+    /* background-color: rgb(34, 101, 145); */
+}
+
+#pom_product_img img
+{
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+	margin-left: 6px;
+	width: 200px;
+	height: 109px;
+        text-align: center;
+}
+
+
+#pom_product_name
+{
+    display: block;
+    top: 20px;
+    left: 218px;
+    position: relative;
+    width: 416px;
+    height: 118px;
+    overflow: hidden;
+    color: white;
+    font-size: 30px;
+/*    background-color: rgb(34, 101, 145); */
+    background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i_720/25alfa_20.png");
+    border-radius: 5px;
+}   
+
+#pom_product_title
+{
+     top: 3px;
+     left: 3px;
+     position: relative;
+     overflow: hidden;
+     text-align: center;
+     width: 408px;
+     height: 106px;
+	display: table;
+/*        background-color:#0F0; */
+}
+
+#pom_product_title span
+{
+        vertical-align:middle !important;
+    display: table-cell !important;
+}
+
+
+#pom_product_description
+{
+    display: block;
+     top: 141px;
+     left: 5px;
+     position: absolute;
+     width: 629px;
+     height: 296px;
+     overflow: hidden;
+     color: white;
+     font-size: 20px;
+ /*    background-color: rgb(34, 101, 145); */
+     background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i_720/25alfa_20.png");
+     border-radius: 5px;
+}
+
+#pom_product_description_title
+{
+     top: 5px;
+     left: 5px;
+     position: relative;
+     width: 600px;
+     height: 286px;
+	overflow: hidden;
+/*	display: table;
+	background-color:#0F0; */
+}
+
+#pom_scroll
+{
+     top: 3px;
+     left: 604px;
+     position: absolute;
+     width: 23px;
+     height: 288px;
+     overflow: hidden;
+}
+
+#pom_scroll_background
+{
+    top: 0px;
+     left: 0px;
+     position: absolute;
+     width: 23px;
+     height: 268px;
+     overflow: hidden;
+}
+
+#pom_scroll_background1
+{
+     top: 268px;
+     left: 0px;
+     position: absolute;
+     width: 23px;
+     height: 20px;
+     overflow: hidden;
+     z-index: 5;
+}
+
+#pom_scroll_background1 img
+{
+     margin-top: -418px;
+}
+
+#pom_scroll_runner
+{
+     top: 7px;
+     left: 6px;
+     position: absolute;
+     z-index: 10;  
+}
+#pom_exit_message 
+{
+     display: none;
+     width:720px;
+     height:576px;
+     background-color:rgba(0, 0, 0, 0.7);
+     position:absolute; 
+     top:0; 
+     left:0; 
+     z-index:2010; 
+}
+#pom_exit_message_ 
+{
+    position: absolute;
+    z-index: 2002;
+     top: 49%;
+     left: 37%;
+     margin: -24px 0 0 -80px;
+     height: 37px;
+     width: 286px;
+     background: #000;
+     text-align: center;
+     padding: 10px;
+     border-width: 2px;
+     border-style: double;
+     border-color: #999;
+     border-radius: 4px;
+     -webkit-border-radius: 4px;
+     background-color: rgb(34, 101, 145);
+}
+#pom_exit_message_title 
+{
+     position: absolute;
+     left: 0px;
+     top: 16px;
+     color: #fff;
+     font-size: 18px;
+     width: 305px;
+     text-align: center;
+}
+
+#pom_exit_message span 
+{
+          top: -6px;
+          position: relative;
+}
+
+#pom_message
+{
+     position: absolute;
+     z-index: 2000;
+     top: 45%;
+     left: 32%;
+     margin: -24px 0 0 -80px;
+     height: 71px;
+     width: 385px;
+     padding: 10px;
+     border-width: 2px;
+     border-style: double;
+     border-color: #999;
+     color: white;
+     background-color: rgb(34, 101, 145);
+     border-radius: 4px;
+	display: none;
+}
+
+#pom_message_title
+{
+     font-size: 20px;
+     position: absolute;
+     left: 92px;
+     top: 16px;
+     width: 308px;
+     text-align: center;
+}

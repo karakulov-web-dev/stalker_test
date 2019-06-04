@@ -1,0 +1,492 @@
+#channelList
+{
+    position:absolute;
+    left:25px; 
+	top:70px; 
+    width: 600px; 
+	height:430px;
+	/*opacity: 0.9;*/
+}
+
+#channelList .channel
+{
+    position:relative;
+    width: 578px; 
+	height:40px;
+	margin-top:3px;
+	color:#FFFFFF;
+
+}
+
+#channelList .number,  #channelList .chan_info
+{
+    float:left;
+}
+
+
+#channelList .chan_info
+{
+	width: 400px;
+	height:36px;
+	margin-left:3px;
+	/*background-image: url("../img/menu.png");*/
+	/*background-color: #13365E;*/
+	/*background-color: #005187;*/
+	background-color: #00000E;
+	border-radius: 6px;
+	color: white;
+	background-repeat:no-repeat;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+}
+
+#channelList .channel_name
+{
+	margin-left: 5px;
+	width: 390px;
+	height:20px;
+	overflow:hidden;
+	float:left;
+	font-weight:bold;
+	font-size:18px;
+	/*font-family: "Arial Black";*/
+	font-family: 'Arial';
+}
+
+
+#channelList .first_line
+{
+	height:20px;
+	margin-top: 6px;
+}
+
+	
+#channelList .number
+{
+	width:30px;
+	height: 26px;
+	padding-top:9px;
+	text-align:center;
+}
+
+#top
+{
+	position: absolute;
+	top: 25px;
+	padding-top: 5px;
+	height: 35px;
+	width: 620px;
+	margin-left: 50px;
+	background-color: #00000E;
+	border-radius: 6px;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	color: white;
+	opacity: 0.9;
+}
+
+#top #widget_time
+{
+	left:470px;
+	position: absolute;
+	font-size:20px;
+	font-weight:bold;
+	padding-top:0px;
+
+}
+#top .widget_title
+{
+	margin-left:10px;
+	position: absolute;
+	padding-top:2px;
+	font-weight:bold;
+	font-size:16px;
+}
+
+#navi 
+{
+    position: absolute;
+	top: 505px;
+	padding-top: 5px;
+	height: 35px;
+	width: 620px;
+	margin-left: 50px;
+	/*background-color: #13365E;*/
+	background-color: #00000E;
+	border-radius: 6px;
+	color: white;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	/*opacity: 0.9;*/
+	font-family: 'Arial';
+}
+
+#navi_info 
+{
+    position: absolute;
+	top: 505px;
+	padding-top: 5px;
+	height: 35px;
+	width: 620px;
+	margin-left: 50px;
+	/*background-color: #13365E;*/
+	background-color: #00000E;
+	border-radius: 6px;
+	color: white;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	/*opacity: 0.9;*/
+	font-family: 'Arial';
+}
+
+#navi_helpertext
+{
+	margin-top: 7px;
+	float:left;
+	padding-right:20px;
+	padding-left:5px;
+}
+
+#navi_button
+{
+	margin-top: 4px;
+	float:left;
+}
+
+#info
+{
+	position: absolute;
+	top:72px;
+	left: 465px;
+	/*background-color: #411316;*/
+	/*background-color: #4C191E;*/
+	background-color: #00000E;
+	height: 425px;
+	width: 213px;
+	border-radius: 6px;
+	/*opacity: 0.4;*/
+	color: #FFFFFE ;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+}
+
+#info .logo
+{
+	
+    width: 200px; 
+    height: 200px;
+	/*margin:0 auto; */
+	margin: 3%;
+	/*background-size: cover;*/
+	/*overflow: auto;*/
+	background-color: #00000E;
+
+}
+
+html,body 
+{
+	/*background-image: url("../img/seroe.gif");*/
+	/*background-color: black;*/
+	background-color: transparent;
+}
+
+/* Player */
+a {outline:none;}
+#main {position:absolute;width:520px;left:50%;margin-left:-260px;height:122px;z-index:1;bottom: 25px;background: url('../img/player/v_bg.png') 50% 50% no-repeat;}
+#filename {position:absolute;width:490px;height:24px;z-index:2;left: 15px;top: 5px;font:25px "Myriad Pro"; color:#FFFFFF; text-align:center;}
+#time_act {position:absolute;width:89px;height:25px;left: 89px;top: 40px;z-index:3;padding-top: 2px;background-image:url('../img/player/v_btn.png'); background-position: -96px 0px;font:bold 22px "Myriad Pro"; color:#FFFFFF; text-align:center;}
+#time_act_sel {position:absolute;width:89px;height:27px;left: 89px;top: 40px;z-index:3;background-image:url('../img/player/v_btn.png'); background-position: -185px 0px;font:bold 22px "Myriad Pro"; color:#000000; text-align:center;}
+#quality {position:absolute;width:89px;height:27px;left: 280px;top: 40px;z-index:3;background-image:url('../img/player/v_btn.png'); background-position: -96px 0px;font:bold 22px "Myriad Pro"; color:#FFFFFF; text-align:center;}
+#time_total {position:absolute;width:90px;height:24px;left: 185px;top: 44px;z-index:4;font:bold 18px "Myriad Pro"; color:#FFFFFF; text-align:left;}
+#interval_above {position:absolute;width:21px;height:27px;left: 383px;top: 40px;z-index:5;}
+a.interval_above {background-image:url('../img/player/v_btn.png'); background-position: -274px 0px; display:block; width:21px; height:27px;}
+#interval_less {position:absolute;width:21px;height:27px;left: 476px;top: 40px;z-index:6;}
+a.interval_less {background-image:url('../img/player/v_btn.png'); background-position: -367px 0px; display:block; width:21px; height:27px;}
+#interval_input {position:absolute;width:72px;height:25px;padding-top: 2px;left: 404px;top: 40px;z-index:7;background-image:url('../img/player/v_btn.png'); background-position: -295px 0px;font:bold 22px "Myriad Pro"; color:#FFFFFF; text-align:center;}
+#interval_input_sel {position:absolute;width:72px;height:27px;left: 404px;top: 40px;z-index:7;background-image:url('../img/player/v_btn.png'); background-position: -409px 0px;font:bold 20px "Myriad Pro"; color:#000000; text-align:center;}
+#rewind {position:absolute;width:24px;height:22px;left: 23px;top: 74px;z-index:8;}
+a.rewind{background-image:url('../img/player/v_btn.png'); background-position: -48px -5px; display:block; width:24px; height:22px;}
+#forward {position:absolute;width:24px;height:22px;left: 473px;top: 74px;z-index:9;}
+a.forward {background-image:url('../img/player/v_btn.png'); background-position: -72px -5px; display:block; width:24px; height:22px;}
+#scrollbar {position:absolute;width:400px;padding: 0 10px 0 10px;height:22px;line-height:16px;left: 50px;top: 74px;z-index:10;background-image:url('../img/player/v_btn.png'); background-position: 0px -27px;}
+#display {z-index:100; left: 50px; top: 50px; height:41px; position:absolute;}
+#conditiion { width:10px;height:10px;float:left;background-image:url('../img/player/v_btn.png'); background-position: -421px -33px; margin-top:6px;}
+#playModeInPlayer { width:37px; height:29px; display:block; position:relative; margin:0; position:absolute; left:23px; top:40px; z-index:3; }
+#playModeInPlayer.single { background:url(../img/1920/pictog_act.png) 0 0 no-repeat; }
+#playModeInPlayer.repeat { background:url(../img/1920/pictog_act.png) -37px 0 no-repeat; }
+#playModeInPlayer.list {   background:url(../img/1920/pictog_act.png) -37px -29px no-repeat; }
+#playModeInPlayer.random { background:url(../img/1920/pictog_act.png) 0 -29px no-repeat; }
+/* end Player */
+
+/*---  VOLUME ---*/
+.t20blue {font-size:20px; color:#05C;}
+.volumeContainer{width:300px;}
+#volumeForm { position:absolute; top:50px; right:30px; width:308px; height:41px; line-height:41px; z-index:1; background-image: url(../img/volume/volume_bg.png); }
+#volume_bar { position:relative; width:200px; height:41px; left:47px; background: url(../img/volume/volume_left.png) 0 50% no-repeat; }
+#volume_right { position:relative; width:100%; max-width: 195px; height:41px; margin-left:5px; background: url(../img/volume/volume_bar.png) 100% 50% no-repeat; }
+#volume_num{position:relative; float:right; top:-37px; font: 26px "Myriad Pro Cond"; font-weight:bold; margin-right:6px; height:41px; line-height:41px;}
+#mute{position:absolute; width:47px; height:41px; top:50px; right:150px; background:url(../img/volume/volume_off.png);}
+/*--- end VOLUME ---*/
+
+#film_info
+{
+	position: absolute;
+	top: 72px;
+	left: 57px;
+	/*background-color: #411316;*/
+	/*background-color: #4C191E;*/
+	background-color: #00000E;
+	height: 425px;
+	width: 620px;
+	border-radius: 6px;
+	/*opacity: 0.4;*/
+	color: #FFFFFE ;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	font-size:20px;
+	/*overflow-y: scroll;*/
+}
+
+#film_info .logo
+{
+	
+    /*width: 100px; */
+	/*height: 100px;*/
+	/*margin:0 auto; */
+	float: left;
+	margin: 3px;
+	/*background-size: cover;*/
+	/*overflow: auto;*/
+	background-color: #00000E;
+
+}
+
+#file_name
+{
+	position: absolute;
+	top: 10px;
+	left: 220px;
+	/*background-color: #411316;*/
+	/*background-color: #4C191E;*/
+	background-color: #00000E;
+	height: 125px;
+	width: 380px;
+	border-radius: 6px;
+	/*opacity: 0.4;*/
+	color: #FFFFFE ;
+	/*border-style: solid;
+	border-color: white;
+	border-width: 1px;*/
+	font-size:35px;
+	text-align:center;
+	vertical-align:bottom;
+}
+
+#spravka
+{
+	position: absolute;
+	top: 150px;
+	left: 5px;
+	/*background-color: #411316;*/
+	/*background-color: #4C191E;*/
+	background-color: #00000E;
+	height: 265px;
+	width: 600px;
+	border-radius: 6px;
+	/*opacity: 0.4;*/
+	color: #FFFFFE ;
+	/*border-style: solid;
+	border-color: white;
+	border-width: 1px;*/
+	font-size:20px;
+	text-align:justify;
+	max-height: 265px;
+	overflow: auto;
+	padding: 5px;
+}
+
+#playingStatus{position:absolute; width:47px; height:41px; top:101px; right:150px; background:url(../img/volume/osd_pause.png); }
+
+#screenAspect { width:206px; height:41px; position:absolute; top:50px; left:100px; z-index: 3; background-repeat:no-repeat;  background-position:50% 50%; }
+
+#loading { width:720px; height:576px; background-color:rgba(0, 0, 0, 0.7); position:absolute; top:0; left:0; z-index:2010; }
+#loading .render { position:absolute; z-index:2002; top:50%; left:50%; margin:-24px 0 0 -80px; height:48px; width:160px; background:#000; text-align:center; padding:10px; border-width:1px; border-style:double; border-color:#999; border-radius: 4px; -webkit-border-radius:4px; }
+#soobshenie { position:absolute; left:10px; top: 330px; color:#fff; font-size:18px; display:block; float:left; width:700px; line-height:68px; text-align:center; }
+#loading .render img { display:block; float:left; width:48px; height:48px; }
+#loading .render span { color:#fff; font-size:18px; display:block; float:left; width:110px; line-height:48px; }
+
+#info_film
+{
+	position: absolute;
+	top: 212px;
+	left: 6px;
+	height: 207px;
+	width: 201px;
+	background-color: #00000E;
+	/*background-color: #6BCBFF;*/
+	border-radius: 6px;
+	color: #FFFFFE;
+}
+
+#rating
+{
+	font-size:14px;
+	position: absolute;
+	top: 2px;
+	left: 6px;
+	height: 20px;
+	/*width: 60px;*/
+	width: 60px;
+	background-color: #00000E;
+	/*background-color: #6BCBFF;*/
+	border-radius: 4px;
+	color: #FFFFFE;
+}
+
+#Adult
+{
+	font-size:14px;
+	position: absolute;
+	top: 23px;
+	left: 6px;
+	height: 20px;
+	width: 190px;
+	background-color: #00000E;
+	/*background-color: #6BCBFF;*/
+	border-radius: 4px;
+	color: #FFFFFE;
+}
+
+#Year
+{
+	font-size:14px;
+	position: absolute;
+	top: 44px;
+	left: 6px;
+	height: 20px;
+	width: 190px;
+	background-color: #00000E;
+	/*background-color: #6BCBFF;*/
+	border-radius: 4px;
+	color: #FFFFFE;
+}
+
+#zvezda
+{
+	position: absolute;
+	top: 3px;
+	left: 65px;
+	/*height: 20px;*/
+	/*width: 60px;*/
+}
+
+#duration
+{
+	font-size:14px;
+	position: absolute;
+	top: 86px;
+	left: 6px;
+	height: 20px;
+	width: 190px;
+	background-color: #00000E;
+	/*background-color: #6BCBFF;*/
+	border-radius: 4px;
+	color: #FFFFFE;
+}
+
+#director
+{
+	font-size:14px;
+	position: absolute;
+	top: 107px;
+	left: 6px;
+	height: 40px;
+	width: 190px;
+	background-color: #00000E;
+	/*background-color: #6BCBFF;*/
+	border-radius: 4px;
+	color: #FFFFFE;
+}
+
+#actors
+{
+	font-size:14px;
+	position: absolute;
+	top: 149px;
+	left: 6px;
+	height: 60px;
+	width: 190px;
+	background-color: #00000E;
+	/*background-color: #6BCBFF;*/
+	border-radius: 4px;
+	color: #FFFFFE;
+}
+
+#country
+{
+	font-size:14px;
+	position: absolute;
+	top: 65px;
+	left: 6px;
+	height: 60px;
+	width: 190px;
+	background-color: #00000E;
+	/*background-color: #6BCBFF;*/
+	border-radius: 4px;
+	color: #FFFFFE;
+}
+
+#yt_search_bg { height:576px; width:720px; background-color:rgba(0, 0, 0, 0.7); position:absolute; top:0px; z-index: 1003; }
+#yt_modalform_search { height:56px; left:50px; top:130px; position:absolute; z-index: 1004; }
+#yt_search_bg .yt_modalform_left {background:url(../img/yt_modalform.png) left no-repeat; height:56px; width:34px; position:absolute; }
+#yt_search_bg .yt_modalform_right{background:url(../img/yt_modalform.png) right no-repeat; height:56px; margin-left:34px; padding-right:70px; }
+#yt_search_bg .modalinput_search { width:500px; position:relative; }
+#yt_search_bg .yt_modalinput{font:23px trebuchet ms, Arial, Helvetica, sans-serif; font-weight:bold; color:#313131; border:none; background:none; margin-top:12px; width:100%;}
+
+#not_found
+{
+	position: absolute;
+	top: 72px;
+	left: 57px;
+	/*background-color: #411316;*/
+	/*background-color: #4C191E;*/
+	background-color: #00000E;
+	height: 425px;
+	width: 620px;
+	border-radius: 6px;
+	/*opacity: 0.4;*/
+	color: #FFFFFE ;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	font-size:25px;
+	vertical-align: middle;
+	text-align: center;
+	/*overflow-y: scroll;*/
+}
+
+#soobshenie1
+{
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	background-color: #00000E;
+	height: 250px;
+	width: 620px;
+	color: #FFFFFE ;
+	border-width: 1px;
+	font-size:25px;
+	text-align: center;
+	
+}
+
+#top1
+{
+	font-size:20px;
+}

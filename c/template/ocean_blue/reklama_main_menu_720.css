@@ -1,0 +1,30 @@
+.reklama_main_menu_block{
+    position: absolute;
+    left: 70px;
+    top: 91px;
+    width: 293px;
+    height: 330px;
+    color: #fff;
+text-align: center;
+    background-image: url("i_720/25alfa_20.png"); 
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#kartinka{
+position: absolute;
+left: 10px;
+top: 10px;
+-webkit-border-radius: 12px;
+width: 273px;
+height: 310px;
+overflow: hidden;
+}
+
+#kartinka img {
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+}
+
+

@@ -1,0 +1,150 @@
+#edds_page
+{
+    top: 90px;
+    left: 80px;
+    position: absolute;
+    width: 1129px;
+    height: 523px;
+    background-image: url("i/25alfa_20.png");
+    border-radius: 7px;
+    color: white;
+    font-size: 28px;
+}
+
+#edds_text
+{
+	position: absolute;
+	top:7px;
+	left: 15px;
+	right: 15px;
+	bottom: 7px;
+     overflow: hidden;
+     text-align: justify;
+}
+
+#edds_navigate
+{
+     position: absolute;
+     top: 625px;
+     left: 80px;
+     width: 1129px;
+     height: 53px;
+     background-image: url("i/25alfa_20.png");
+     border-radius: 7px;
+}
+
+#edds_navi_ico
+{
+     position: absolute;
+     background-image: url("../../key_for_app/exit.png");
+     width: 60px;
+     height: 25px;
+     top: 15px;
+     left: 100px;
+     background-repeat: no-repeat;
+}
+
+#edds_navi_text
+{
+     position: absolute;     
+     width: 60px;
+     height: 25px;
+     top: 10px;
+     left: 150px;
+     font-size: 23px;
+     color: white;
+}
+
+#edds_navi_ico1
+{
+     position: absolute;
+     background-image: url("../../key_for_app/updown.png");
+     width: 60px;
+     height: 25px;
+     top: 15px;
+     left: 300px;
+     background-repeat: no-repeat;
+     display: block;
+}
+
+#edds_navi_text1
+{
+     position: absolute;     
+     width: 370px;
+     height: 25px;
+     top: 10px;
+     left: 350px;
+     font-size: 23px;
+     color: white;
+     display: block;
+}
+
+#edds_navi_ico2
+{
+     position: absolute;
+     background-image: url("../../key_for_app/blue.png");
+     width: 60px;
+     height: 25px;
+     top: 15px;
+     left: 726px;
+     background-repeat: no-repeat;
+     display: block;
+}
+
+#edds_navi_text2
+{
+     position: absolute;     
+     width: 370px;
+     height: 25px;
+     top: 10px;
+     left: 776px;
+     font-size: 23px;
+     color: white;
+     display: block;
+}
+
+#edds_scroll
+{
+     top: 10px;
+     left: 1100px;
+     position: absolute;
+     width: 23px;
+     height: 538px;
+     overflow: hidden;
+     display: none;
+}
+
+#edds_scroll_background
+{
+    top: 0px;
+     left: 0px;
+     position: absolute;
+     width: 23px;
+     height: 398px;
+     overflow: hidden;
+}
+
+#edds_scroll_background1
+{
+     top: 398px;
+     left: 0px;
+     position: absolute;
+     width: 23px;
+     height: 107px;
+     overflow: hidden;
+     z-index: 5;
+}
+
+
+#edds_scroll_background1 img
+{
+     margin-top: -333px;
+}
+
+#edds_scroll_runner
+{
+     top: 7px;
+     left: 6px;
+     position: absolute;
+     z-index: 10;
+}

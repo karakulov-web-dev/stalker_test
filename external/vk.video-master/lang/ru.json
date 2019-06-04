@@ -1,0 +1,98 @@
+{
+	"meta": {
+		"charset": "utf-8",
+		"project": "vk.video 0.0.1",
+		"language": "ru",
+		"plural": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+	},
+	"data": {
+		"": {
+			"After 10 seconds, the browser will be loaded, and to confirm your wish to log in, click on the button \"Pass test check\"": "Через 10 секунд будет загружен браузер и для подтверждения вашего желания авторизоваться нажмите на кнопку \"Pass test check\"",
+			"Aspect": "Аспект",
+			"Back": "Назад",
+			"Cancel": "Отмена",
+			"Clear history": "Очистить историю",
+			"Clear search history ?": "Очистить историю?",
+			"Convenient application for viewing videos from the popular social network VKontakte. This service allows you to watch video from a personal page or use the search by friends, groups or title.": "Удобное приложение для просмотра видео из популярной социальной сети ВКонтакте. Сервис позволяет смотреть видео с личной страницы или воспользоваться поиском по друзьям, группам или названию.",
+			"Exit": "Выход",
+			"Exit from the app?": "Выйти из приложения?",
+			"External video may not be played": "Видео со сторонних сайтов могут не проиграться",
+			"Friends videos": "Видео друзей",
+			"Group albums": "Альбомы пользователя",
+			"Groups videos": "Видео групп",
+			"Language": "Язык",
+			"Loading...": "Загрузка...",
+			"Login": "Войти",
+			"Logout": "Выйти из аккаунта",
+			"Logout?": "Выйти из аккаунта?",
+			"My albums": "Мои альбомы",
+			"My videos": "Мои видео",
+			"No content or some error happened, try later.": "Нет данных для отображения или случилась ошибка, попробуйте позже.",
+			"No videos or loading error, try later.": "Нет данных для отображения или случилась ошибка, попробуйте позже.",
+			"Ok": "Ок",
+			"Original": "Оригинальный",
+			"Own albums": "Мои альбомы",
+			"Password": "Пароль",
+			"Phone or email": "Телефон или email",
+			"Please, input login": "Пожалуйста, введите логин",
+			"Please, input password": "Пожалуйста, введите пароль",
+			"Safe search": "Безопастный поиск",
+			"Search": "Поиск",
+			"Search history ": "История поиска",
+			"Service is temporarily unavailable": "Сервис временно недоступен",
+			"Settings": "Настройки",
+			"Total": "Всего",
+			"User albums": "Альбомы пользователя",
+			"Videos of me": "Видео со мной",
+			"added": "добавлено",
+			"ago": "назад",
+			"day": [
+				"день",
+				"дня",
+				"дней"
+			],
+			"hour": [
+				"час",
+				"часа",
+				"часов"
+			],
+			"minute": [
+				"минута",
+				"минуты",
+				"минут"
+			],
+			"month": [
+				"месяц",
+				"месяца",
+				"месяцев"
+			],
+			"offline": "оффлайн",
+			"online": "онлайн",
+			"second": [
+				"секунда",
+				"секунды",
+				"секунд"
+			],
+			"user": [
+				"пользователь",
+				"пользователя",
+				"пользователей"
+			],
+			"video": [
+				"видео",
+				"видео",
+				"видео"
+			],
+			"view": [
+				"просмотр",
+				"просмотра",
+				"просмотров"
+			],
+			"year": [
+				"год",
+				"года",
+				"лет"
+			]
+		}
+	}
+}

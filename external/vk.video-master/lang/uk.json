@@ -1,0 +1,98 @@
+{
+	"meta": {
+		"charset": "utf-8",
+		"project": "vk.video 0.0.1",
+		"language": "uk",
+		"plural": "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)"
+	},
+	"data": {
+		"": {
+			"After 10 seconds, the browser will be loaded, and to confirm your wish to log in, click on the button \"Pass test check\"": "Через 10 секунд, браузер буде завантажений, і щоб підтвердити своє бажання увійти, натисніть на кнопку \"Pass test check\"",
+			"Aspect": "Аспект",
+			"Back": "Назад",
+			"Cancel": "Скасувати",
+			"Clear history": "Видалити історію",
+			"Clear search history ?": "Видалити історію ?",
+			"Convenient application for viewing videos from the popular social network VKontakte. This service allows you to watch video from a personal page or use the search by friends, groups or title.": "Зручний додаток для перегляду відео з популярної соціальної мережі ВКонтакте. Ця послуга дозволяє вам дивитися відео з персональної сторінки або скористатися пошуком по друзях, групам або назві.",
+			"Exit": "Вийти",
+			"Exit from the app?": "Вихід з програми?",
+			"External video may not be played": "Відео зі сторонніх сайтів можуть не бути відтворені",
+			"Friends videos": "Відео друзів",
+			"Group albums": "Альбоми користувача",
+			"Groups videos": "Відео групп",
+			"Language": "Мова",
+			"Loading...": "Завантаження ...",
+			"Login": "Увійти",
+			"Logout": "Вийти",
+			"Logout?": "Вийти?",
+			"My albums": "Моі альбоми",
+			"My videos": "Моі відео",
+			"No content or some error happened, try later.": "Немає контенту або трапились помилки , спробуйте пізніше.",
+			"No videos or loading error, try later.": "Немає контенту або трапились помилки , спробуйте пізніше.",
+			"Ok": "Ок",
+			"Original": "Оригінальний",
+			"Own albums": "Моі альбоми",
+			"Password": "Пароль",
+			"Phone or email": "Телефон або email",
+			"Please, input login": "Будь ласка, введіть логін",
+			"Please, input password": "Будь ласка, введіть пароль",
+			"Safe search": "Безпечний пошук",
+			"Search": "Пошук",
+			"Search history ": "Пошукова історія",
+			"Service is temporarily unavailable": "Сервіс тимчасово недоступний",
+			"Settings": "Налаштування",
+			"Total": "Усього",
+			"User albums": "Альбоми користувача",
+			"Videos of me": "Відео зі мною",
+			"added": "додано",
+			"ago": "назад",
+			"day": [
+				"день",
+				"дні",
+				"днів"
+			],
+			"hour": [
+				"година",
+				"години",
+				"годин"
+			],
+			"minute": [
+				"хвилина",
+				"хвилини",
+				"хвилин"
+			],
+			"month": [
+				"місяць",
+				"місяця",
+				"місяців"
+			],
+			"offline": "офлайн",
+			"online": "онлайн",
+			"second": [
+				"секунда",
+				"секунди",
+				"секунд"
+			],
+			"user": [
+				"користувач",
+				"користувача",
+				"користувачів"
+			],
+			"video": [
+				"відео",
+				"відео",
+				"відео"
+			],
+			"view": [
+				"перегляд",
+				"перегляди",
+				"перегелядів"
+			],
+			"year": [
+				"рік",
+				"роки",
+				"років"
+			]
+		}
+	}
+}

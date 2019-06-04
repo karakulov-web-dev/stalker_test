@@ -1,0 +1,117 @@
+body, p, td, li, a{
+	font-family : verdana,arial,helvetica,sans-serif;
+	font-size: 12px;
+	color : #000000;
+	text-decoration: none;
+}
+
+h1{
+	font-size: 20px;
+}
+
+h2{
+	font-size: 18px;
+}
+
+h3{
+	font-size: 14px;
+}
+
+
+.bg {
+ padding:30px;
+}
+
+
+a:hover{
+	font-family : verdana,arial,helvetica,sans-serif;
+	color : #000000;
+	text-decoration: underline;
+}
+
+a.indice{
+	font-family : verdana,arial,helvetica,sans-serif;
+	color : #990000;
+	text-decoration: underline;
+}
+
+a.indice:hover{
+	font-family : verdana,arial,helvetica,sans-serif;
+	color : #990000;
+	text-decoration: underline;
+}
+
+.textoP{
+	font-family : verdana,arial,helvetica,sans-serif;
+	font-size: 11px;
+	color : #000000;
+	text-decoration: none;
+}
+
+select{
+	border: 1px solid #000000;
+	width: 130px;
+	font-size: 10px;
+	display: block;
+	margin-bottom: 5px;	
+}
+
+option{
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+input{
+	border: 1px solid #000000;
+}
+
+#restart_level {
+     
+      display:none; position:absolute;  margin: 130px 0 0 185px;
+
+}
+
+#new_game {
+     
+      display:none; position:absolute;  margin: 130px 0 0 185px;
+}
+
+#level {
+     
+        display:block; position:absolute;  margin: -22px 0 0 495px;
+        font-family : arial,helvetica,sans-serif;
+	font-size: 15px;
+	font-weight:bold;
+	color : #ffffff;
+	text-decoration: none;
+}
+
+#timer {
+     
+      display:block; position:absolute;  margin: 10px 0 0 180px;
+            font-family : verdana,arial,helvetica,sans-serif;
+	font-size: 14px;
+	font-weight:bold;
+	color : #ffffff;
+	text-decoration: none;
+}
+
+
+#save_game {
+display:none; position:absolute;  top: 282px; left: 346px;
+
+}
+
+#save_game_bg {
+display:none; position:absolute;  top: 250px; left: 270px;
+}
+
+#counter_time, #counter_steps {z-index:4}
+
+#counter_time, #counter_steps {width: 126px;height: 56px;position: absolute;top:420px;left:227px;}
+.cover{padding:13px 0 0 47px; color:#fff;font-weight: bold;font-size: 26px;}
+#counter_steps .cover{letter-spacing: 10px;}
+#counter_time {background: url(../img/counter_time.png) 50% 50% no-repeat;}
+#counter_steps {background: url(../img/counter_moves.png) 50% 50% no-repeat;margin-left:136px;}
+
+#main 
+{display:block;margin-left:30px;}

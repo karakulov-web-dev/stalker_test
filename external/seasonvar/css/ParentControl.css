@@ -1,0 +1,86 @@
+.ParentControlWindow_wrap {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/bgBottomButton.png");
+}
+
+.ParentControlWindow_window {
+  width: 315px;
+  height: 245px;
+  margin: 97px auto;
+  background: #fafafa;
+  position: relative;
+}
+
+.ParentControlWindow_header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 47px;
+  background: #c62d1f;
+  border: 1px solid #d02718;
+  color: #ffffff;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-left: 40px;
+}
+
+.ParentControlWindow_content {
+  position: absolute;
+  bottom: 0px;
+  top: 74px;
+  left: 0px;
+  right: 0px;
+  background: #cccccc;
+}
+
+.ParentControlWindow_h1 {
+  font-size: 16px;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: bold;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  position: relative;
+  left: 4px;
+  top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  margin-left: 40px;
+}
+
+.ParentControlWindow_input {
+  height: 30px;
+  margin-top: 40px;
+  width: 66%;
+  border: 1px solid grey;
+  padding-left: 10px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 45px;
+}
+
+.ParentControlWindow_invalidElem {
+  margin-left: 50px;
+  font-family: Roboto, Arial, sans-serif;
+  color: red;
+}
+.ParentControlWindow_okButton {
+  display: inline-block;
+  width: 35%;
+  margin-left: 45px;
+  font-family: Roboto, Arial, sans-serif;
+}
+.ParentControlWindow_exitButton {
+  width: 35%;
+  font-family: Roboto, Arial, sans-serif;
+}

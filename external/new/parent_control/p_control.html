@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html style="height:100%;">
+<head>
+<title>ivi_pass</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--<link rel="stylesheet" type="text/css" href="1280.css">-->
+<script type="text/javascript">
+    (function () {
+            document.write('<link rel="stylesheet" type="text/css" href="'+gSTB.RDir('gmode')+'.css" />');
+    })();
+</script>
+
+</head>
+<body style="height:98%;" onload="onLoad()">
+
+<div id="divpass" class="outer" style="height:98%; width: 100%; display:none">
+  <span class="inner">
+    <p id="str_head">РОДИТЕЛЬСКИЙ КОНТРОЛЬ</p>
+    <p id="str_hint">Для доступа к приложению необходимо ввести пароль:<p>
+    <img id="ico_wrong"><input type="password" id="input_pass" onkeydown="handleKeyDownInput(event);"><br>
+    <button class="button" id="ok_button" onkeydown="handleKeyDownOk(event);">ОК</button>
+    <button class="button" id="cancel_button" onkeydown="handleKeyDownCancel(event);">Выход</button>
+  </span>
+</div>
+
+<script>
+
+    function onLoad() {
+        try {stb = gSTB;}
+        catch(e){}
+
+        var resurs = parseGetParams();
+	var params = "";
+        if (resurs == 'ivi') {
+            if (stb.RDir('getenv ivipass') == 1) {
+                processWithPass(resurs);
+            }
+            else {
+                goToIvi();
+            }
+        }
+        else if(resurs == 'vcat') {
+            if (stb.RDir('getenv vcatpass') == 1) {
+                processWithPass(resurs);
+            }
+            else {
+                goToVcat();
+            }
+        }
+        else if (resurs == 'yout') {
+            if (stb.RDir('getenv youtpass') == 1) {
+                processWithPass(resurs);
+            }
+            else {
+                goToYout();
+            }
+        }
+    }
+
+    var Data = "";
+    (function(){
+        try {stb = gSTB;}
+        catch(e){}
+
+        //console.log("ivi_pass.html mac: " + stb.RDir('getenv ethaddr'));
+    
+        var xhr = new XMLHttpRequest();
+        //xhr.open('GET', '../../custom/get_pass.php?mac=' + stb.RDir('getenv ethaddr'), false);
+	xhr.open('GET', '../../custom/get_pass.php?mac=' + stb.RDir('MACAddress'), false);
+        xhr.send();
+        if (xhr.status != 200) {
+            alert( xhr.status + ': ' + xhr.statusText );
+        } else {
+            Data = JSON.parse(xhr.responseText);
+            //console.log( Data.password );
+        }
+
+    })();
+
+    function processWithPass(resurs) {
+        document.getElementById('divpass').style.display = 'block';
+        document.getElementById('divpass').name = resurs;
+        document.getElementById('input_pass').value='';
+        document.getElementById('input_pass').focus();
+    }
+
+    function goToIvi() {
+        // stb.portal_path = undefined ??
+        //console.log('/' + stb.portal_path + '/external/ivi/index.html?referrer='+encodeURIComponent(window.location));
+        var wl = '/stalker_portal/c/index.html';
+	if (params!="") params="&"+params;
+        window.location = '/' + 'stalker_portal' + '/external/ivi/index.html?referrer='+encodeURIComponent(wl)+params;
+    }
+
+    function goToVcat() {
+	if (params!="") params="?"+params;
+        window.location = '/' + 'stalker_portal' + '/external/videocatalog/index.html'+params;
+    }
+
+    function goToYout() {
+        //window.location = '/' + 'stalker_portal' + '/external/youtube/index.html?language=ru';
+	if (params!="") params="&"+params;
+	window.location = '/' + 'stalker_portal' + '/external/youtube/index.html?referrer=http://212.77.128.205'+params;
+    }
+
+    function parseGetParams() {
+        var tmp = new Array();      // два вспомагательных   
+        var tmp2 = new Array();     // массива   
+        var param = new Array();   
+        var get = location.search;  // строка GET запроса   
+        if(get != '') {   
+            tmp = (get.substr(1)).split('&');   // разделяем переменные   
+            for(var i=0; i < tmp.length; i++) {   
+                tmp2 = tmp[i].split('=');       // массив param будет содержать   
+                param[tmp2[0]] = tmp2[1];       // пары ключ(имя переменной)->значение   
+            }   
+        }
+	console.log("ajax_loader="+param['ajax_loader']);
+        console.log("token="+param['token']);
+        console.log("timeout="+param['timeout']);
+        if ((param['ajax_loader']!= "undefined")&&(param['token']!= "undefined")&&(param['timeout']!= "undefined"))
+        {
+            params="ajax_loader="+param['ajax_loader']+"&token="+param['token']+"&timeout="+param['timeout'];
+        }
+	console.log("params="+params);
+        return param['resurs'];
+   }
+
+    function handleKeyDownInput(event) {
+        if (document.getElementById('ico_wrong').style.visibility == 'visible')document.getElementById('ico_wrong').style.visibility = 'hidden';
+        if (event.keyCode == 40) {//down
+            document.getElementById('input_pass').blur();
+            document.getElementById('ok_button').focus();
+        }
+        else if (event.keyCode == 13) {ok_pressed(document.getElementById('divpass').name);}
+        else if (event.keyCode == 27) {cancel_pressed();}
+    }
+    function handleKeyDownOk(event) {
+        if (event.keyCode == 38) {//up
+            document.getElementById('ok_button').blur();
+            document.getElementById('input_pass').focus();
+        }
+        else if (event.keyCode == 39) {//right
+            document.getElementById('ok_button').blur();
+            document.getElementById('cancel_button').focus();
+        }
+        else if (event.keyCode == 13) {ok_pressed(document.getElementById('divpass').name);}
+        else if (event.keyCode == 27) {cancel_pressed();}
+    }
+    function handleKeyDownCancel(event) {
+        if (event.keyCode == 38) {//up
+            document.getElementById('cancel_button').blur();
+            document.getElementById('input_pass').focus(); 
+        }
+        else if (event.keyCode == 37) {//left
+            document.getElementById('cancel_button').blur();
+            document.getElementById('ok_button').focus(); 
+        }
+        else if (event.keyCode == 13 || event.keyCode == 27) {cancel_pressed();}
+    }
+
+    function ok_pressed(resurs) {
+        if (document.getElementById('input_pass').value == Data.password) {
+            switch(resurs) {
+                case "ivi":
+                    goToIvi();
+                    break;
+                case "vcat":
+                    goToVcat();
+                    break;
+                case "yout":
+                    goToYout();
+                    break;
+            }
+        }
+        else {
+            document.getElementById('input_pass').value = '';
+            document.getElementById('ico_wrong').style.visibility = 'visible';
+        }
+    }
+
+    function cancel_pressed() {
+        window.location = '/stalker_portal/c/index.html';
+    }
+</script>
+</body>
+</html>

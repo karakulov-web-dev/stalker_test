@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <meta http-equiv="Cache-Control" content="no-cache" />
+                <script type="text/javascript" src="jquery.js"></script>		
+                <script type="text/javascript" src="tetris.js"></script>
+                <script type="text/javascript" src="gstb.js"></script>
+                <script type="text/javascript" src="event.js"></script>
+
+	</head>
+	<body>
+		
+
+
+<div class="wrap" id="wrap" style="display:none;">
+<div class="left"> 
+
+<h2 >Благодарю Вас за участвие в игре!</h2> 
+<div class="articles">
+На этой странице вы можете увидеть свой рейтинг. Если Вам не удалось 
+попасть в десятку лучших, не расстраивайтесь. Попытайтесь сыграть еще 
+раз, и, я уверен, у Вас получится ;)</div>
+
+<h3>TOP 10</h3>
+<div class="articles" id="articles">
+</div>
+
+<div id="button_continue">
+    <table width="200" style="border:0; color: #CCCCCC; font-size: 12px;">
+      <tr>
+        <td width="32"><img src="img/btn_red.png"></td>
+        <td width="156"> Начать игру заново</td>
+      </tr>
+    </table>
+</div>
+
+</div>
+
+
+ 
+</div>
+
+
+
+
+<div id="tetris" style="display:block";>
+
+
+
+
+
+			<div id="tetris-wrap">
+				<div id="tetris-wrap-inner">
+
+<!-- search -->
+            <div id="yt_search_bg" style="display:none;">
+
+
+
+ <div id="search_note">Чтобы сохранить результат игры на доске почета, введите свое имя (например Sergei) или нажмите Exit чтобы начать игру заново.      
+</div>
+
+ <div id="msgboxx" style="display:none;"></div>
+
+
+                <div id="yt_modalform_search">
+                    <div class="yt_modalform_left"></div>
+                    <div class="yt_modalform_right modalinput_search">
+                        <input name="textfield" type="text" class="yt_modalinput" id="search_val" value="" />
+                    </div>
+                </div>
+            </div>
+<!-- End search -->
+
+
+
+
+					<div id="tetris-main">	
+
+					</div>
+					<div id="tetris-overlay">
+						<div id="tetris-message"></div>
+                                                <div id="tetris-message-gameover"></div>
+					</div>
+					<div id="tetris-side">
+						<div id="tetris-side-inner">
+							<div id="tetris-next">
+								<div id="tetris-next-inner"></div>
+							</div>
+							<div id="tetris-scores">
+								<dl>
+									<dd id="tetris-level">1</dd>
+								</dl>
+								<dl>
+									<dd id="tetris-score">0</dd>
+								</dl>
+								<dl>
+									<dd id="tetris-hightscore">0</dd>
+								</dl>
+								<div class="clear"></div>
+							</div>
+							<div id="tetris-keys">
+								<dl>
+									<dt>Двигать:</dt>
+									<dd>&larr; &darr; &rarr;<dd>
+								</dl>
+								<dl>
+									<dt>Вращать:</dt>
+									<dd>&uarr;<dd>
+								</dl>
+								<dl>
+									<dt>Бросить:</dt>
+									<dd>OK<dd>
+								</dl>
+								<dl>
+									<dt>Пауза:</dt>
+									<dd>MENU<dd>
+								</dl> 
+                                                                <dl>
+                                                                        <dt>Рестарт:</dt>
+                                                                        <dd>BACK<dd>
+                                                                </dl>                                                               
+                                                                 <dl>
+                                                                        <dt>Выход:</dt>
+                                                                        <dd>EXIT<dd>
+                                                                </dl>
+    							   	                                                        
+
+								<div class="clear"></div>
+							</div>
+
+                                                       <div id="logo"></div>
+
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			</div>
+	</body>
+</html>

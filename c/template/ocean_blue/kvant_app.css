@@ -1,0 +1,490 @@
+/*1.0*/html,
+body
+{
+     margin: 0;
+     padding: 0;
+     width: 720px; height: 576px;
+     outline: 2px solid #000;
+     /*background-image: url("bg3.png");     */
+}
+
+#kvant_pages
+{
+     top: 91px;
+     left: 70px;
+     position: absolute;
+     width: 667px;
+     height: 445px; 
+
+}
+
+#kvant_gl_menu
+{
+     top: 8px;
+     left:0px;
+     position: absolute;
+     width: 608px;
+     height: 444px;
+     display: block;
+}
+
+#kvant_video0
+{
+     display: block;
+     top: 0px;
+     left: 0px;
+     position: absolute;
+     width: 602px;
+     height: 96px;
+     overflow: hidden;
+     border-radius: 5px;
+    /* background-color: rgb(34, 101, 145);*/
+}
+
+#kvant_video1
+{
+     display: block;
+     top: 96px;
+     left: 0px;
+     position: absolute;
+     width: 602px;
+     height: 96px;
+     overflow: hidden;
+     border-radius: 5px;
+     /*background-color: rgb(34, 101, 145);*/
+}
+
+#kvant_video2
+{    
+     display: block;
+     top: 192px;
+     left: 0px;
+     position: absolute;
+     width: 602px;
+     height: 96px;
+     overflow: hidden;
+     border-radius: 5px;
+    /* background-color: rgb(34, 101, 145);     */
+}
+
+#kvant_video3
+{    
+     display: block;
+     top: 288px;
+     left: 0px;
+     position: absolute;
+     width: 602px;
+     height: 96px;
+     overflow: hidden;
+     border-radius: 5px;
+     /*background-color: rgb(34, 101, 145);*/
+}
+
+#kvant_video_img0, #kvant_video_img1, #kvant_video_img2, #kvant_video_img3
+{
+	position: absolute;
+	left: 8px;
+	top: 3px;
+}
+
+#kvant_duration0, #kvant_duration1, #kvant_duration2, #kvant_duration3
+{
+     position: absolute;
+     top: 69px;
+     right: 476px;    
+     color: white;
+     text-align: center;
+     overflow: hidden;
+     height: 20px;
+    background: black;
+     /*width: 40px;*/
+     padding-right: 4px;
+     padding-left: 4px; 
+     font-size: 15px;
+}
+
+#kvant_data0, #kvant_data1, #kvant_data2, #kvant_data3
+{
+     position: relative;
+     top: 4px;
+     left: 0px;
+     color: white;     
+     overflow: hidden;
+     height: 20px;
+    /*  background: black;
+     width: 73px; 
+     padding-right: 4px; */
+     font-size: 15px;
+     text-align: left;
+}
+
+#kvant_name0, #kvant_name1, #kvant_name2, #kvant_name3
+
+{
+     position: absolute;
+     top: 8px;
+     font-size: 21px;
+     font-weight: bold;
+     left: 139px;
+     width: 456px;
+     color: white;
+     text-align: left;
+     overflow: hidden;
+   /*  height: 47px; */
+     font-family: Helvetica, sans-serif;
+}
+
+#kvant_menu
+{
+     top: 520px;
+     left:55px;
+     position: absolute;
+     width: 600px; height: 24px;   
+     font-size: 14px;
+     color: white;     
+}
+
+#kvant_red
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 11px;
+     font-weight: bold;
+     color: white;     
+     top:5px;
+     left: 25px;
+     vertical-align:middle;
+     float:left;
+     font-family: Helvetica, sans-serif;
+}
+#kvant_img_red
+{
+     position: absolute;
+     height: 24px;
+     top: 0px;
+     left: 0px;
+     vertical-align:middle;
+     background-image: url("kino_kuzbass/red.png");
+     width: 24px;
+}
+
+#kvant_green
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 11px;
+     color: white;     
+     top:5px;
+     left: 181px;
+     vertical-align:middle;
+font-weight: bold;
+font-family: Helvetica, sans-serif;
+}
+
+#kvant_img_green
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 157px;
+     vertical-align:middle;
+background-image: url("kino_kuzbass/green.png");
+width: 24px;
+}
+
+#kvant_yelow
+{
+     position: absolute;
+     height: 30px;  
+     font-size: 11px;
+     color: white;     
+     top:5px;
+     left: 305px;
+     vertical-align:middle;
+     font-weight: bold;
+     font-family: Helvetica, sans-serif;
+}
+
+#kvant_img_yelow
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 280px;
+     vertical-align:middle;
+background-image: url("kino_kuzbass/yelow.png");
+width: 24px;
+}
+
+#kvant_blue
+{
+     position: absolute;
+     height: 24px;  
+     font-size: 11px;
+     color: white;    
+     top:5px;
+     left: 488px;
+     vertical-align:middle;
+     font-weight: bold;
+     font-family: Helvetica, sans-serif;
+}
+
+#kvant_img_blue
+{
+     position: absolute;
+     height: 24px;       
+     top: 0px;
+     left: 463px;
+     vertical-align:middle;
+     background-image: url("./kino_kuzbass/blue.png");
+     width: 24px;
+font-weight: bold;
+}
+
+#kvant_number_page
+{
+     position: absolute;
+     top: 21px;
+     left: 542px;
+     width: 130px;
+     height: 30px;
+     color: white;
+     font-size: 17px;
+
+}
+
+#kvant_loading
+{
+	position: absolute;
+        top: 48%;
+        left: 42%;
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-size: 30px;
+}
+#kvant_exit_message
+{
+     display: none;
+     width:720px;
+     height:576px;
+     background-color:rgba(0, 0, 0, 0.7);
+     position:absolute;
+     top:0;
+     left:0;
+     z-index:2010;
+}
+#kvant_exit_message_
+{
+    position: absolute;
+    z-index: 2002;
+     top: 49%;
+     left: 37%;
+     margin: -24px 0 0 -80px;
+     height: 37px;
+     width: 286px;
+     background: #000;
+     text-align: center;
+     padding: 10px;
+     border-width: 2px;
+     border-style: double;
+     border-color: #999;
+     border-radius: 4px;
+     -webkit-border-radius: 4px;
+	background-color: rgb(0, 95, 185);
+}
+#kvant_exit_message_title
+{
+     position: absolute;
+     left: 0px;
+     top: 16px;
+     color: #fff;
+     font-size: 18px;
+      width: 305px;
+     text-align: center;
+}
+
+#kvant_exit_message span
+{
+          top: -6px;
+          position: relative;
+}
+
+#kvant_menu
+{
+     top: 520px;
+     left:55px;
+     position: absolute;
+     width: 600px; height: 24px;
+/*     font-size: 14px; */
+     color: white;
+     overflow: hidden;
+}
+
+#kvant_menu_key0, #kvant_menu_key1, #kvant_menu_key2, #kvant_menu_key3, #kvant_menu_key4
+{
+     width: 200px;
+     height: 24px;
+     float: left;
+}
+
+#kvant_menu_key0_title, #kvant_menu_key1_title, #kvant_menu_key2_title, #kvant_menu_key3_title, #kvant_menu_key4_title
+{
+     left: 7px;
+     position: relative;
+/*     font_size: 24px; */
+        padding-top: 3px;
+}
+
+#kvant_menu_key0_img, #kvant_menu_key1_img, #kvant_menu_key2_img, #kvant_menu_key3_img, #kvant_menu_key4_img
+{
+     float: left;
+}
+
+#kvant_select_channel
+{
+     position: absolute;
+     top: 8px;
+     left: 0px;
+     position: absolute;
+     width: 608px;
+     height: 417px;
+     display: none;
+}
+
+#kvant_select_channel_left_side
+{
+     top: 0px;
+     left: 0px;
+     position: absolute;
+/*     width: 358px; */
+     width: 325px;
+	height: 416px;
+     display: block;
+     font-size: 25px;
+     color:white;
+}
+
+#kvant_channel_0, #kvant_channel_1, #kvant_channel_2, #kvant_channel_3, #kvant_channel_4, #kvant_channel_5
+{
+     top: 0px;
+/*     width: 387px; */
+	width: 354px; 
+     height: 60px;
+     position: relative;
+     padding: 3px;
+/*    border-radius: 5px;
+     background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i/25alfa_20.png"); */
+	border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+
+#kvant_channel_0_img, #kvant_channel_1_img, #kvant_channel_2_img, #kvant_channel_3_img, #kvant_channel_4_img, #kvant_channel_5_img
+{
+	position: absolute;
+	left: 4px;
+	position: relative;
+}
+
+#kvant_channel_0_title, #kvant_channel_1_title, #kvant_channel_2_title, #kvant_channel_3_title, #kvant_channel_4_title, #kvant_channel_5_title
+{
+     left:72px;
+     top:14px;
+     position: absolute;
+}
+
+#kvant_channel_3
+{
+   /*  background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i/25alfa_20.png");*/
+}
+
+#kvant_select_channel_right_side
+{
+/*     right: 0px; */
+	right: 33px;
+     top: 0px;
+     width: 215px;
+     height: 396px;
+     position: absolute;
+	background-image: url("i/25alfa_20.png");
+/*     background-image: url("http://212.77.128.177/stalker_portal/c/template/default/i/25alfa_20.png");
+     border-radius: 0px 5px 5px 5px; */
+	border-top-left-radius: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#kvant_select_channel_right_side_title
+{
+     left: 4px;
+     width: 237px;
+     height: 300px;
+     color: white;
+     font-size: 20px;
+     position: absolute;
+     top: 6px;
+     text-align: center;
+     overflow: hidden;
+	display: none;
+}
+
+#kvant_select_channel_update
+{
+	position: relative;
+     font-size: 17px;
+     top: 10px;
+     text-align: center;
+     color: white;
+     left: 3px;
+     height: 50px;
+     overflow: hidden;
+     width: 210px;
+	display: table;
+}
+
+#kvant_select_channel_update span
+{
+        vertical-align:middle !important;
+    display: table-cell !important;
+}
+
+#kvant_select_channel_right_side_preview
+{
+     position: relative;
+     top: 3px;
+     left: 25px;
+     height: 330px;
+     width: 169px;
+     overflow: hidden;   
+
+}
+
+#prev_video0, #prev_video1, #prev_video2
+{
+          top: 0px;
+     width: 205px;
+     height: 60px;
+     position: relative;
+     padding: 22px;
+}
+
+#prev_video0_img0
+{
+
+}
+
+#prev_duration0, #prev_duration1, #prev_duration2
+{
+     color: white;
+     background-color: black;
+     font-size: 15px;
+     padding-left: 4px;
+     padding-right: 4px;
+     height: 20px;
+     position: absolute;
+     top: 79px;
+     right:110px;
+	display: none;
+}
+

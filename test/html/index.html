@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title of the document</title>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="main.js"></script>
+
+	<!-- Load player theme -->
+	<link rel="stylesheet" href="projekktor/themes/maccaco/projekktor.style.css" type="text/css" media="screen" />
+
+	<!-- Load jquery -->
+	<!-- <script type="text/javascript" src="projekktor/jquery-1.9.1.min.js"></script> -->
+
+	<!-- load projekktor -->
+	<script type="text/javascript" src="projekktor/projekktor-1.3.09.min.js"></script>
+</head>
+	<body>
+	The content of the document......
+	<div><a id="link" href="">link</a></div>
+
+<h1 id="platform">Press play to test for VLC support.</h1>
+
+<!-- 	<video id="player_a" class="projekktor" poster="intro.jpg" title="this is projekktor" width="640" height="360" controls style="max-width:100%; position: absolute;top: 0;bottom: 0;left: 0;right: 0;"> -->
+	<video id="player_a" class="projekktor" poster="intro.jpg" title="this is projekktor" width="640" height="360">
+		
+		<source src="http://212.77.128.204:7071" type="video/mp4" videoScaling="aspectratio" />
+
+		<!-- <source src="http://10.20.0.214:7088/udp/239.200.200.91:1234" type="video/mp4" videoScaling="aspectratio" /> -->
+	</video>
+
+	<p>
+	This instance of the player is potentially able to handle the following content types:
+</p>
+
+<a href="#" id="setfullscreen">setFullscreen()</a><br>
+
+<textarea rows="10" cols="80">
+
+</textarea>
+
+<ul id="playlist">
+	
+</ul>
+
+<div id="uglylist"></div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			projekktor('#player_a', {
+			volume: 0.8,
+			// controls: false,
+			// disablePause: true,
+			disallowSkip: true,
+			// enableFullscreen: false,
+			imageScaling: 'fill',
+			videoScaling: 'fill',
+			ratio: 2/1,
+			playerFlashMP4: 'projekktor/swf/StrobeMediaPlayback/StrobeMediaPlayback.swf',
+			playerFlashMP3: 'projekktor/swf/StrobeMediaPlayback/StrobeMediaPlayback.swf',
+			platforms: ['browser', 'android', 'ios', 'vlc', 'native', 'flash'],
+			streamType: 'http',
+			}, function(player) {
+				player.addListener('fullscreen', screenListener);
+				player.addListener('displayReady', function(val, ref) {
+					var model = ref.getModel();			
+					$('#platform').html( (model=='VIDEOVLC') ? "Yeah!!1 VLC Web Plugin detected and in use." : "DÂ´oh... model " + model + " in use right now.");			
+				});
+				var count=0;
+				$.each($p.mmap, function() {
+					count++;
+					$('<p/>').html(this.type + "(." + this.ext + ")").appendTo('#uglylist');
+				});
+				if (count>24) {
+					$('#platform').html("Seems youÂ´ve da VLC Web Plugin installed, dude.");
+				}
+				window.p = player;
+				p.setDebug(true);
+			});
+		});
+	</script> 
+</body>
+
+</html>
+

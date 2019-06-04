@@ -1,0 +1,2 @@
+var stb;
+stb = gSTB;  

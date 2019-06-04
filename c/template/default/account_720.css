@@ -1,0 +1,55 @@
+.simple_layer {
+  padding: 20px;
+  width: 1100px;
+  height: 490px;
+}
+
+#account .label {
+  color: #99a8b5;
+}
+
+.main_container,
+.payment_container,
+.agreement_container,
+.terms_container {
+  position: absolute;
+  left: 15px;
+  height: 488px;
+  width: 1100px;
+}
+.main_content,
+.payment_content,
+.agreement_content,
+.terms_content {
+  position: absolute;
+  height: 488px;
+  width: 1080px;
+  overflow: hidden;
+  font-size: 30px;
+}
+
+#account .label {
+  color: #99a8b5;
+}
+
+.msgreader_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 720px;
+  background-image: url("i_720/bg2.png");
+}
+.msg_container {
+  padding: 15px;
+  margin: 2px 0 0 75px;
+  width: 1100px;
+  height: 90px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: justify;
+  font-size: 140%;
+}
+#msg_0 {
+  margin-top: 80px;
+}

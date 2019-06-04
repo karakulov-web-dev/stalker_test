@@ -1,0 +1,265 @@
+<html style="height:100%;">
+<head>
+  <!-- !< -->
+  <script type="text/javascript">
+    (function () {
+      document.write('<link rel="stylesheet" type="text/css" href="../parent_control/'+parent.stb.RDir('gmode')+'.css" />');
+    })();
+  </script>
+  <!-- >! -->
+<script>
+var pp='';
+var iid=1;
+var mid=10;
+read=new Object();
+var pread=["1","2","3","4","5","6"];//!
+read={'result':{'1':'','2':'','3':'','4':'','5':'','6':''}};//!
+var menuT=[['input',parent.t('Password:')],['input',parent.t('New password:')],['input',parent.t('Confirm password:')],
+  ['check', parent.t('Parent control IVI:')],['check', parent.t('Parent control VIDEOCATALOG:')],['check', parent.t('Parent control YOUTUBE:')]];//!
+var  mid=menuT.length+2;
+function onLoad()
+{
+        sload();
+        init();
+        parent.cont.focus();
+        document.getElementById("i1").focus();
+        document.getElementById("i7").value=parent.t('OK');
+        document.getElementById("i8").value=parent.t('Cancel');
+
+        //!<
+        if (parent.stb.RDir('getenv ivipass') == 1){
+          document.getElementById('i4').setAttribute('checked', 'checked');
+        }
+        if (parent.stb.RDir('getenv vcatpass') == 1){
+          document.getElementById('i5').setAttribute('checked', 'checked');
+        }
+        if (parent.stb.RDir('getenv youtpass') == 1){
+          document.getElementById('i6').setAttribute('checked', 'checked');
+        }
+        myBack=true;
+        parent.load({"type":"stb","action":"get_settings_profile"},
+          function(profile){pp=profile.parent_password;});
+
+        document.getElementById('str_head').innerHTML=parent.t('PARENT CONTROL');
+        document.getElementById('str_hint').innerHTML=parent.t('For changing parent control is is needed to put password');
+        document.getElementById('ok_button').innerHTML=parent.t('OK');
+        document.getElementById('cancel_button').innerHTML=parent.t('Cancel');
+        //!>
+}
+
+function onIviPressed() {
+  if (event.keyCode == 13) {
+    myBack=false;
+    checkPass("ivi");
+  }
+}
+function onVcatPressed() {
+  if (event.keyCode == 13) {
+    myBack=false;
+    checkPass("vcat");
+  }
+}
+function onYoutPressed() {
+  if (event.keyCode == 13) {
+    myBack=false;
+    checkPass("yout");
+  }
+}
+
+function checkPass(resurs) {
+  if (resurs == "ivi")document.getElementById("i4").blur();
+  else if (resurs == "vcat")document.getElementById("i5").blur();
+  else if (resurs == "yout")document.getElementById("i6").blur();
+  document.getElementById('blueback').style.display = 'none';
+  document.getElementById('footer').style.display = 'none';
+  document.getElementById('divpass').style.display = 'block';
+  document.getElementById('ico_wrong').style.visibility = 'hidden';
+  document.getElementById('input_pass').value='';
+  document.getElementById('input_pass').focus();
+  document.getElementById('input_pass').name=resurs;
+}
+
+function handleKeyDownInput() {
+  if (document.getElementById('ico_wrong').style.visibility == 'visible')document.getElementById('ico_wrong').style.visibility = 'hidden';
+  if (event.keyCode == 40) {//down
+    document.getElementById('input_pass').blur();
+    document.getElementById('ok_button').focus();
+  }
+  else if (event.keyCode == 13) {ok_pressed(document.getElementById('input_pass').name);}
+  else if (event.keyCode == 27) {cancel_pressed(document.getElementById('input_pass').name);setCheckStatus(document.getElementById('input_pass').name);}
+    }
+  function handleKeyDownOk() {
+    if (event.keyCode == 38) {//up
+      document.getElementById('ok_button').blur();
+      document.getElementById('input_pass').focus();
+    }
+    else if (event.keyCode == 39) {//right
+      document.getElementById('ok_button').blur();
+      document.getElementById('cancel_button').focus();
+    }
+    else if (event.keyCode == 13) {ok_pressed(document.getElementById('input_pass').name);}
+    else if (event.keyCode == 27) {cancel_pressed(document.getElementById('input_pass').name);setCheckStatus(document.getElementById('input_pass').name);}
+  }
+  function handleKeyDownCancel() {
+    if (event.keyCode == 38) {//up
+      document.getElementById('cancel_button').blur();
+      document.getElementById('input_pass').focus(); 
+    }
+    else if (event.keyCode == 37) {//left
+      document.getElementById('cancel_button').blur();
+      document.getElementById('ok_button').focus(); 
+    }
+    else if (event.keyCode == 13 || event.keyCode == 27) {cancel_pressed(document.getElementById('input_pass').name);setCheckStatus(document.getElementById('input_pass').name);myBack=true;}      
+  }
+
+    function ok_pressed(resurs) {
+      if (document.getElementById('input_pass').value == pp) {
+        myBack = true;
+        document.getElementById('blueback').style.display = 'block';
+        document.getElementById('footer').style.display = 'block';
+        document.getElementById('divpass').style.display = 'none';
+        switch (resurs) {
+          case "ivi":
+            document.getElementById("i4").focus();
+            if (parent.stb.RDir('getenv ivipass') == 1)
+              parent.stb.RDir('setenv ivipass');
+            else parent.stb.RDir('setenv ivipass 1');
+            break;
+          case "vcat":
+            document.getElementById("i5").focus();
+            if (parent.stb.RDir('getenv vcatpass') == 1)
+              parent.stb.RDir('setenv vcatpass');
+            else parent.stb.RDir('setenv vcatpass 1');
+            break;
+          case "yout":
+            document.getElementById("i6").focus();
+            if (parent.stb.RDir('getenv youtpass') == 1)
+              parent.stb.RDir('setenv youtpass');
+            else parent.stb.RDir('setenv youtpass 1');
+            break;
+        }
+      }
+      else {
+        document.getElementById('input_pass').value = '';
+        document.getElementById('ico_wrong').style.visibility = 'visible';
+      }
+    }
+
+    function cancel_pressed(resurs) {
+      document.getElementById('blueback').style.display = 'block';
+      document.getElementById('footer').style.display = 'block';
+      document.getElementById('divpass').style.display = 'none';
+      if (resurs == "ivi")document.getElementById("i4").focus();
+      else if (resurs == "vcat")document.getElementById("i5").focus();
+      else if (resurs == "yout")document.getElementById("i6").focus();
+    }
+
+    function setCheckStatus(resurs) {
+      switch(resurs){
+        case "ivi":
+          if (parent.stb.RDir('getenv ivipass') == 1){
+            document.getElementById('i4').checked = true;
+          }
+          else document.getElementById('i4').checked = false;
+          break;
+        case "vcat":
+          if (parent.stb.RDir('getenv vcatpass') == 1){
+            document.getElementById('i5').checked = true;
+          }
+          else document.getElementById('i5').checked = false;
+          break;
+        case "yout":
+          if (parent.stb.RDir('getenv youtpass') == 1){
+            document.getElementById('i6').checked = true;
+          }
+          else document.getElementById('i6').checked = false;
+          break;
+      }
+    }
+
+    function pressKeyMod(e) {
+      ec = e.keyCode;
+      if(!block)switch(ec) {
+        case 9:e.preventDefault();break;
+        case 27:parent.wifi_ssid.length=0;if(myBack==true){back();}else{myBack=true;}break;
+        case 13:fc=true;break;
+        case 40:if(myBack){if(iid<=mid)perehod_set(+1);fc=true;e.preventDefault();if(fln)ni=1;}break;
+        case 38:if(myBack){if(iid<=mid)perehod_set(-1);fc=true;e.preventDefault();if(fln)ni=1;}break;
+        case 37:change(-1);if(fln&&iid<=mid-2)if(menuT[iid-1][0]=='dn')e.preventDefault();break;
+        case 39:change(1);if(fln&&iid<=mid-2)if(menuT[iid-1][0]=='dn')e.preventDefault();break;
+        case 80:if(fusb){flesh.length=0;load();}break;
+        case 81:if(fusb){flesh.length=0;load();}break;
+      }
+      else e.preventDefault();
+    }
+
+function submit()
+{
+   var p1=document.getElementById('i1').value;
+   var p2=document.getElementById('i2').value;
+   var p3=document.getElementById('i3').value;
+   var p4=document.getElementById('i4').checked;//!<>
+   var p5=document.getElementById('i5').checked;//!<>
+   var p6=document.getElementById('i6').checked;//!<>
+   if(p1!=''&&p2!=''&&p3!='')parent.load({"type":"stb","action":"get_settings_profile"},
+   function(profile){
+    document.getElementById('i1').value='';document.getElementById('i2').value='';document.getElementById('i3').value='';
+    if(profile.parent_password==p1)
+    if(p3==p2)
+    {
+      parent.load({"type":"stb","action":"set_parent_password","parent_password" : p1,"pass":p2, "repeat_pass":p3},function(result){if(!result)parent.erMes(parent.t('Saving error'),"i"+iid);else {try{parent.stb.SendEventToPortal('{"type":"settings","parent_password":"'+p2+'"}');}catch(e){}back();}});     
+    }
+    else parent.erMes(parent.t('New and confirm passwords must be same'),"i"+iid);
+    else parent.erMes(parent.t('Error filling in forms'),"i"+iid);});
+    else /*parent.erMes(parent.t('Error filling in forms'),"i"+iid);*/back();//!
+}
+function change(a){
+        if(iid>mid-2)if(iid+a<=mid&&iid+a>=mid-1){iid+=a;document.getElementById('i'+iid).focus();}
+}
+</script>
+<script language="JavaScript" src="js/pres.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<body style="height:98%;" onload="onLoad()" onkeydown="pressKeyMod(event);">
+        <div id="blueback">
+        <table class="nsp" width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right"><span id="t1"></span></td>
+            <td width="10"><input type="password" id="i1" />
+          </tr>
+          <tr>
+            <td align="right"><span id="t2"></span></td>
+            <td><input type="password" id="i2">
+          </tr>
+          <tr>
+            <td align="right"><span id="t3"></span></td>
+           <td><input type="password" id="i3" value=""></td>
+          </tr>
+          <tr><!-- !< -->
+            <td align="right"><span id="t4"></span></td>
+            <td><input type="checkbox" id="i4" onkeydown="onIviPressed();"/><label></label></td>
+          </tr>
+          <tr>
+            <td align="right"><span id="t5"></span></td>
+            <td><input type="checkbox" id="i5" onkeydown="onVcatPressed();"/><label></label></td>
+          </tr>
+          <tr>
+            <td align="right"><span id="t6"></span></td>
+            <td><input type="checkbox" id="i6" onkeydown="onYoutPressed();"/><label></label></td>
+          </tr><!-- !> -->
+        </table>
+        </div>
+    <div id="footer">
+        <input id="i8" type="button"  value="" onClick="back();"/><!-- ! -->
+        <input id="i7" type="button" value="" onClick="submit();"/><!-- ! -->
+    </div>
+    <div id="divpass" class="outer" style="height:98%; width: 100%; display:none">
+      <span class="inner">
+        <p id="str_head"></p>
+        <p id="str_hint"><p>
+        <img id="ico_wrong"><input type="password" id="input_pass" onkeydown="handleKeyDownInput(event);"><br>
+        <button class="button" id="ok_button" onkeydown="handleKeyDownOk(event);"></button>
+        <button class="button" id="cancel_button" onkeydown="handleKeyDownCancel(event);"></button>
+      </span>
+    </div>
+</body>
+</html>

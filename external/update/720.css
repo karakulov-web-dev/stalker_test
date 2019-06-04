@@ -1,0 +1,373 @@
+/*1.0*/html,
+body
+{
+     margin: 0;
+     padding: 0;
+     width: 720px; height: 576px;
+    /* outline: 2px solid white; */
+     background-repeat: no-repeat;
+     background-color: black;
+}
+
+
+#logo
+{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background-image: url("./img/1280/logo.png");
+	background-repeat: no-repeat;
+	width: 19%;
+    height: 13%;
+}
+
+#info
+{
+	position: absolute;
+    top: 8%;
+    left: 14%;
+    width: 70%;
+    height: 9%;
+    color: yellow;
+    text-align: center;
+    font-size: 25px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#info2
+{
+	position: absolute;
+	top: 15%;
+    left: 14%;
+    width: 70%;
+    height: 9%;
+    	/*color: rgb(156, 156, 156); */
+    	color: white;
+    	text-align: center;
+    font-size: 21px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#info3
+{
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    width: 97%;
+    height: 9%;
+    /* color: rgb(156, 156, 156); */
+    color: white;
+    text-align: center;
+    font-size: 21px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#update_page
+{
+    position: absolute;
+    top: 6%;
+    left: 10%;
+    width: 80%;
+    height: 87%;
+    background-color: rgb(72, 79, 117);
+    background: linear-gradient(to bottom right, rgb(72, 79, 117), #5b6469);
+    border-radius: 20px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#current_version
+{
+    position: absolute;
+    top: 35%;
+    left: 1%;
+    width: 40%;
+    height: 4%;    
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#current_version_
+{
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    width: 40%;
+    height: 4%;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#description
+{
+    position: absolute;
+    top: 40%;
+    left: 1%;
+    width: 40%;
+    height: 4%;    
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#description_
+{
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    width: 40%;
+    height: 4%;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#date
+{
+    position: absolute;
+    top: 45%;
+    left: 1%;
+    width: 40%;
+    height: 4%;    
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#date_
+{
+    position: absolute;
+    top: 45%;
+    left: 43%;
+    width: 55%;
+    height: 4%;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#current_version1
+{
+    position: absolute;
+    top: 52%;
+    left: 1%;
+    width: 40%;
+    height: 4%;    
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#current_version1_
+{
+    position: absolute;
+    top: 52%;
+    left: 43%;
+    width: 40%;
+    height: 4%;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#description1
+{
+    position: absolute;
+    top: 57%;
+    left: 1%;
+    width: 40%;
+    height: 4%;    
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#description1_
+{
+    position: absolute;
+    top: 57%;
+    left: 43%;
+    width: 40%;
+    height: 4%;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#date1
+{
+    position: absolute;
+    top: 62%;
+    left: 1%;
+    width: 40%;
+    height: 4%;    
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#date1_
+{
+    position: absolute;
+    top: 62%;
+    left: 43%;
+    width: 55%;
+    height: 4%;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#update_status
+{
+    position: absolute;
+    top: 73%;
+    left: 1%;
+    width: 40%;
+    height: 4%;    
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#update_status_
+{
+    position: absolute;
+    top: 73%;
+    left: 43%;
+    width: 55%;
+    height: 4%;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: Ubuntu, sans-serif;
+}
+
+#progress
+
+{
+    /*-webkit-appearance: none; */
+    position: absolute;
+    top: 82%;
+    left: 12%;
+    width: 78%;
+    height: 8%;
+    display: block;
+    border: 2px solid #0098ff;
+    /* border-radius: 5px; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;    
+    padding: 2px;
+    z-index: 1;    
+
+}
+
+::-webkit-progress-bar {
+    background: white;
+    background-color: white;
+}
+::-webkit-progress-value {
+    background: yellow;
+    background-color: yellow;
+    color: yellow;
+}
+::-moz-progress-bar {
+    background: yellow;
+    background-color: yellow;
+}
+
+::-webkit-progress-inner-element {  
+  background-color: white;
+  background: white;
+}
+
+#back_progress
+{
+    position: absolute;
+    top: 83%;
+    left: 13%;
+    width: 77%;
+    height: 7%;
+    background-color: white;
+}
+
+#percent_progress
+{
+    position: absolute;
+    top: 84%;
+    left: 29%;
+    width: 43%;
+    height: 4%;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-family: Ubuntu, sans-serif;
+    z-index: 3;
+}
+
+#message
+{
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    width: 577px;
+    height: 193px;
+    background-color: rgb(72, 79, 117);
+    border-radius: 20px;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+#caption
+{
+    position: absolute;
+    top: 14px;
+    left: 21px;
+    width: 536px;
+    height: 40px;
+    /* background-color: red; */
+    color: yellow;
+    font-size: 30px;
+    text-align: center;
+    font-family: Ubuntu, sans-serif;
+    /* line-height: 1.4; */
+    /*line-height: 1.2; */
+    /* letter-spacing: 1.1px; */
+    overflow: hidden;
+}
+
+#text
+{
+    position: absolute;
+    top: 55px;
+    left: 13px;
+    width: 553px;
+    height: 126px;
+    /*background-color: red;*/
+    color: white;
+    font-size: 25px;
+    font-family: Ubuntu, sans-serif;    
+    /*line-height: 1.2;*/
+    text-align: center;
+    /*letter-spacing: 1.1px; */
+    overflow: hidden;
+}

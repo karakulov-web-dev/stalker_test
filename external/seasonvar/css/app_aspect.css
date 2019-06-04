@@ -1,0 +1,14 @@
+#aspect {
+  background: url("../img/aspect_bg.png") no-repeat;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #264b7b;
+  height: 35px;
+  padding: 8px 0 0 0px;
+  width: 400px;
+  text-align: center;
+  display: none;
+}
