@@ -113,7 +113,9 @@ class Karaoke extends AjaxResponse implements \Stalker\Lib\StbApi\Karaoke
                 $result = $result->orderby('karaoke.name');
             }elseif ($sortby == 'singer'){
                 $result = $result->orderby('karaoke.singer');
-            } 
+            }elseif ($sortby == 'count'){
+                $result = $result->orderby('karaoke.count');
+            }
             
         }else{
             $result = $result->orderby('karaoke.singer');
