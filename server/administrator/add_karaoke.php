@@ -103,11 +103,12 @@ if (!$error){
     
         if(@$_GET['name']){
 
+
             Admin::checkAccess(AdminAccess::ACCESS_CREATE);
 
             $datetime = date("Y-m-d H:i:s");
 
-            Mysql::getInstance()->insert('karaoke', array(
+            $data = array(
                 'name'     => @$_GET['name'],
                 'protocol' => $protocol,
                 'rtsp_url' => $rtsp_url,
@@ -116,8 +117,16 @@ if (!$error){
                 'author'   => @$_POST['author'],
                 'added'    => $datetime,
                 'status'   => $status,
-                'add_by'   => @$_SESSION['uid']
-            ));
+                'add_by'   => @$_SESSION['uid'],
+            );
+
+            if (!$_FILES['karaokePreview']['error']) {
+                $data['karaokePreview'] = "http://212.77.128.177/stalker_portal/misc/karaokePreview/".$_FILES['karaokePreview']['name'];
+                $previewPath = "/var/www/stalker_portal/misc/karaokePreview/";
+                move_uploaded_file($_FILES['karaokePreview']['tmp_name'], $previewPath.$_FILES['karaokePreview']['name']);
+            }
+
+            Mysql::getInstance()->insert('karaoke', $data);
 
             unset($_SESSION['upload']);
             
@@ -134,8 +143,7 @@ if (!$error){
 
             Admin::checkAccess(AdminAccess::ACCESS_EDIT);
 
-            Mysql::getInstance()->update('karaoke',
-                array(
+            $data =  array(
                     'name'     => $_GET['name'],
                     'protocol' => $protocol,
                     'rtsp_url' => $rtsp_url,
@@ -143,7 +151,17 @@ if (!$error){
                     'singer'   => @$_POST['singer'],
                     'status'   => $status,
                     'author'   => @$_POST['author']
-                ),
+            );
+
+            if (!$_FILES['karaokePreview']['error']) {
+                file_put_contents("umitest", print_r($_FILES, true)."\n", FILE_APPEND | LOCK_EX);
+                $data['karaokePreview'] = "http://212.77.128.177/stalker_portal/misc/karaokePreview/".$_FILES['karaokePreview']['name'];
+                $previewPath = "/var/www/stalker_portal/misc/karaokePreview/";
+                move_uploaded_file($_FILES['karaokePreview']['tmp_name'], $previewPath.$_FILES['karaokePreview']['name']);
+            }
+
+            Mysql::getInstance()->update('karaoke',
+                $data,
                 array('id' => intval(@$_GET['id']))
             );
 
@@ -557,6 +575,8 @@ echo "</tr>";
 echo "</table>";
 echo "</center>";
 
+$karaokePreview = "http://212.77.128.177/stalker_portal/misc/karaokePreview/previewNotFound.png";
+
 if (@$_GET['edit']){
 
     $arr = Karaoke::getById(intval(@$_GET['id']));
@@ -569,6 +589,7 @@ if (@$_GET['edit']){
         $year     = $arr['year'];
         $rtsp_url = $arr['rtsp_url'];
         $protocol = $arr['protocol'];
+        $karaokePreview = $arr['karaokePreview'];
     }
 
     $screenshots = Mysql::getInstance()->from('screenshots')->where(array('media_id' => intval(@$_GET['id'])))->get()->all('id');
@@ -833,6 +854,20 @@ function check_protocol(){
            <td>
            <? echo $upload_str ?>
            </td>
+        </tr>
+        <tr>
+            <td align="right"></td>
+            <td valign="top" >
+                <img id="karaokePreview" src="<?echo $karaokePreview; ?>" style="float: left; max-width: 140px;"/><a style="float: left;"></a>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                Превью:
+            </td>
+            <td>
+                <input type="file" name="karaokePreview" id="karaokePreviewInput"/>
+            </td>
         </tr>
         <tr>
            <td>
