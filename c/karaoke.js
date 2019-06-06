@@ -132,7 +132,7 @@
       _debug("indexOf", this.data_items[this.cur_row].cmd.indexOf("://"));
 
       var id = this.data_items[this.cur_row].id;
-      console.log("karaoke_itemI)id = " + id);
+      countView(id);
 
       if (this.data_items[this.cur_row].cmd.indexOf("://") < 0) {
         stb.player.on_create_link = function(result) {
@@ -211,7 +211,7 @@
       {
         label: "По просмотрам",
         cmd: function() {
-          this.parent.load_params.sortby = "count";
+          this.parent.load_params.sortby = "countView";
         }
       }
     ],
@@ -252,5 +252,27 @@
     module.karaoke
   );
 })();
+
+function countView(id, cb) {
+  var url = "http://212.77.128.177/karakulov/karaoke/viewCount.php";
+  var xhr = new XMLHttpRequest();
+  var data = {
+    karaoke_item_id: Number(id)
+  };
+  data = JSON.stringify(data);
+  xhr.open("post", url, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(data);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        var data = JSON.parse(xhr.responseText);
+        if (cb) {
+          cb(data);
+        }
+      }
+    }
+  };
+}
 
 loader.next();
