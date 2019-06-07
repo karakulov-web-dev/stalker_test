@@ -6,7 +6,7 @@
   function karaoke_constructor() {
     this.layer_name = "karaoke";
 
-    this.row_blocks = ["singer", "name"];
+    this.row_blocks = ["name"];
 
     this.load_params = {
       type: "karaoke",
@@ -18,6 +18,8 @@
     this.sort_menu = {};
 
     this.search_box = {};
+
+    this.previewNotFoundUrl = "http://212.77.128.177/stalker_portal/misc/karaokePreview/previewNotFound.png";
 
     this.load_abc = function() {
       _debug("karaoke.load_abc");
@@ -38,6 +40,13 @@
 
     this._show = function() {
       _debug("karaoke._show");
+      this.set_short_container();
+      this.setInfo(
+        "Идет загрузка...",
+        "Идет загрузка...",
+        "Идет загрузка...",
+        this.previewNotFoundUrl
+      );
 
       try {
         this.sort_menu.action();
@@ -48,6 +57,59 @@
       } catch (e) {
         _debug(e);
       }
+    };
+
+    this.init_short_info = function() {
+      this.info_box = create_block_element("", this.main_container);
+
+      this.short_info_box = create_block_element("tv_timetable", this.info_box);
+
+      if (!stb.IsEmulator) {
+        this.short_info_box.addClass("epg_mask");
+      }
+
+      this.preview_box = create_block_element("tv_prev_window", this.info_box);
+      this.preview_msg = document.createElement("div");
+      this.preview_msg.style.position = "absolute";
+      this.preview_msg.style.background =
+        "url(" + this.previewNotFoundUrl + ") no-repeat";
+      this.preview_msg.style.width = "98%";
+      this.preview_msg.style.minHeight = "97%";
+      this.preview_msg.style.height = "31%";
+      this.preview_msg.style.maxHeight = "97%";
+      this.preview_msg.style.backgroundSize = "cover";
+      this.preview_msg.style.backgroundpPosition = "center";
+      this.preview_box.appendChild(this.preview_msg);
+      this.clock_box = create_block_element("tv_clock", this.info_box);
+      this.short_info_box.innerHTML = "";
+    };
+
+    this.setInfo = function(name, singer, countView, imgSrc) {
+      countView = parseInt(countView);
+      name = name ? name : "Идет загрузка...";
+      singer = singer ? singer : "Нет данных";
+      countView = countView ? -countView : "Нет данных";
+      imgSrc = imgSrc ? imgSrc : this.previewNotFoundUrl;
+      this.short_info_box.innerHTML =
+        "Название: " +
+        name +
+        "<br>" +
+        "Исполнитель: " +
+        singer +
+        "<br>" +
+        "Число Просмотров: " +
+        countView +
+        "<br>";
+
+      this.preview_msg.style.background = "url(" + imgSrc + ") no-repeat";
+      this.preview_msg.style.backgroundSize = "cover";
+      this.preview_msg.style.backgroundpPosition = "center";
+    };
+
+    this.fill_list = function(data) {
+      this.superclass.fill_list.call(this, data);
+      var item = this.data_items[this.cur_row];
+      this.setInfo(item.name, item.singer, item.countView, item.karaokePreview);
     };
 
     this.hide = function(do_not_reset) {
@@ -92,6 +154,7 @@
     };
 
     this.bind = function() {
+      var self = this;
       this.superclass.bind.apply(this);
 
       (function() {
@@ -121,6 +184,23 @@
         .bind(key.LEFT, this));
 
       this.play.bind(key.OK, this);
+
+      function shift_row(dir) {
+        self.superclass.shift_row.call(self, dir);
+        var item = self.data_items[self.cur_row];
+        self.setInfo(
+          item.name,
+          item.singer,
+          item.countView,
+          item.karaokePreview
+        );
+      }
+      (function() {
+        shift_row(+1);
+      }.bind(key.DOWN, this));
+      (function() {
+        shift_row(-1);
+      }.bind(key.UP, this));
     };
 
     this.play = function() {
@@ -169,6 +249,7 @@
 
   karaoke.bind();
   karaoke.init();
+  karaoke.init_short_info();
 
   if (single_module.indexOf("karaoke") == -1) {
     karaoke.init_left_ear(word["ears_back"]);
