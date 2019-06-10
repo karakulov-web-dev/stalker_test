@@ -13,13 +13,18 @@
       action: "get_ordered_list"
     };
 
+    this.connectorDevice = new ConnectorDevice();
+
     this.superclass = ListLayer.prototype;
+
+    this.menu = {};
 
     this.sort_menu = {};
 
     this.search_box = {};
 
-    this.previewNotFoundUrl = "http://212.77.128.177/stalker_portal/misc/karaokePreview/previewNotFound.png";
+    this.previewNotFoundUrl =
+      "http://212.77.128.177/stalker_portal/misc/karaokePreview/previewNotFound.png";
 
     this.load_abc = function() {
       _debug("karaoke.load_abc");
@@ -121,8 +126,40 @@
 
       this.search_box.on && this.search_box.hide && this.search_box.hide();
       this.sort_menu.on && this.sort_menu.hide && this.sort_menu.hide();
+      this.menu.on && this.menu.hide && this.menu.hide();
 
       this.superclass.hide.call(this, do_not_reset);
+    };
+
+    this.init_menu = function(map, options) {
+      this.menu = new bottom_menu(this, options);
+      this.menu.init(map);
+      this.menu.need_reset_load_data = false;
+      this.menu.bind();
+    };
+
+    this.menu_switcher = function() {
+      var self = this;
+      if (this.menu && this.menu.on) {
+        this.menu.hide();
+      } else {
+        if (this.connectorDevice.status) {
+          this.menu.items[3].dom_obj.innerText = "Откл. устройство";
+          this.menu.items[3].label = "Откл. устройство";
+          this.menu.items[3].cmd = function() {
+            self.connectorDevice.disconnect();
+          };
+        } else {
+          this.menu.items[3].dom_obj.innerText = "Подкл. устройство";
+          this.menu.items[3].label = "Подкл. устройство";
+          this.menu.items[3].cmd = function() {
+            self.connectorDevice.connect();
+          };
+        }
+        setTimeout(function() {
+          self.menu.show();
+        }, 50);
+      }
     };
 
     this.init_sort_menu = function(map, options) {
@@ -256,14 +293,11 @@
   }
 
   karaoke.init_color_buttons([
-    { label: word["karaoke_view"], cmd: function() {} },
+    { label: "Меню", cmd: karaoke.menu_switcher },
     { label: word["karaoke_sort"], cmd: karaoke.sort_menu_switcher },
     { label: word["karaoke_search"], cmd: karaoke.search_box_switcher },
     { label: word["karaoke_sampling"], cmd: karaoke.sidebar_switcher }
   ]);
-
-  //karaoke.color_buttons[karaoke.color_buttons.getIdxByVal('color', 'red')].text_obj.setClass('disable_color_btn_text');
-  karaoke.color_buttons.get("red").disable();
 
   karaoke.init_sidebar();
 
@@ -274,6 +308,31 @@
   });
 
   karaoke.sidebar.bind();
+
+  karaoke.init_menu(
+    [
+      {
+        label: "Караоке Главная",
+        cmd: function() {}
+      },
+      {
+        label: "Мои записи",
+        cmd: function() {}
+      },
+      {
+        label: "Записи Пользователей",
+        cmd: function() {}
+      },
+      {
+        label: "Подкл. устройство",
+        cmd: function() {}
+      }
+    ],
+    {
+      offset_x: 17,
+      color: "red"
+    }
+  );
 
   karaoke.init_sort_menu(
     [
@@ -355,5 +414,81 @@ function countView(id, cb) {
     }
   };
 }
+
+function ConnectorDevice() {
+  this.status = false;
+  this.monitoringInterval = undefined;
+  this.log = [];
+}
+ConnectorDevice.prototype.connect = function() {
+  var self = this;
+  this.getMediaDeviceLink(stb.mac, then);
+  function then(link) {
+    if (!link) {
+      return;
+    }
+    self.status = true;
+    var img = new ModalFormItem();
+    img._item = document.createElement("img");
+    img._item.src =
+      "http://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=200x200&chl=" +
+      link;
+    img._item.style.display = "block";
+    img._item.style.margin = "0 auto";
+    img._item.style.padding = "25px 10px";
+
+    var p = new ModalFormItem();
+    p._item = document.createElement("p");
+    p._item.innerHTML =
+      "Откройте страницу: " +
+      link +
+      " в браузере и разрешите доступ к устройству ";
+    p._item.style.margin = "0 auto";
+    p._item.style.padding = "25px 10px";
+
+    var m = new ModalForm({
+      title: "Подключение устройства",
+      parent: karaoke
+    });
+    m.enableOnExitClose();
+    m.addItem(img);
+    m.addItem(p);
+    m.show();
+  }
+};
+ConnectorDevice.prototype.getMediaDeviceLink = function(mac, cb) {
+  setTimeout(function() {
+    cb("http://device-test.ru/");
+  }, 1000);
+};
+ConnectorDevice.prototype.play = function() {
+  this.log.push({
+    type: "play",
+    time: Date.now(),
+    contentId: karaoke.data_items[karaoke.cur_row].id
+  });
+  this.monitoringStart();
+};
+ConnectorDevice.prototype.monitoringStart = function() {
+  var self = this;
+  stb.player._listeners.stop.push(function() {
+    console.log(
+      "stop ---------------------------------------------------------------------"
+    );
+  });
+  this.monitoringInterval = setInterval(function() {
+    self.monitoring();
+  }, 50);
+};
+ConnectorDevice.prototype.stop = function() {
+  this.monitoringStop();
+};
+ConnectorDevice.prototype.monitoringStop = function() {
+  clearInterval(this.monitoringInterval);
+};
+ConnectorDevice.prototype.monitoring = function() {};
+ConnectorDevice.prototype.disconnect = function() {
+  this.status = false;
+};
 
 loader.next();

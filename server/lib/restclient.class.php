@@ -83,6 +83,8 @@ class RESTClient
         $headers[] = "Connection: close";
         $headers[] = "X-From: ".self::$from;
 
+        //     file_put_contents("unitest", print_r($good_storages, true)."\n", FILE_APPEND | LOCK_EX);
+
         if (!empty(self::$access_token)){
             $headers[] = "Authorization: Bearer ".self::$access_token;
         }elseif (!empty(self::$auth_login) && !empty(self::$auth_password)){

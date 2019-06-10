@@ -92,6 +92,7 @@ class Admin
 
     public function isAuthorized() {
 
+
         if (empty($_SESSION['login']) || empty($_SESSION['pass'])){
             return false;
         }
