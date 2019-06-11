@@ -71,11 +71,9 @@
 
       if (!stb.IsEmulator) {
         this.short_info_box.addClass("epg_mask");
-        this.short_info_box.style.fontSize = "30px";
       }
 
       this.preview_box = create_block_element("tv_prev_window", this.info_box);
-      this.preview_box.style.background = "none";
       this.preview_msg = document.createElement("div");
       this.preview_msg.style.position = "absolute";
       this.preview_msg.style.background =
@@ -246,6 +244,7 @@
       _debug("karaoke.play");
 
       var self = this;
+
       _debug("cmd", this.data_items[this.cur_row].cmd);
       _debug("indexOf", this.data_items[this.cur_row].cmd.indexOf("://"));
 
@@ -277,9 +276,6 @@
         stb.player.need_show_info = 1;
       }
 
-      if (self.connectorDevice.status) {
-        self.connectorDevice.play();
-      }
       stb.player.play(this.data_items[this.cur_row]);
     };
   }
@@ -297,7 +293,7 @@
   }
 
   karaoke.init_color_buttons([
-    { label: "", cmd: function() {} },
+    { label: "Меню", cmd: karaoke.menu_switcher },
     { label: word["karaoke_sort"], cmd: karaoke.sort_menu_switcher },
     { label: word["karaoke_search"], cmd: karaoke.search_box_switcher },
     { label: word["karaoke_sampling"], cmd: karaoke.sidebar_switcher }
@@ -426,123 +422,71 @@ function ConnectorDevice() {
 }
 ConnectorDevice.prototype.connect = function() {
   var self = this;
-  self.status = true;
   this.getMediaDeviceLink(stb.mac, then);
   function then(link) {
     if (!link) {
       return;
     }
-
-    if (self.m) {
-      self.img._item.src =
-        "http://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=200x200&chl=" +
-        link;
-      self.p._item.innerHTML =
-        "Откройте страницу: " +
-        link +
-        " в браузере и разрешите доступ к устройству ";
-      self.m.show();
-      return;
-    }
-    self.img = new ModalFormItem();
-    self.img._item = document.createElement("img");
-    self.img._item.src =
+    self.status = true;
+    var img = new ModalFormItem();
+    img._item = document.createElement("img");
+    img._item.src =
       "http://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=200x200&chl=" +
       link;
-    self.img._item.style.display = "block";
-    self.img._item.style.margin = "0 auto";
-    self.img._item.style.padding = "25px 10px";
+    img._item.style.display = "block";
+    img._item.style.margin = "0 auto";
+    img._item.style.padding = "25px 10px";
 
-    self.p = new ModalFormItem();
-    self.p._item = document.createElement("p");
-    self.p._item.innerHTML =
+    var p = new ModalFormItem();
+    p._item = document.createElement("p");
+    p._item.innerHTML =
       "Откройте страницу: " +
       link +
       " в браузере и разрешите доступ к устройству ";
-    self.p._item.style.margin = "0 auto";
-    self.p._item.style.padding = "25px 10px";
+    p._item.style.margin = "0 auto";
+    p._item.style.padding = "25px 10px";
 
-    self.m = new ModalForm({
+    var m = new ModalForm({
       title: "Подключение устройства",
       parent: karaoke
     });
-    self.m.enableOnExitClose();
-    self.m.addItem(self.img);
-    self.m.addItem(self.p);
-    self.m.show();
+    m.enableOnExitClose();
+    m.addItem(img);
+    m.addItem(p);
+    m.show();
   }
 };
 ConnectorDevice.prototype.getMediaDeviceLink = function(mac, cb) {
-  var url = "http://212.77.128.177/karakulov/karaoke/mediaDeviceLink.php";
-  var xhr = new XMLHttpRequest();
-  var data = {
-    mac: mac
-  };
-  data = JSON.stringify(data);
-  xhr.open("post", url, true);
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(data);
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        var data = JSON.parse(xhr.responseText);
-        if (cb) {
-          cb(data.link);
-        }
-      }
-    }
-  };
+  setTimeout(function() {
+    cb("http://device-test.ru/");
+  }, 1000);
 };
 ConnectorDevice.prototype.play = function() {
   this.log.push({
     type: "play",
     time: Date.now(),
-    contentId: module.karaoke.data_items[module.karaoke.cur_row].id
+    contentId: karaoke.data_items[karaoke.cur_row].id
   });
   this.monitoringStart();
 };
 ConnectorDevice.prototype.monitoringStart = function() {
   var self = this;
-  stb.player.on_stop = function() {
-    self.stop();
-  };
+  stb.player._listeners.stop.push(function() {
+    console.log(
+      "stop ---------------------------------------------------------------------"
+    );
+  });
+  this.monitoringInterval = setInterval(function() {
+    self.monitoring();
+  }, 50);
 };
 ConnectorDevice.prototype.stop = function() {
   this.monitoringStop();
-  this.log.push({
-    type: "stop",
-    time: Date.now()
-  });
-  this.sendPlayLog(then);
-  function then() {
-    alert("Запись будет доступна в разделе Мои записи");
-  }
 };
 ConnectorDevice.prototype.monitoringStop = function() {
   clearInterval(this.monitoringInterval);
 };
 ConnectorDevice.prototype.monitoring = function() {};
-ConnectorDevice.prototype.sendPlayLog = function(cb) {
-  var log = JSON.parse(JSON.stringify(this.log));
-  var url = "http://212.77.128.177/karakulov/karaoke/sendPlayLog.php";
-  var xhr = new XMLHttpRequest();
-  var data = {
-    log: log
-  };
-  data = JSON.stringify(data);
-  xhr.open("post", url, true);
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(data);
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        if (cb) {
-          cb();
-        }
-      }
-    }
-  };
-};
 ConnectorDevice.prototype.disconnect = function() {
   this.status = false;
 };
