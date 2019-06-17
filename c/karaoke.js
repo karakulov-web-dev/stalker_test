@@ -527,7 +527,8 @@ ConnectorDevice.prototype.sendPlayLog = function(cb) {
   var url = "http://212.77.128.177/karakulov/karaoke/sendPlayLog.php";
   var xhr = new XMLHttpRequest();
   var data = {
-    log: log
+    log: log,
+    mac: stb.mac
   };
   data = JSON.stringify(data);
   xhr.open("post", url, true);
