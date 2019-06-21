@@ -136,7 +136,7 @@
     this.init_menu = function(map, options) {
       this.menu = new bottom_menu(this, options);
       this.menu.init(map);
-      this.menu.need_reset_load_data = false;
+      this.menu.need_reset_load_data = true;
       this.menu.bind();
     };
 
@@ -297,7 +297,7 @@
   }
 
   karaoke.init_color_buttons([
-    { label: "", cmd: function() {} },
+    { label: "Меню", cmd: karaoke.menu_switcher },
     { label: word["karaoke_sort"], cmd: karaoke.sort_menu_switcher },
     { label: word["karaoke_search"], cmd: karaoke.search_box_switcher },
     { label: word["karaoke_sampling"], cmd: karaoke.sidebar_switcher }
@@ -317,11 +317,15 @@
     [
       {
         label: "Караоке Главная",
-        cmd: function() {}
+        cmd: function() {
+          delete karaoke.load_params.custom;
+        }
       },
       {
         label: "Мои записи",
-        cmd: function() {}
+        cmd: function() {
+          karaoke.load_params.custom = stb.mac;
+        }
       },
       {
         label: "Записи Пользователей",
@@ -494,6 +498,7 @@ ConnectorDevice.prototype.getMediaDeviceLink = function(mac, cb) {
   };
 };
 ConnectorDevice.prototype.play = function() {
+  this.rec();
   this.log.push({
     type: "play",
     time: Date.now(),
@@ -508,6 +513,8 @@ ConnectorDevice.prototype.monitoringStart = function() {
   };
 };
 ConnectorDevice.prototype.stop = function() {
+  var self = this;
+  this.sendStop();
   this.monitoringStop();
   this.log.push({
     type: "stop",
@@ -516,6 +523,7 @@ ConnectorDevice.prototype.stop = function() {
   this.sendPlayLog(then);
   function then() {
     alert("Запись будет доступна в разделе Мои записи");
+    self.log = [];
   }
 };
 ConnectorDevice.prototype.monitoringStop = function() {
@@ -528,6 +536,46 @@ ConnectorDevice.prototype.sendPlayLog = function(cb) {
   var xhr = new XMLHttpRequest();
   var data = {
     log: log,
+    mac: stb.mac
+  };
+  data = JSON.stringify(data);
+  xhr.open("post", url, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(data);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        if (cb) {
+          cb();
+        }
+      }
+    }
+  };
+};
+ConnectorDevice.prototype.rec = function(cb) {
+  var url = "http://212.77.128.177/karakulov/karaoke/rec.php";
+  var xhr = new XMLHttpRequest();
+  var data = {
+    mac: stb.mac
+  };
+  data = JSON.stringify(data);
+  xhr.open("post", url, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(data);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        if (cb) {
+          cb();
+        }
+      }
+    }
+  };
+};
+ConnectorDevice.prototype.sendStop = function(cb) {
+  var url = "http://212.77.128.177/karakulov/karaoke/stop.php";
+  var xhr = new XMLHttpRequest();
+  var data = {
     mac: stb.mac
   };
   data = JSON.stringify(data);

@@ -72,6 +72,12 @@ class Karaoke extends AjaxResponse implements \Stalker\Lib\StbApi\Karaoke
         if (!$this->stb->isModerator()){
             $where['accessed'] = 1;
         }
+
+        if (@$_REQUEST['custom']){
+            $where['clientMac'] = $_REQUEST['custom'];
+        } else {
+            $where['clientMac'] = "";
+        }
         
         $like = array();
         
