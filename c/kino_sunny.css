@@ -1,0 +1,263 @@
+.layer_bg2{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 720px;
+    height: 576px;
+    background-image: url("i/bg2.png");
+}
+
+#pages
+{
+     top: 80px;
+     left:55px;
+     position: absolute;
+     width: 670px; height: 400px;	
+
+}
+
+#today
+{
+     top: 3px;
+     left:0px;
+     position: absolute;
+     width: 670px; height: 390px;	 
+}
+
+#header
+{    
+     left:40px;
+     position: absolute;
+     color: white;
+}
+
+#kino0
+{    
+     top: 35px;
+     left:25px;
+     position: absolute;
+     width: 158px; height: 315px;
+     overflow:hidden;
+     background: rgba(0, 170, 238, 0.3);
+     border-radius: 5px; 
+}
+
+#kino1
+{    
+     top: 35px;
+     left:163px;
+     position: absolute;
+     width: 158px; height: 315px;
+     overflow:hidden;
+     border-radius: 5px;
+}
+
+#kino2
+{    
+     top: 35px;
+     left:301px;
+     position: absolute;
+     width: 157px; height: 315px;
+     overflow:hidden;
+     border-radius: 5px;
+}
+
+#kino_data0, #kino_data1, #kino_data2
+{
+	text-transform: uppercase;
+	font-size: 13px;
+	text-align: center;
+	color: white;
+	overflow:hidden;
+	top: 3px;
+    position: absolute;
+    width: 158px;
+}
+
+#kino_img0, #kino_img1, #kino_img2
+{
+     top: 20px;
+     left:21px;
+     position: absolute;
+     width: 117px; height: 165px;	 
+}
+
+#genre0, #genre1, #genre2
+{
+position: relative;
+	top: 5px;
+	text-transform: uppercase;
+	font-size: 12px;
+	text-align: center;
+	color: white;
+	height: 30px;
+	overflow:hidden;
+}
+
+#name0, #name1, #name2
+
+{
+position: relative;
+	top: 192px;
+	font-size: 20px;
+	font-weight: bold;
+	left: 14px;
+	width: 133px;
+	color: white;
+	text-align: center;
+	overflow:hidden;
+}
+
+#menu
+{
+     top: 520px;
+     left:55px;
+     position: absolute;
+     width: 600px; height: 24px;	
+     font-size: 14px;
+     color: white;     
+}
+
+#red
+{
+     position: absolute;
+     height: 24px;	
+     font-size: 14px;
+font-weight: bold;
+     color: white;     
+     top:5px;
+     left: 25px;
+     vertical-align:middle;
+     float:left;
+}
+#img_red
+{
+	position: absolute;
+     height: 24px;
+     top: 0px;
+     left: 0px;
+     vertical-align:middle;
+	background-image: url("kino_kuzbass/red.png");
+	width: 24px;
+}
+
+#green
+{
+     position: absolute;
+     height: 24px;	
+     font-size: 14px;
+     color: gray;     
+     top:5px;
+     left: 181px;
+     vertical-align:middle;
+font-weight: bold;
+}
+
+#img_green
+{
+     position: absolute;
+     height: 24px;	     
+     top: 0px;
+     left: 157px;
+     vertical-align:middle;
+background-image: url("kino_kuzbass/green.png");
+width: 24px;
+}
+
+#yelow
+{
+     position: absolute;
+     height: 30px;	
+     font-size: 14px;
+     color: gray;     
+     top:5px;
+     left: 355px;
+     vertical-align:middle;
+	font-weight: bold;
+}
+
+#img_yelow
+{
+     position: absolute;
+     height: 24px;	     
+     top: 0px;
+     left: 330px;
+     vertical-align:middle;
+background-image: url("kino_kuzbass/yelow.png");
+width: 24px;
+}
+
+#blue
+{
+     position: absolute;
+     height: 24px;	
+     font-size: 14px;
+     color: gray;     
+     top:5px;
+     left: 488px;
+     vertical-align:middle;
+	font-weight: bold;
+}
+
+#img_blue
+{
+     position: absolute;
+     height: 24px;	     
+     top: 0px;
+     left: 463px;
+     vertical-align:middle;
+     background-image: url("./kino_kuzbass/blue.png");
+	width: 24px;
+font-weight: bold;
+}
+
+#left
+{
+     position: absolute;     
+     top: 51px;
+     left: 0px;
+     display:block;
+     background-image: url("kino_kuzbass/left.png");
+	width: 21px;
+height: 165px;
+}
+
+#right
+{
+     position: absolute;     
+     top: 55px;
+     left: 463px;
+	width: 21px;
+	height: 165px;
+     background-image: url("kino_kuzbass/right.png");    
+}
+
+#ad
+{
+     display:block;
+     position: absolute;
+     height: 240px;
+     width: 149px;     
+     top: 118px;
+     left: 536px;
+     border-radius: 10px;
+     overflow: hidden;     
+     -webkit-border-radius: 10px;
+     background-image: url("kino_kuzbass/25alfa_20.png");
+}
+
+#ad_ad{
+position: absolute;
+left: 5px;
+top: 5px;
+-webkit-border-radius: 12px;
+width: 139px;
+height: 229px;
+overflow: hidden;
+}
+
+#ad_ad img
+{
+  -webkit-border-radius: 7px;
+  border-radius: 7px; 
+}
