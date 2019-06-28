@@ -1288,8 +1288,9 @@ try {
             item = JSON.parse(JSON.stringify(item));
             item.focus = true;
             if (
+              typeof item.attachments !== "undefined" &&
               typeof item.attachments[state.wall.attachmentsFocus.get()] !==
-              "undefined"
+                "undefined"
             ) {
               item.attachments[state.wall.attachmentsFocus.get()].focus = true;
             }

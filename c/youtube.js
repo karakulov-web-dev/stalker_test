@@ -13,6 +13,8 @@
     module.videoportal_sub.push({
         "title" : 'YouTube',
         "cmd"   : function(){
+			if (stb.mac.substring(0,8)!="10:27:BE")
+        			{
 			//window.location = '/' + stb.portal_path + '/external/parent_control/p_control.html?resurs=yout';
 			//url = '/' + stb.portal_path + '/external/youtube-rikt/index.html?referrer=http://212.77.128.205';
 			var url='/' + stb.portal_path + '/external/apps_control/index.html?resurs=yout&ajax_loader='+ stb.ajax_loader;
@@ -21,8 +23,13 @@
                		 url= url+ '&timeout=' + stb.user['watchdog_timeout'];
 	                //console.log("url= "+url);
        	        window.location = url;
-        }
-    });
+			}
+			else
+			{
+				//TvipStb.execSystemUri("https://apps.tvip.ru/apps/youtube/?referrer=http://212.77.128.205");
+				TvipStb.execSystemUri("youtube");
+			}
+        }    });
 
     loader.next();
 })();
