@@ -7,62 +7,69 @@
     background-image: url("i/bg2.png");
 }
 
-#pages
+#pages_sunny
 {
      top: 80px;
-     left:55px;
+     left:53px;
      position: absolute;
-     width: 670px; height: 400px;	
+     width: 667px; height: 400px;	
 
 }
 
-#today
+#today_sunny, #schedule_sunny
 {
      top: 3px;
      left:0px;
      position: absolute;
-     width: 670px; height: 390px;	 
+     width: 482px; height: 390px;	 
 }
 
-#header
+#header_sunny
 {    
      left:40px;
      position: absolute;
      color: white;
+	top: 3px;
 }
 
-#kino0
+#kino0_sunny
 {    
+     display:none;
      top: 35px;
      left:25px;
      position: absolute;
-     width: 158px; height: 315px;
+     width: 158px; 
+     height: 324px;
      overflow:hidden;
-     background: rgba(0, 170, 238, 0.3);
-     border-radius: 5px; 
+	 border-radius: 5px;
+<!--     background: rgba(0, 170, 238, 0.3); -->
 }
 
-#kino1
+#kino1_sunny
 {    
+     display:none;
      top: 35px;
      left:163px;
      position: absolute;
-     width: 158px; height: 315px;
+     width: 158px;
+     height: 324px;
      overflow:hidden;
      border-radius: 5px;
 }
 
-#kino2
+#kino2_sunny
 {    
+     display:none;
      top: 35px;
      left:301px;
      position: absolute;
-     width: 157px; height: 315px;
+     width: 157px;
+     height: 324px;
      overflow:hidden;
      border-radius: 5px;
 }
 
-#kino_data0, #kino_data1, #kino_data2
+#kino_data0_sunny, #kino_data1_sunny, #kino_data2_sunny
 {
 	text-transform: uppercase;
 	font-size: 13px;
@@ -74,7 +81,7 @@
     width: 158px;
 }
 
-#kino_img0, #kino_img1, #kino_img2
+#kino_img0_sunny, #kino_img1_sunny, #kino_img2_sunny
 {
      top: 20px;
      left:21px;
@@ -82,10 +89,10 @@
      width: 117px; height: 165px;	 
 }
 
-#genre0, #genre1, #genre2
+#genre0_sunny, #genre1_sunny, #genre2_sunny
 {
 position: relative;
-	top: 5px;
+	top: 190px;
 	text-transform: uppercase;
 	font-size: 12px;
 	text-align: center;
@@ -94,7 +101,7 @@ position: relative;
 	overflow:hidden;
 }
 
-#name0, #name1, #name2
+#name0_sunny, #name1_sunny, #name2_sunny
 
 {
 position: relative;
@@ -102,13 +109,14 @@ position: relative;
 	font-size: 20px;
 	font-weight: bold;
 	left: 14px;
-	width: 133px;
+	width: 135px;
 	color: white;
 	text-align: center;
 	overflow:hidden;
+     height: 97px;
 }
 
-#menu
+#menu_sunny
 {
      top: 520px;
      left:55px;
@@ -118,7 +126,7 @@ position: relative;
      color: white;     
 }
 
-#red
+#red_sunny
 {
      position: absolute;
      height: 24px;	
@@ -130,7 +138,7 @@ font-weight: bold;
      vertical-align:middle;
      float:left;
 }
-#img_red
+#img_red_sunny
 {
 	position: absolute;
      height: 24px;
@@ -141,7 +149,7 @@ font-weight: bold;
 	width: 24px;
 }
 
-#green
+#green_sunny
 {
      position: absolute;
      height: 24px;	
@@ -153,7 +161,7 @@ font-weight: bold;
 font-weight: bold;
 }
 
-#img_green
+#img_green_sunny
 {
      position: absolute;
      height: 24px;	     
@@ -164,7 +172,7 @@ background-image: url("kino_kuzbass/green.png");
 width: 24px;
 }
 
-#yelow
+#yelow_sunny
 {
      position: absolute;
      height: 30px;	
@@ -176,7 +184,7 @@ width: 24px;
 	font-weight: bold;
 }
 
-#img_yelow
+#img_yelow_sunny
 {
      position: absolute;
      height: 24px;	     
@@ -187,7 +195,7 @@ background-image: url("kino_kuzbass/yelow.png");
 width: 24px;
 }
 
-#blue
+#blue_sunny
 {
      position: absolute;
      height: 24px;	
@@ -199,7 +207,7 @@ width: 24px;
 	font-weight: bold;
 }
 
-#img_blue
+#img_blue_sunny
 {
      position: absolute;
      height: 24px;	     
@@ -211,30 +219,30 @@ width: 24px;
 font-weight: bold;
 }
 
-#left
+#left_sunny
 {
+     display:none;
      position: absolute;     
      top: 51px;
-     left: 0px;
-     display:block;
+     left: 3px;
      background-image: url("kino_kuzbass/left.png");
 	width: 21px;
 height: 165px;
 }
 
-#right
+#right_sunny
 {
      position: absolute;     
      top: 55px;
-     left: 463px;
+     left: 459px;
 	width: 21px;
 	height: 165px;
      background-image: url("kino_kuzbass/right.png");    
 }
 
-#ad
+#ad_sunny, #ad1_sunny
 {
-     display:block;
+     display:none;
      position: absolute;
      height: 240px;
      width: 149px;     
@@ -246,7 +254,8 @@ height: 165px;
      background-image: url("kino_kuzbass/25alfa_20.png");
 }
 
-#ad_ad{
+#ad_ad_sunny, #ad_ad1_sunny
+{
 position: absolute;
 left: 5px;
 top: 5px;
@@ -256,8 +265,107 @@ height: 229px;
 overflow: hidden;
 }
 
-#ad_ad img
+#ad_ad_sunny img
 {
   -webkit-border-radius: 7px;
   border-radius: 7px; 
+}
+
+#ad_ad1_sunny img
+{
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+
+
+#info_blok_sunny
+{
+     	top: 30px;
+     	left: 2px;
+     	position: absolute;
+     	width: 468px; 
+	height: 400px;
+	overflow: hidden;
+	color: white;
+	display: none;
+	font-size: 20px;
+}
+
+#scrol_sunny
+{
+	position: absolute;
+     top: 0px;
+     left: 462px;
+	background-image: url("i/mb_scroll_bg.png");
+	height: 438px;
+width: 20px;
+}
+
+#scrol_now_sunny
+{
+	position: absolute;
+	left: 6px;
+	top: 7px;
+}
+
+#detail_sunny
+{
+	position: absolute;
+        left: 47px;
+        top: 20px;
+	z-index:1000;
+	width: 640px;
+	color: white;
+	overflow: hidden;
+}
+
+.detail_class
+{
+	position: relative;
+	left:10px;
+	font-size: 20px;
+}
+
+#detail_description_sunny
+{
+	height: 200px;
+	width: 625px;
+	overflow: hidden;
+	text-align: justify;
+}
+
+#detail_starring_sunny
+{
+        width: 625px;
+        overflow: hidden;
+        text-align: justify;
+}
+
+.shedule_date
+{
+	text-transform: uppercase;
+	color: yellow;
+}
+
+#loading_sunny
+{
+	position: absolute;
+	top: 48%;
+	left: 42%;
+	width: 100px;
+	height: 30px;
+	color: white;
+	font-size: 30px;
+}
+
+#key_info_today_sunny
+{
+	position: absolute;
+	top: 380px;
+	left: 25px;
+	width: 600px;
+	height: 30px;
+	color: white;
+	font-size: 18px;
+	text-align: center;
 }
