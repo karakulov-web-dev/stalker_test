@@ -1,4 +1,6 @@
 (function() {
+  stb.SetSubtitles(true);
+
   function kino_sunny_constructor() {
     this.layer_name = "kino_sunny";
     this.dom_obj = this.create_block("layer_bg2");

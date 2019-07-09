@@ -10,18 +10,18 @@
 #pages_sunny
 {
      top: 80px;
-     left:53px;
+     left:55px;
      position: absolute;
-     width: 667px; height: 400px;	
+     width: 670px; height: 400px;	
 
 }
 
-#today_sunny, #schedule_sunny
+#today_sunny
 {
      top: 3px;
      left:0px;
      position: absolute;
-     width: 482px; height: 390px;	 
+     width: 670px; height: 390px;	 
 }
 
 #header_sunny
@@ -29,42 +29,35 @@
      left:40px;
      position: absolute;
      color: white;
-	top: 3px;
 }
 
 #kino0_sunny
 {    
-     display:none;
      top: 35px;
      left:25px;
      position: absolute;
-     width: 158px; 
-     height: 324px;
+     width: 158px; height: 315px;
      overflow:hidden;
-	 border-radius: 5px;
-<!--     background: rgba(0, 170, 238, 0.3); -->
+     background: rgba(0, 170, 238, 0.3);
+     border-radius: 5px; 
 }
 
 #kino1_sunny
 {    
-     display:none;
      top: 35px;
      left:163px;
      position: absolute;
-     width: 158px;
-     height: 324px;
+     width: 158px; height: 315px;
      overflow:hidden;
      border-radius: 5px;
 }
 
 #kino2_sunny
 {    
-     display:none;
      top: 35px;
      left:301px;
      position: absolute;
-     width: 157px;
-     height: 324px;
+     width: 157px; height: 315px;
      overflow:hidden;
      border-radius: 5px;
 }
@@ -92,7 +85,7 @@
 #genre0_sunny, #genre1_sunny, #genre2_sunny
 {
 position: relative;
-	top: 190px;
+	top: 5px;
 	text-transform: uppercase;
 	font-size: 12px;
 	text-align: center;
@@ -109,11 +102,10 @@ position: relative;
 	font-size: 20px;
 	font-weight: bold;
 	left: 14px;
-	width: 135px;
+	width: 133px;
 	color: white;
 	text-align: center;
 	overflow:hidden;
-     height: 97px;
 }
 
 #menu_sunny
@@ -221,10 +213,10 @@ font-weight: bold;
 
 #left_sunny
 {
-     display:none;
      position: absolute;     
      top: 51px;
-     left: 3px;
+     left: 0px;
+     display:block;
      background-image: url("kino_kuzbass/left.png");
 	width: 21px;
 height: 165px;
@@ -234,15 +226,15 @@ height: 165px;
 {
      position: absolute;     
      top: 55px;
-     left: 459px;
+     left: 463px;
 	width: 21px;
 	height: 165px;
      background-image: url("kino_kuzbass/right.png");    
 }
 
-#ad_sunny, #ad1_sunny
+#ad_sunny
 {
-     display:none;
+     display:block;
      position: absolute;
      height: 240px;
      width: 149px;     
@@ -254,8 +246,7 @@ height: 165px;
      background-image: url("kino_kuzbass/25alfa_20.png");
 }
 
-#ad_ad_sunny, #ad_ad1_sunny
-{
+#ad_ad_sunny{
 position: absolute;
 left: 5px;
 top: 5px;
@@ -269,103 +260,4 @@ overflow: hidden;
 {
   -webkit-border-radius: 7px;
   border-radius: 7px; 
-}
-
-#ad_ad1_sunny img
-{
-  -webkit-border-radius: 7px;
-  border-radius: 7px;
-}
-
-
-#info_blok_sunny
-{
-     	top: 30px;
-     	left: 2px;
-     	position: absolute;
-     	width: 468px; 
-	height: 400px;
-	overflow: hidden;
-	color: white;
-	display: none;
-	font-size: 20px;
-}
-
-#scrol_sunny
-{
-	position: absolute;
-     top: 0px;
-     left: 462px;
-	background-image: url("i/mb_scroll_bg.png");
-	height: 438px;
-width: 20px;
-}
-
-#scrol_now_sunny
-{
-	position: absolute;
-	left: 6px;
-	top: 7px;
-}
-
-#detail_sunny
-{
-	position: absolute;
-        left: 47px;
-        top: 20px;
-	z-index:1000;
-	width: 640px;
-	color: white;
-	overflow: hidden;
-}
-
-.detail_class
-{
-	position: relative;
-	left:10px;
-	font-size: 20px;
-}
-
-#detail_description_sunny
-{
-	height: 200px;
-	width: 625px;
-	overflow: hidden;
-	text-align: justify;
-}
-
-#detail_starring_sunny
-{
-        width: 625px;
-        overflow: hidden;
-        text-align: justify;
-}
-
-.shedule_date
-{
-	text-transform: uppercase;
-	color: yellow;
-}
-
-#loading_sunny
-{
-	position: absolute;
-	top: 48%;
-	left: 42%;
-	width: 100px;
-	height: 30px;
-	color: white;
-	font-size: 30px;
-}
-
-#key_info_today_sunny
-{
-	position: absolute;
-	top: 380px;
-	left: 25px;
-	width: 600px;
-	height: 30px;
-	color: white;
-	font-size: 18px;
-	text-align: center;
 }
