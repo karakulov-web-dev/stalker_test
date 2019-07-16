@@ -161,7 +161,7 @@
           document.getElementById("loading_sunny").style.display = "none";
           document.getElementById("pages_sunny").style.display = "block";
           kino_sunny.load_shedule(
-            "http://212.77.128.177/karakulov/sunny/sessionSchedule.php"
+            "http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/sessionSchedule.php"
           );
         }
       };
@@ -180,7 +180,7 @@
           //kino_sunny.today_update(0);
           //kino_sunny.kino_active=0;
           kino_sunny.load_soon(
-            "http://212.77.128.177/karakulov/sunny/soon.php"
+            "http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/soon.php"
           );
           //console.log("kino_sunny.shedule.length="+kino_sunny.shedule.length);
         }
@@ -819,7 +819,9 @@
       document.getElementById("ad1_sunny").style.display = "none";
       document.getElementById("menu_sunny").style.display = "none";
       document.getElementById("loading_sunny").style.display = "block";
-      kino_sunny.load_today("http://212.77.128.177/karakulov/sunny/today.php");
+      kino_sunny.load_today(
+        "http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/today.php"
+      );
       kino_sunny.today_active_kino(0);
       kino_sunny.today_pozition = 0;
       document.getElementById("pages_sunny").style.display = "none";

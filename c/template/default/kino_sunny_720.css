@@ -1,3 +1,11 @@
+#kino_img0_sunny img, #kino_img1_sunny img, #kino_img2_sunny img {
+     width: 200px;
+     margin: 0 auto;
+     display: block;
+}
+#pages_sunny #name0_sunny,#pages_sunny #name1_sunny,#pages_sunny #name2_sunny {
+     font-size: 21px;
+}
 .layer_bg2{
     position:absolute;
     left: 0;
