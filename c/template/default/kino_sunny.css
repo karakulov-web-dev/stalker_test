@@ -1,263 +1,276 @@
-.layer_bg2{
-    position:absolute;
-    left: 0;
-    top: 0;
-    width: 720px;
-    height: 576px;
-    background-image: url("i/bg2.png");
+#kino_img0_sunny img,
+#kino_img1_sunny img,
+#kino_img2_sunny img {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+#pages_sunny #name0_sunny,
+#pages_sunny #name1_sunny,
+#pages_sunny #name2_sunny {
+  font-size: 15px;
 }
 
-#pages_sunny
-{
-     top: 80px;
-     left:55px;
-     position: absolute;
-     width: 670px; height: 400px;	
-
+.layer_bg2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 720px;
+  height: 576px;
+  background-image: url("i/bg2.png");
 }
 
-#today_sunny
-{
-     top: 3px;
-     left:0px;
-     position: absolute;
-     width: 670px; height: 390px;	 
+#pages_sunny {
+  top: 80px;
+  left: 55px;
+  position: absolute;
+  width: 670px;
+  height: 400px;
 }
 
-#header_sunny
-{    
-     left:40px;
-     position: absolute;
-     color: white;
+#today_sunny {
+  top: 3px;
+  left: 0px;
+  position: absolute;
+  width: 670px;
+  height: 390px;
 }
 
-#kino0_sunny
-{    
-     top: 35px;
-     left:25px;
-     position: absolute;
-     width: 158px; height: 315px;
-     overflow:hidden;
-     background: rgba(0, 170, 238, 0.3);
-     border-radius: 5px; 
+#header_sunny {
+  left: 40px;
+  position: absolute;
+  color: white;
 }
 
-#kino1_sunny
-{    
-     top: 35px;
-     left:163px;
-     position: absolute;
-     width: 158px; height: 315px;
-     overflow:hidden;
-     border-radius: 5px;
+#kino0_sunny {
+  top: 35px;
+  left: 25px;
+  position: absolute;
+  width: 158px;
+  height: 315px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-#kino2_sunny
-{    
-     top: 35px;
-     left:301px;
-     position: absolute;
-     width: 157px; height: 315px;
-     overflow:hidden;
-     border-radius: 5px;
+#kino1_sunny {
+  top: 35px;
+  left: 163px;
+  position: absolute;
+  width: 158px;
+  height: 315px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-#kino_data0_sunny, #kino_data1_sunny, #kino_data2_sunny
-{
-	text-transform: uppercase;
-	font-size: 13px;
-	text-align: center;
-	color: white;
-	overflow:hidden;
-	top: 3px;
-    position: absolute;
-    width: 158px;
+#kino2_sunny {
+  top: 35px;
+  left: 301px;
+  position: absolute;
+  width: 157px;
+  height: 315px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-#kino_img0_sunny, #kino_img1_sunny, #kino_img2_sunny
-{
-     top: 20px;
-     left:21px;
-     position: absolute;
-     width: 117px; height: 165px;	 
+#kino_data0_sunny,
+#kino_data1_sunny,
+#kino_data2_sunny {
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  top: 3px;
+  position: absolute;
+  width: 158px;
 }
 
-#genre0_sunny, #genre1_sunny, #genre2_sunny
-{
-position: relative;
-	top: 5px;
-	text-transform: uppercase;
-	font-size: 12px;
-	text-align: center;
-	color: white;
-	height: 30px;
-	overflow:hidden;
+#kino_img0_sunny,
+#kino_img1_sunny,
+#kino_img2_sunny {
+  top: 20px;
+  left: 21px;
+  position: absolute;
+  width: 117px;
+  height: 165px;
 }
 
-#name0_sunny, #name1_sunny, #name2_sunny
-
-{
-position: relative;
-	top: 192px;
-	font-size: 20px;
-	font-weight: bold;
-	left: 14px;
-	width: 133px;
-	color: white;
-	text-align: center;
-	overflow:hidden;
+#genre0_sunny,
+#genre1_sunny,
+#genre2_sunny {
+  position: relative;
+  top: 190px;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  height: 30px;
+  overflow: hidden;
 }
 
-#menu_sunny
-{
-     top: 520px;
-     left:55px;
-     position: absolute;
-     width: 600px; height: 24px;	
-     font-size: 14px;
-     color: white;     
+#name0_sunny,
+#name1_sunny,
+#name2_sunny {
+  position: relative;
+  top: 192px;
+  font-size: 20px;
+  font-weight: bold;
+  left: 14px;
+  width: 133px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
-#red_sunny
-{
-     position: absolute;
-     height: 24px;	
-     font-size: 14px;
-font-weight: bold;
-     color: white;     
-     top:5px;
-     left: 25px;
-     vertical-align:middle;
-     float:left;
-}
-#img_red_sunny
-{
-	position: absolute;
-     height: 24px;
-     top: 0px;
-     left: 0px;
-     vertical-align:middle;
-	background-image: url("kino_kuzbass/red.png");
-	width: 24px;
+#menu_sunny {
+  top: 520px;
+  left: 55px;
+  position: absolute;
+  width: 600px;
+  height: 24px;
+  font-size: 14px;
+  color: white;
 }
 
-#green_sunny
-{
-     position: absolute;
-     height: 24px;	
-     font-size: 14px;
-     color: gray;     
-     top:5px;
-     left: 181px;
-     vertical-align:middle;
-font-weight: bold;
+#red_sunny {
+  position: absolute;
+  height: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  top: 5px;
+  left: 25px;
+  vertical-align: middle;
+  float: left;
+}
+#img_red_sunny {
+  position: absolute;
+  height: 24px;
+  top: 0px;
+  left: 0px;
+  vertical-align: middle;
+  background-image: url("kino_kuzbass/red.png");
+  width: 24px;
 }
 
-#img_green_sunny
-{
-     position: absolute;
-     height: 24px;	     
-     top: 0px;
-     left: 157px;
-     vertical-align:middle;
-background-image: url("kino_kuzbass/green.png");
-width: 24px;
+#green_sunny {
+  position: absolute;
+  height: 24px;
+  font-size: 14px;
+  color: gray;
+  top: 5px;
+  left: 181px;
+  vertical-align: middle;
+  font-weight: bold;
 }
 
-#yelow_sunny
-{
-     position: absolute;
-     height: 30px;	
-     font-size: 14px;
-     color: gray;     
-     top:5px;
-     left: 355px;
-     vertical-align:middle;
-	font-weight: bold;
+#img_green_sunny {
+  position: absolute;
+  height: 24px;
+  top: 0px;
+  left: 157px;
+  vertical-align: middle;
+  background-image: url("kino_kuzbass/green.png");
+  width: 24px;
 }
 
-#img_yelow_sunny
-{
-     position: absolute;
-     height: 24px;	     
-     top: 0px;
-     left: 330px;
-     vertical-align:middle;
-background-image: url("kino_kuzbass/yelow.png");
-width: 24px;
+#yelow_sunny {
+  position: absolute;
+  height: 30px;
+  font-size: 14px;
+  color: gray;
+  top: 5px;
+  left: 355px;
+  vertical-align: middle;
+  font-weight: bold;
 }
 
-#blue_sunny
-{
-     position: absolute;
-     height: 24px;	
-     font-size: 14px;
-     color: gray;     
-     top:5px;
-     left: 488px;
-     vertical-align:middle;
-	font-weight: bold;
+#img_yelow_sunny {
+  position: absolute;
+  height: 24px;
+  top: 0px;
+  left: 330px;
+  vertical-align: middle;
+  background-image: url("kino_kuzbass/yelow.png");
+  width: 24px;
 }
 
-#img_blue_sunny
-{
-     position: absolute;
-     height: 24px;	     
-     top: 0px;
-     left: 463px;
-     vertical-align:middle;
-     background-image: url("./kino_kuzbass/blue.png");
-	width: 24px;
-font-weight: bold;
+#blue_sunny {
+  position: absolute;
+  height: 24px;
+  font-size: 14px;
+  color: gray;
+  top: 5px;
+  left: 488px;
+  vertical-align: middle;
+  font-weight: bold;
 }
 
-#left_sunny
-{
-     position: absolute;     
-     top: 51px;
-     left: 0px;
-     display:block;
-     background-image: url("kino_kuzbass/left.png");
-	width: 21px;
-height: 165px;
+#img_blue_sunny {
+  position: absolute;
+  height: 24px;
+  top: 0px;
+  left: 463px;
+  vertical-align: middle;
+  background-image: url("./kino_kuzbass/blue.png");
+  width: 24px;
+  font-weight: bold;
 }
 
-#right_sunny
-{
-     position: absolute;     
-     top: 55px;
-     left: 463px;
-	width: 21px;
-	height: 165px;
-     background-image: url("kino_kuzbass/right.png");    
+#left_sunny {
+  position: absolute;
+  top: 51px;
+  left: 0px;
+  display: block;
+  background-image: url("kino_kuzbass/left.png");
+  width: 21px;
+  height: 165px;
 }
 
-#ad_sunny
-{
-     display:block;
-     position: absolute;
-     height: 240px;
-     width: 149px;     
-     top: 118px;
-     left: 536px;
-     border-radius: 10px;
-     overflow: hidden;     
-     -webkit-border-radius: 10px;
-     background-image: url("kino_kuzbass/25alfa_20.png");
+#right_sunny {
+  position: absolute;
+  top: 55px;
+  left: 463px;
+  width: 21px;
+  height: 165px;
+  background-image: url("kino_kuzbass/right.png");
 }
 
-#ad_ad_sunny{
-position: absolute;
-left: 5px;
-top: 5px;
--webkit-border-radius: 12px;
-width: 139px;
-height: 229px;
-overflow: hidden;
+#ad_sunny {
+  display: block;
+  position: absolute;
+  height: 240px;
+  width: 149px;
+  top: 118px;
+  left: 536px;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  background-image: url("kino_kuzbass/25alfa_20.png");
 }
 
-#ad_ad_sunny img
-{
+#ad_ad_sunny {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  -webkit-border-radius: 12px;
+  width: 139px;
+  height: 229px;
+  overflow: hidden;
+}
+
+#ad_ad_sunny img {
   -webkit-border-radius: 7px;
-  border-radius: 7px; 
+  border-radius: 7px;
+}
+
+#key_info_today_sunny {
+  position: absolute;
+  top: 380px;
+  left: 25px;
+  width: 600px;
+  height: 30px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
 }

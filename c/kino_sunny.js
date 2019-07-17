@@ -1,4 +1,21 @@
 (function() {
+  function getVideoInfo(id, cb) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(
+      "get",
+      "http://212.77.128.203/apps/youtube/links.php?id=" + id,
+      true
+    );
+    xhr.send();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          cb(JSON.parse(xhr.responseText));
+        }
+      }
+    };
+  }
+
   function kino_sunny_constructor() {
     this.layer_name = "kino_sunny";
     this.dom_obj = this.create_block("layer_bg2");
@@ -70,10 +87,16 @@
           //console.log('big_logo[0]= '+kino_sunny.today[pozition].big_logo.substr(40, kino_sunny.today[pozition].big_logo.length));
           img_url = kino_sunny.today[pozition].big_logo;
           document.getElementById("kino_img0_sunny").innerHTML =
-            '<img src="' + img_url + '">';
+            '<img src="' +
+            "http://212.77.128.203:8006/proxy?url=" +
+            img_url +
+            '">';
         } else {
           document.getElementById("kino_img0_sunny").innerHTML =
-            '<img src="' + kino_sunny.today[pozition].logo + '">';
+            '<img src="' +
+            "http://212.77.128.203:8006/proxy?url=" +
+            kino_sunny.today[pozition].logo +
+            '">';
         }
         document.getElementById("name0_sunny").innerHTML =
           kino_sunny.today[pozition].name;
@@ -90,10 +113,16 @@
         if (resolution_prefix == "_720") {
           img_url1 = kino_sunny.today[pozition + 1].big_logo;
           document.getElementById("kino_img1_sunny").innerHTML =
-            '<img src="' + img_url1 + '">';
+            '<img src="' +
+            "http://212.77.128.203:8006/proxy?url=" +
+            img_url1 +
+            '">';
         } else {
           document.getElementById("kino_img1_sunny").innerHTML =
-            '<img src="' + kino_sunny.today[pozition + 1].logo + '">';
+            '<img src="' +
+            "http://212.77.128.203:8006/proxy?url=" +
+            kino_sunny.today[pozition + 1].logo +
+            '">';
         }
         document.getElementById("name1_sunny").innerHTML =
           kino_sunny.today[pozition + 1].name;
@@ -110,10 +139,16 @@
         if (resolution_prefix == "_720") {
           img_url2 = kino_sunny.today[pozition + 2].big_logo;
           document.getElementById("kino_img2_sunny").innerHTML =
-            '<img src="' + img_url2 + '">';
+            '<img src="' +
+            "http://212.77.128.203:8006/proxy?url=" +
+            img_url2 +
+            '">';
         } else {
           document.getElementById("kino_img2_sunny").innerHTML =
-            '<img src="' + kino_sunny.today[pozition + 2].logo + '">';
+            '<img src="' +
+            "http://212.77.128.203:8006/proxy?url=" +
+            kino_sunny.today[pozition + 2].logo +
+            '">';
         }
         document.getElementById("name2_sunny").innerHTML =
           kino_sunny.today[pozition + 2].name;
@@ -161,7 +196,7 @@
           document.getElementById("loading_sunny").style.display = "none";
           document.getElementById("pages_sunny").style.display = "block";
           kino_sunny.load_shedule(
-            "http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/sessionSchedule.php"
+            "http://212.77.128.203:8006/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/sessionSchedule.php"
           );
         }
       };
@@ -180,7 +215,7 @@
           //kino_sunny.today_update(0);
           //kino_sunny.kino_active=0;
           kino_sunny.load_soon(
-            "http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/soon.php"
+            "http://212.77.128.203:8006/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/soon.php"
           );
           //console.log("kino_sunny.shedule.length="+kino_sunny.shedule.length);
         }
@@ -576,6 +611,12 @@
           case "ok":
             //console.log('press ok');
 
+            var url =
+              "http://212.77.128.203/kinoteatr/public/video/" +
+              kino_sunny.today[
+                kino_sunny.kino_active + kino_sunny.today_pozition
+              ].youtube;
+
             if (kino_sunny.detail_visible == 0) {
               var item = {
                 name: get_word(
@@ -583,15 +624,8 @@
                     kino_sunny.kino_active + kino_sunny.today_pozition
                   ].name + " - Трейлер"
                 ),
-                cmd:
-                  "ffmpeg " +
-                  kino_sunny.trailer_url +
-                  kino_sunny.today[
-                    kino_sunny.kino_active + kino_sunny.today_pozition
-                  ].youtube +
-                  ".mp4"
+                cmd: "ffmpeg " + url
               };
-
               stb.set_cur_place("demo");
 
               //main_menu.hide();
@@ -605,6 +639,7 @@
               document.getElementById("pages_sunny").style.display = "block";
               document.getElementById("ad_sunny").style.display = "block";
             }
+
             break;
           case "info":
             //console.log('press info');
@@ -820,7 +855,7 @@
       document.getElementById("menu_sunny").style.display = "none";
       document.getElementById("loading_sunny").style.display = "block";
       kino_sunny.load_today(
-        "http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/today.php"
+        "http://212.77.128.203:8006/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/today.php"
       );
       kino_sunny.today_active_kino(0);
       kino_sunny.today_pozition = 0;
