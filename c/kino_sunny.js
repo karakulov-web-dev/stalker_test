@@ -28,7 +28,7 @@
     this.superclass = BaseLayer.prototype;
 
     this.host_url = "http://kuzbass-stb.m-sk.ru";
-    this.trailer_url = "http://212.77.128.233/trailers/";
+    this.trailer_url = "http://212.77.128.233/trailers/public/video/";
     this.today;
     this.today_save;
     this.shedule;
@@ -612,7 +612,7 @@
             //console.log('press ok');
 
             var url =
-              "http://212.77.128.203/kinoteatr/public/video/" +
+              this.trailer_url +
               kino_sunny.today[
                 kino_sunny.kino_active + kino_sunny.today_pozition
               ].youtube;
