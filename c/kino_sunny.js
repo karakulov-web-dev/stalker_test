@@ -839,7 +839,7 @@
   var kino_sunny = new kino_sunny_constructor();
   kino_sunny.init();
   kino_sunny.bind();
-  kino_sunny.init_header_path("Кинотеатр солнечный");
+  kino_sunny.init_header_path('Кинотеатр "Солнечный"');
   kino_sunny.hide();
   module.kino_sunny = kino_sunny;
 
