@@ -98,8 +98,9 @@
             kino_sunny.today[pozition].logo +
             '">';
         }
-        document.getElementById("name0_sunny").innerHTML =
-          kino_sunny.today[pozition].name;
+        document.getElementById("name0_sunny").innerHTML = kino_sunny.today[
+          pozition
+        ].name.match(/\"(.*)\"/)[1];
         document.getElementById("genre0_sunny").innerHTML =
           kino_sunny.today[pozition].genre;
         document.getElementById("kino_data0_sunny").innerHTML =
@@ -124,8 +125,9 @@
             kino_sunny.today[pozition + 1].logo +
             '">';
         }
-        document.getElementById("name1_sunny").innerHTML =
-          kino_sunny.today[pozition + 1].name;
+        document.getElementById("name1_sunny").innerHTML = kino_sunny.today[
+          pozition + 1
+        ].name.match(/\"(.*)\"/)[1];
         document.getElementById("genre1_sunny").innerHTML =
           kino_sunny.today[pozition + 1].genre;
         document.getElementById("kino_data1_sunny").innerHTML =
@@ -150,8 +152,9 @@
             kino_sunny.today[pozition + 2].logo +
             '">';
         }
-        document.getElementById("name2_sunny").innerHTML =
-          kino_sunny.today[pozition + 2].name;
+        document.getElementById("name2_sunny").innerHTML = kino_sunny.today[
+          pozition + 2
+        ].name.match(/\"(.*)\"/)[1];
         document.getElementById("genre2_sunny").innerHTML =
           kino_sunny.today[pozition + 2].genre;
         document.getElementById("kino_data2_sunny").innerHTML =
@@ -845,7 +848,7 @@
   }
 
   module.my_city_sub.push({
-    title: 'Кинотеатр "солнечный"',
+    title: 'Кинотеатр "Cолнечный"',
     cmd: function() {
       main_menu.hide();
       //module.kino_sunny.show();
