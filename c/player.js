@@ -5865,20 +5865,31 @@ player.prototype.subtitle_pid = {
     this.enabled = true;
   },
   enableTeletextSubtitles: function(pid) {
-    var player = stbPlayerManager.list[0];
+    try {
+      var player = stbPlayerManager.list[0];
+      console.log(pid);
+      console.log("----");
+      console.log(player.enableTeletext);
+      console.log(player.teletextVisible);
+      console.log(player.teletextOpacity);
+      console.log(player.teletextPID);
+      console.log(JSON.stringify(player.teletextTracks));
+      console.log(JSON.stringify(player.teletextViewport));
 
-    player.enableTeletext = true;
 
-    player.teletextPID = pid;
 
-    player.teletextCommand(8);
-    player.teletextCommand(8);
-    player.teletextCommand(8);
+      player.enableTeletext = true;
+      player.teletextVisible = true;
+      player.teletextOpacity = 0.5;
+      player.teletextForceCharset = 0x24;
 
-    player.teletextOpacity = 1;
-    player.teletextVisible = true;
-
-    player.teletextForceCharset = 0x24;
+      // player.teletextCommand(8);
+      //  player.teletextCommand(8);
+      //  player.teletextCommand(8);
+    } catch (e) {
+      console.log(e);
+    }
+ 
   },
 
   disable: function() {
@@ -6022,15 +6033,15 @@ player.prototype.subtitle_pid = {
 
     if (stb.mac.substring(0, 8) !== "10:27:BE") {
       var player = stbPlayerManager.list[0];
-      if (player.teletextTracks[0]) {
+      player.teletextTracks.forEach(function(ttTrack) {
         map.push({
-          title: "Телетекст - " + player.teletextTracks[0].lang,
+          title: "Телетекст - " + ttTrack.lang,
           cmd: function() {
-            self.enableTeletextSubtitles(player.teletextTracks[0].pid);
+            self.enableTeletextSubtitles(ttTrack.pid);
           },
           active: 0
         });
-      }
+      });
     }
 
     return map;
