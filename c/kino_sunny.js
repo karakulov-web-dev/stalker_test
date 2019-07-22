@@ -88,13 +88,13 @@
           img_url = kino_sunny.today[pozition].big_logo;
           document.getElementById("kino_img0_sunny").innerHTML =
             '<img src="' +
-            "http://212.77.128.203:8006/proxy?url=" +
+            "http://212.77.128.203/nodejsapp/proxy/proxy?url=" +
             img_url +
             '">';
         } else {
           document.getElementById("kino_img0_sunny").innerHTML =
             '<img src="' +
-            "http://212.77.128.203:8006/proxy?url=" +
+            "http://212.77.128.203/nodejsapp/proxy/proxy?url=" +
             kino_sunny.today[pozition].logo +
             '">';
         }
@@ -115,13 +115,13 @@
           img_url1 = kino_sunny.today[pozition + 1].big_logo;
           document.getElementById("kino_img1_sunny").innerHTML =
             '<img src="' +
-            "http://212.77.128.203:8006/proxy?url=" +
+            "http://212.77.128.203/nodejsapp/proxy/proxy?url=" +
             img_url1 +
             '">';
         } else {
           document.getElementById("kino_img1_sunny").innerHTML =
             '<img src="' +
-            "http://212.77.128.203:8006/proxy?url=" +
+            "http://212.77.128.203/nodejsapp/proxy/proxy?url=" +
             kino_sunny.today[pozition + 1].logo +
             '">';
         }
@@ -142,13 +142,13 @@
           img_url2 = kino_sunny.today[pozition + 2].big_logo;
           document.getElementById("kino_img2_sunny").innerHTML =
             '<img src="' +
-            "http://212.77.128.203:8006/proxy?url=" +
+            "http://212.77.128.203/nodejsapp/proxy/proxy?url=" +
             img_url2 +
             '">';
         } else {
           document.getElementById("kino_img2_sunny").innerHTML =
             '<img src="' +
-            "http://212.77.128.203:8006/proxy?url=" +
+            "http://212.77.128.203/nodejsapp/proxy/proxy?url=" +
             kino_sunny.today[pozition + 2].logo +
             '">';
         }
@@ -199,7 +199,7 @@
           document.getElementById("loading_sunny").style.display = "none";
           document.getElementById("pages_sunny").style.display = "block";
           kino_sunny.load_shedule(
-            "http://212.77.128.203:8006/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/sessionSchedule.php"
+            "http://212.77.128.203/nodejsapp/proxy/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/sessionSchedule.php"
           );
         }
       };
@@ -218,7 +218,7 @@
           //kino_sunny.today_update(0);
           //kino_sunny.kino_active=0;
           kino_sunny.load_soon(
-            "http://212.77.128.203:8006/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/soon.php"
+            "http://212.77.128.203/nodejsapp/proxy/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/soon.php"
           );
           //console.log("kino_sunny.shedule.length="+kino_sunny.shedule.length);
         }
@@ -483,10 +483,11 @@
       //if (stb.RDir('gmode')==720)
       if (resolution_prefix == "_720") {
         //var url_r = 'http://xn--d1abdw2b.net/include/kliktv_kuzbass_inc.php';
-        var url_r = "http://xn--d1abdw2b.net/include/kliktv_kuzbasshd_inc.php";
+        var url_r =
+          "http://xn--d1abdw2b.net/include/kliktv_solnechniihd_inc.php";
       } else {
         //var url_r = 'http://xn--d1abdw2b.net/include/kliktv_kuzbasshd_inc.php';
-        var url_r = "http://xn--d1abdw2b.net/include/kliktv_kuzbass_inc.php";
+        var url_r = "http://xn--d1abdw2b.net/include/kliktv_solnechnii_inc.php";
       }
 
       xmlhttp_r.onreadystatechange = function() {
@@ -858,7 +859,7 @@
       document.getElementById("menu_sunny").style.display = "none";
       document.getElementById("loading_sunny").style.display = "block";
       kino_sunny.load_today(
-        "http://212.77.128.203:8006/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/today.php"
+        "http://212.77.128.203/nodejsapp/proxy/proxy?url=http://xn--42-mlcqimbe0a8d2b.xn--p1ai/sunnyRikt/today.php"
       );
       kino_sunny.today_active_kino(0);
       kino_sunny.today_pozition = 0;
