@@ -5863,6 +5863,7 @@ player.prototype.subtitle_pid = {
     _debug("subtitle_pid.enable");
     stb.SetSubtitles(true);
     this.enabled = true;
+  },
   enableTeletextSubtitles: function(pid) {
     var player = stbPlayerManager.list[0];
 
