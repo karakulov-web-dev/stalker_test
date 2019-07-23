@@ -614,7 +614,7 @@
                                     kino_kuzbass.trailer_url +
                                     kino_kuzbass.today[
                                         kino_kuzbass.kino_active + kino_kuzbass.today_pozition
-                                    ].youtube
+                                    ].youtube + ".mp4"
                             };
 
                             stb.set_cur_place("demo");
