@@ -1,21 +1,4 @@
 (function() {
-    function getVideoInfo(id, cb) {
-        var xhr = new XMLHttpRequest();
-        xhr.open(
-            "get",
-            "http://212.77.128.203/apps/youtube/links.php?id=" + id,
-            true
-        );
-        xhr.send();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    cb(JSON.parse(xhr.responseText));
-                }
-            }
-        };
-    }
-
     function kino_sunny_constructor() {
         this.layer_name = "kino_sunny";
         this.dom_obj = this.create_block("layer_bg2");
