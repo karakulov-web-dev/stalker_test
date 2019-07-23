@@ -602,7 +602,7 @@
                             this.trailer_url +
                             kino_sunny.today[
                                 kino_sunny.kino_active + kino_sunny.today_pozition
-                            ].youtube;
+                            ].youtube + ".mp4";
 
                         if (kino_sunny.detail_visible == 0) {
                             var item = {
