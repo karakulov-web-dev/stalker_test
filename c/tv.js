@@ -619,6 +619,13 @@
     this.play = function() {
       _debug("tv.play");
 
+      try {
+        // показать телетекст
+        stb.player.subtitle_pid.showTeletext();
+      } catch (e) {
+        console.log(e);
+      }
+
       _debug("this.data_items[this.cur_row]", this.data_items[this.cur_row]);
       _debug(
         "empty(this.data_items[this.cur_row]",
@@ -755,6 +762,13 @@
 
     this.set_short_container = function() {
       _debug("tv.set_short_container");
+
+      try {
+        // скрыть телетекст
+        stb.player.subtitle_pid.hideTeletext();
+      } catch (e) {
+        console.log(e);
+      }
 
       this.superclass.set_short_container.apply(this);
 

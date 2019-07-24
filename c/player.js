@@ -5864,32 +5864,37 @@ player.prototype.subtitle_pid = {
     stb.SetSubtitles(true);
     this.enabled = true;
   },
+  hideTeletext: function() {
+    stb.TeletextShow(false);
+    player.teletextVisible = false;
+  },
+  showTeletext: function() {
+    stb.TeletextShow(true);
+    player.teletextVisible = true;
+  },
   enableTeletextSubtitles: function(pid) {
     try {
       var player = stbPlayerManager.list[0];
-      console.log(pid);
-      console.log("----");
-      console.log(player.enableTeletext);
-      console.log(player.teletextVisible);
-      console.log(player.teletextOpacity);
-      console.log(player.teletextPID);
-      console.log(JSON.stringify(player.teletextTracks));
-      console.log(JSON.stringify(player.teletextViewport));
-
-
-
       player.enableTeletext = true;
-      player.teletextVisible = true;
+      stb.SetTeletext(true);
+      player.teletextPID = pid;
+      stb.SetTeletextPID(pid);
       player.teletextOpacity = 0.5;
       player.teletextForceCharset = 0x24;
 
-      // player.teletextCommand(8);
-      //  player.teletextCommand(8);
-      //  player.teletextCommand(8);
+      setTimeout(function() {
+        stb.TeletextShow(true);
+        player.teletextVisible = true;
+      }, 500);
+
+      setTimeout(function() {
+        player.teletextCommand(8);
+        player.teletextCommand(8);
+        player.teletextCommand(8);
+      }, 1000);
     } catch (e) {
       console.log(e);
     }
- 
   },
 
   disable: function() {
