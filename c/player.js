@@ -4006,13 +4006,12 @@ player.prototype.show_prev_layer = function() {
     }
 
     if (this.prev_layer && this.prev_layer.cur_view == "short") {
-      this.stop();
       return;
     }
 
     this.stop();
   } catch (e) {
-    console.log(e);
+    _debug(e);
   }
 };
 
@@ -6047,7 +6046,7 @@ player.prototype.subtitle_pid = {
     }
 
     if (stb.mac.substring(0, 8) !== "10:27:BE") {
-      self.disableTeletext()
+      self.disableTeletext();
       var player = stbPlayerManager.list[0];
       player.teletextTracks.forEach(function(ttTrack) {
         map.push({

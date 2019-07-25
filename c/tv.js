@@ -624,6 +624,7 @@
       } catch (e) {
         console.log(e);
       }
+
       _debug("this.data_items[this.cur_row]", this.data_items[this.cur_row]);
       _debug(
         "empty(this.data_items[this.cur_row]",
