@@ -5865,16 +5865,27 @@ player.prototype.subtitle_pid = {
     this.enabled = true;
   },
   hideTeletext: function() {
+    var player = stbPlayerManager.list[0];
     stb.TeletextShow(false);
     player.teletextVisible = false;
   },
   showTeletext: function() {
+    if (!this.teletextStatus) {
+      return;
+    }
+    var player = stbPlayerManager.list[0];
     stb.TeletextShow(true);
     player.teletextVisible = true;
+  },
+  teletextStatus: false,
+  disableTeletext: function() {
+    this.hideTeletext();
+    this.teletextStatus = false;
   },
   enableTeletextSubtitles: function(pid) {
     try {
       var player = stbPlayerManager.list[0];
+      this.teletextStatus = true;
       player.enableTeletext = true;
       stb.SetTeletext(true);
       player.teletextPID = pid;
@@ -5903,8 +5914,7 @@ player.prototype.subtitle_pid = {
     this.enabled = false;
 
     if (stb.mac.substring(0, 8) !== "10:27:BE") {
-      var player = stbPlayerManager.list[0];
-      player.enableTeletext = false;
+      this.disableTeletext();
     }
   },
 
@@ -6037,6 +6047,7 @@ player.prototype.subtitle_pid = {
     }
 
     if (stb.mac.substring(0, 8) !== "10:27:BE") {
+      self.disableTeletext()
       var player = stbPlayerManager.list[0];
       player.teletextTracks.forEach(function(ttTrack) {
         map.push({

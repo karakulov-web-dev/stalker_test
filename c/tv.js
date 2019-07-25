@@ -618,14 +618,12 @@
 
     this.play = function() {
       _debug("tv.play");
-
       try {
-        // показать телетекст
+        // показать телетекст, если активен
         stb.player.subtitle_pid.showTeletext();
       } catch (e) {
         console.log(e);
       }
-
       _debug("this.data_items[this.cur_row]", this.data_items[this.cur_row]);
       _debug(
         "empty(this.data_items[this.cur_row]",
