@@ -5864,22 +5864,34 @@ player.prototype.subtitle_pid = {
     this.enabled = true;
   },
   hideTeletext: function() {
-    var player = stbPlayerManager.list[0];
-    stb.TeletextShow(false);
-    player.teletextVisible = false;
+    try {
+      stb.TeletextShow(false);
+      var player = stbPlayerManager.list[0];
+      player.teletextVisible = false;
+    } catch (e) {
+      console.log(e);
+    }
   },
   showTeletext: function() {
-    if (!this.teletextStatus) {
-      return;
+    try {
+      if (!this.teletextStatus) {
+        return;
+      }
+      var player = stbPlayerManager.list[0];
+      stb.TeletextShow(true);
+      player.teletextVisible = true;
+    } catch (e) {
+      console.log(e);
     }
-    var player = stbPlayerManager.list[0];
-    stb.TeletextShow(true);
-    player.teletextVisible = true;
   },
   teletextStatus: false,
   disableTeletext: function() {
-    this.hideTeletext();
-    this.teletextStatus = false;
+    try {
+      this.hideTeletext();
+      this.teletextStatus = false;
+    } catch (e) {
+      console.log(e);
+    }
   },
   enableTeletextSubtitles: function(pid) {
     try {
@@ -6045,18 +6057,22 @@ player.prototype.subtitle_pid = {
       });
     }
 
-    if (stb.mac.substring(0, 8) !== "10:27:BE") {
-      self.disableTeletext();
-      var player = stbPlayerManager.list[0];
-      player.teletextTracks.forEach(function(ttTrack) {
-        map.push({
-          title: "Телетекст - " + ttTrack.lang,
-          cmd: function() {
-            self.enableTeletextSubtitles(ttTrack.pid);
-          },
-          active: 0
+    try {
+      if (stb.mac.substring(0, 8) !== "10:27:BE") {
+        self.disableTeletext();
+        var player = stbPlayerManager.list[0];
+        player.teletextTracks.forEach(function(ttTrack) {
+          map.push({
+            title: "Телетекст - " + ttTrack.lang,
+            cmd: function() {
+              self.enableTeletextSubtitles(ttTrack.pid);
+            },
+            active: 0
+          });
         });
-      });
+      }
+    } catch (e) {
+      console.log(e);
     }
 
     return map;
