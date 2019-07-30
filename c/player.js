@@ -5902,6 +5902,9 @@ player.prototype.subtitle_pid = {
       player.teletextPID = pid;
       stb.SetTeletextPID(pid);
       player.teletextOpacity = 0.5;
+      player.teletextSubtitlesDefaultCharset = 0x24;
+      player.teletextSubtitlesForceCharset = 0x24;
+      player.teletextDefaultCharset = 0x24;
       player.teletextForceCharset = 0x24;
 
       setTimeout(function() {
@@ -5914,6 +5917,18 @@ player.prototype.subtitle_pid = {
         player.teletextCommand(8);
         player.teletextCommand(8);
       }, 1000);
+
+      setTimeout(function() {
+        player.teletextSubtitlesDefaultCharset = 0x24;
+        player.teletextSubtitlesForceCharset = 0x24;
+        player.teletextDefaultCharset = 0x24;
+        player.teletextForceCharset = 0x24;
+        setTimeout(function() {
+          player.teletextCommand(8);
+          player.teletextCommand(8);
+          player.teletextCommand(8);
+        }, 500);
+      }, 1500);
     } catch (e) {
       console.log(e);
     }
